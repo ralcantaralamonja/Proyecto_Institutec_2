@@ -1,0 +1,2250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="InstituTecModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TB_Alumno">
+          <Key>
+            <PropertyRef Name="IdAlum" />
+          </Key>
+          <Property Name="IdAlum" Type="char" MaxLength="4" Nullable="false" />
+          <Property Name="Ndocum" Type="char" MaxLength="8" Nullable="false" />
+          <Property Name="NomAlu" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="ApePat" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ApeMat" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TelAlu" Type="char" MaxLength="9" />
+          <Property Name="CorAlu" Type="varchar" MaxLength="50" />
+          <Property Name="Estado" Type="bit" />
+          <Property Name="Sexoal" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="FecNac" Type="date" />
+          <Property Name="CodCar" Type="char" MaxLength="4" Nullable="false" />
+          <Property Name="Fec_Registro" Type="datetime" />
+          <Property Name="Usu_Registro" Type="varchar" MaxLength="20" />
+          <Property Name="Fec_Ult_Mod" Type="datetime" />
+          <Property Name="Usu_Ult_Mod" Type="varchar" MaxLength="20" />
+          <Property Name="direccion" Type="varchar" MaxLength="100" />
+          <Property Name="Id_Ubi" Type="nchar" MaxLength="6" Nullable="false" />
+          <Property Name="foto" Type="image" />
+        </EntityType>
+        <EntityType Name="TB_Aula">
+          <Key>
+            <PropertyRef Name="IdAula" />
+          </Key>
+          <Property Name="IdAula" Type="char" MaxLength="4" Nullable="false" />
+          <Property Name="IdCent" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="AfoAul" Type="tinyint" />
+          <Property Name="Habita" Type="bit" />
+          <Property Name="Fec_Registro" Type="datetime" />
+          <Property Name="Usu_Registro" Type="varchar" MaxLength="20" />
+          <Property Name="Fec_Ult_Mod" Type="datetime" />
+          <Property Name="Usu_Ult_Mod" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Tb_Carrera">
+          <Key>
+            <PropertyRef Name="CodCar" />
+          </Key>
+          <Property Name="CodCar" Type="char" MaxLength="4" Nullable="false" />
+          <Property Name="IdFacu" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="DesCar" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Fec_Registro" Type="datetime" />
+          <Property Name="Usu_Registro" Type="varchar" MaxLength="20" />
+          <Property Name="Fec_Ult_Mod" Type="datetime" />
+          <Property Name="Usu_Ult_Mod" Type="varchar" MaxLength="20" />
+          <Property Name="Est_carr" Type="int" />
+        </EntityType>
+        <EntityType Name="Tb_Curso">
+          <Key>
+            <PropertyRef Name="IdCurs" />
+          </Key>
+          <Property Name="IdCurs" Type="char" MaxLength="4" Nullable="false" />
+          <Property Name="NomCur" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Activo" Type="bit" />
+          <Property Name="CodCar" Type="char" MaxLength="4" Nullable="false" />
+          <Property Name="Fec_Registro" Type="datetime" />
+          <Property Name="Usu_Registro" Type="varchar" MaxLength="20" />
+          <Property Name="Fec_Ult_Mod" Type="datetime" />
+          <Property Name="Usu_Ult_Mod" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="TB_Det_Espc">
+          <Key>
+            <PropertyRef Name="IdEspc" />
+            <PropertyRef Name="IdProf" />
+          </Key>
+          <Property Name="IdEspc" Type="tinyint" Nullable="false" />
+          <Property Name="IdProf" Type="char" MaxLength="4" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TB_Det_Mat">
+          <Key>
+            <PropertyRef Name="NroMat" />
+            <PropertyRef Name="IdCods" />
+          </Key>
+          <Property Name="NroMat" Type="char" MaxLength="7" Nullable="false" />
+          <Property Name="IdCods" Type="char" MaxLength="6" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TB_Espc_Prof">
+          <Key>
+            <PropertyRef Name="IdEspc" />
+          </Key>
+          <Property Name="IdEspc" Type="tinyint" Nullable="false" />
+          <Property Name="DesEsc" Type="varchar" MaxLength="60" />
+          <Property Name="Fec_Registro" Type="datetime" />
+          <Property Name="Usu_Registro" Type="varchar" MaxLength="20" />
+          <Property Name="Fec_Ult_Mod" Type="datetime" />
+          <Property Name="Usu_Ult_Mod" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="TB_Facultad">
+          <Key>
+            <PropertyRef Name="IdFacu" />
+          </Key>
+          <Property Name="IdFacu" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="DesFac" Type="varchar" MaxLength="50" />
+          <Property Name="Fec_Registro" Type="datetime" />
+          <Property Name="Usu_Registro" Type="varchar" MaxLength="20" />
+          <Property Name="Fec_Ult_Mod" Type="datetime" />
+          <Property Name="Usu_Ult_Mod" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="TB_local">
+          <Key>
+            <PropertyRef Name="IdCent" />
+          </Key>
+          <Property Name="IdCent" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="Desloc" Type="varchar" MaxLength="50" />
+          <Property Name="Dirloc" Type="varchar" MaxLength="50" />
+          <Property Name="Fec_Registro" Type="datetime" />
+          <Property Name="Usu_Registro" Type="varchar" MaxLength="20" />
+          <Property Name="Fec_Ult_Mod" Type="datetime" />
+          <Property Name="Usu_Ult_Mod" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="TB_Matricula">
+          <Key>
+            <PropertyRef Name="NroMat" />
+          </Key>
+          <Property Name="NroMat" Type="char" MaxLength="7" Nullable="false" />
+          <Property Name="IdSeme" Type="char" MaxLength="7" Nullable="false" />
+          <Property Name="EstMat" Type="tinyint" Nullable="false" />
+          <Property Name="IdAlum" Type="char" MaxLength="4" Nullable="false" />
+          <Property Name="FecMat" Type="date" />
+          <Property Name="CodCar" Type="char" MaxLength="4" />
+        </EntityType>
+        <EntityType Name="TB_Profesor">
+          <Key>
+            <PropertyRef Name="IdProf" />
+          </Key>
+          <Property Name="IdProf" Type="char" MaxLength="4" Nullable="false" />
+          <Property Name="Ndocum" Type="char" MaxLength="8" Nullable="false" />
+          <Property Name="NomPro" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="ApePat" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ApeMat" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CorIns" Type="varchar" MaxLength="50" />
+          <Property Name="TelPro" Type="char" MaxLength="9" />
+          <Property Name="FecNac" Type="date" />
+          <Property Name="Sexopr" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="FecIng" Type="date" />
+          <Property Name="Estado" Type="bit" />
+          <Property Name="Fec_Registro" Type="datetime" />
+          <Property Name="Usu_Registro" Type="varchar" MaxLength="20" />
+          <Property Name="Fec_Ult_Mod" Type="datetime" />
+          <Property Name="Usu_Ult_Mod" Type="varchar" MaxLength="20" />
+          <Property Name="direccion" Type="varchar" MaxLength="100" />
+          <Property Name="Id_Ubi" Type="nchar" MaxLength="6" Nullable="false" />
+          <Property Name="Foto" Type="image" />
+        </EntityType>
+        <EntityType Name="Tb_Seccion">
+          <Key>
+            <PropertyRef Name="IdCods" />
+          </Key>
+          <Property Name="IdCods" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="IdCurs" Type="char" MaxLength="4" Nullable="false" />
+          <Property Name="IdProf" Type="char" MaxLength="4" Nullable="false" />
+          <Property Name="Activo" Type="bit" />
+          <Property Name="Vacant" Type="tinyint" />
+          <Property Name="DIA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="IdCent" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="Fec_Registro" Type="datetime" />
+          <Property Name="Usu_Registro" Type="varchar" MaxLength="20" />
+          <Property Name="Fec_Ult_Mod" Type="datetime" />
+          <Property Name="Usu_Ult_Mod" Type="varchar" MaxLength="20" />
+          <Property Name="HorIni" Type="time" Precision="0" />
+          <Property Name="HorFin" Type="time" Precision="0" />
+        </EntityType>
+        <EntityType Name="TB_Semestre">
+          <Key>
+            <PropertyRef Name="IdSeme" />
+          </Key>
+          <Property Name="IdSeme" Type="char" MaxLength="7" Nullable="false" />
+          <Property Name="Descrp" Type="varchar" MaxLength="50" />
+          <Property Name="FecInc" Type="date" />
+          <Property Name="FecFin" Type="date" />
+          <Property Name="Fec_Registro" Type="datetime" />
+          <Property Name="Usu_Registro" Type="varchar" MaxLength="20" />
+          <Property Name="Fec_Ult_Mod" Type="datetime" />
+          <Property Name="Usu_Ult_Mod" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Tb_Ubigeo">
+          <Key>
+            <PropertyRef Name="Id_Ubigeo" />
+          </Key>
+          <Property Name="Id_Ubigeo" Type="nchar" MaxLength="6" Nullable="false" />
+          <Property Name="IdDepa" Type="nvarchar" MaxLength="255" />
+          <Property Name="IdProv" Type="nvarchar" MaxLength="255" />
+          <Property Name="IdDist" Type="nvarchar" MaxLength="255" />
+          <Property Name="Departamento" Type="nvarchar" MaxLength="255" />
+          <Property Name="Provincia" Type="nvarchar" MaxLength="255" />
+          <Property Name="Distrito" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Tb_Usuario">
+          <Key>
+            <PropertyRef Name="Login_Usuario" />
+          </Key>
+          <Property Name="Login_Usuario" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Pass_Usuario" Type="varchar" MaxLength="20" />
+          <Property Name="Niv_Usuario" Type="int" />
+          <Property Name="Est_Usuario" Type="int" />
+          <Property Name="Fec_Registro" Type="datetime" />
+          <Property Name="Usu_Registro" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <Association Name="FK_Asi_Car">
+          <End Role="Tb_Carrera" Type="Self.Tb_Carrera" Multiplicity="1" />
+          <End Role="Tb_Curso" Type="Self.Tb_Curso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Carrera">
+              <PropertyRef Name="CodCar" />
+            </Principal>
+            <Dependent Role="Tb_Curso">
+              <PropertyRef Name="CodCar" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cur_Sec">
+          <End Role="Tb_Curso" Type="Self.Tb_Curso" Multiplicity="1" />
+          <End Role="Tb_Seccion" Type="Self.Tb_Seccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Curso">
+              <PropertyRef Name="IdCurs" />
+            </Principal>
+            <Dependent Role="Tb_Seccion">
+              <PropertyRef Name="IdCurs" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Loc_Aula">
+          <End Role="TB_local" Type="Self.TB_local" Multiplicity="1" />
+          <End Role="TB_Aula" Type="Self.TB_Aula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_local">
+              <PropertyRef Name="IdCent" />
+            </Principal>
+            <Dependent Role="TB_Aula">
+              <PropertyRef Name="IdCent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Local_Seccion">
+          <End Role="TB_local" Type="Self.TB_local" Multiplicity="1" />
+          <End Role="Tb_Seccion" Type="Self.Tb_Seccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_local">
+              <PropertyRef Name="IdCent" />
+            </Principal>
+            <Dependent Role="Tb_Seccion">
+              <PropertyRef Name="IdCent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Mat_Alu">
+          <End Role="TB_Alumno" Type="Self.TB_Alumno" Multiplicity="1" />
+          <End Role="TB_Matricula" Type="Self.TB_Matricula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Alumno">
+              <PropertyRef Name="IdAlum" />
+            </Principal>
+            <Dependent Role="TB_Matricula">
+              <PropertyRef Name="IdAlum" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SecProf">
+          <End Role="TB_Profesor" Type="Self.TB_Profesor" Multiplicity="1" />
+          <End Role="Tb_Seccion" Type="Self.Tb_Seccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Profesor">
+              <PropertyRef Name="IdProf" />
+            </Principal>
+            <Dependent Role="Tb_Seccion">
+              <PropertyRef Name="IdProf" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_Alumno_Tb_Carrera">
+          <End Role="Tb_Carrera" Type="Self.Tb_Carrera" Multiplicity="1" />
+          <End Role="TB_Alumno" Type="Self.TB_Alumno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Carrera">
+              <PropertyRef Name="CodCar" />
+            </Principal>
+            <Dependent Role="TB_Alumno">
+              <PropertyRef Name="CodCar" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_Alumno_Tb_Ubigeo">
+          <End Role="Tb_Ubigeo" Type="Self.Tb_Ubigeo" Multiplicity="1" />
+          <End Role="TB_Alumno" Type="Self.TB_Alumno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Ubigeo">
+              <PropertyRef Name="Id_Ubigeo" />
+            </Principal>
+            <Dependent Role="TB_Alumno">
+              <PropertyRef Name="Id_Ubi" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tb_Carrera_TB_Facultad">
+          <End Role="TB_Facultad" Type="Self.TB_Facultad" Multiplicity="1" />
+          <End Role="Tb_Carrera" Type="Self.Tb_Carrera" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Facultad">
+              <PropertyRef Name="IdFacu" />
+            </Principal>
+            <Dependent Role="Tb_Carrera">
+              <PropertyRef Name="IdFacu" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_Det_Espc_Profe">
+          <End Role="TB_Profesor" Type="Self.TB_Profesor" Multiplicity="1" />
+          <End Role="TB_Det_Espc" Type="Self.TB_Det_Espc" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Profesor">
+              <PropertyRef Name="IdProf" />
+            </Principal>
+            <Dependent Role="TB_Det_Espc">
+              <PropertyRef Name="IdProf" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_Det_Mat_TB_Matricula">
+          <End Role="TB_Matricula" Type="Self.TB_Matricula" Multiplicity="1" />
+          <End Role="TB_Det_Mat" Type="Self.TB_Det_Mat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Matricula">
+              <PropertyRef Name="NroMat" />
+            </Principal>
+            <Dependent Role="TB_Det_Mat">
+              <PropertyRef Name="NroMat" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_Det_Mat_Tb_Seccion">
+          <End Role="Tb_Seccion" Type="Self.Tb_Seccion" Multiplicity="1" />
+          <End Role="TB_Det_Mat" Type="Self.TB_Det_Mat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Seccion">
+              <PropertyRef Name="IdCods" />
+            </Principal>
+            <Dependent Role="TB_Det_Mat">
+              <PropertyRef Name="IdCods" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_Espc_Prof">
+          <End Role="TB_Espc_Prof" Type="Self.TB_Espc_Prof" Multiplicity="1" />
+          <End Role="TB_Det_Espc" Type="Self.TB_Det_Espc" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Espc_Prof">
+              <PropertyRef Name="IdEspc" />
+            </Principal>
+            <Dependent Role="TB_Det_Espc">
+              <PropertyRef Name="IdEspc" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_Matricula_TB_Semestre">
+          <End Role="TB_Semestre" Type="Self.TB_Semestre" Multiplicity="1" />
+          <End Role="TB_Matricula" Type="Self.TB_Matricula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Semestre">
+              <PropertyRef Name="IdSeme" />
+            </Principal>
+            <Dependent Role="TB_Matricula">
+              <PropertyRef Name="IdSeme" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_Profesor_Tb_Ubigeo">
+          <End Role="Tb_Ubigeo" Type="Self.Tb_Ubigeo" Multiplicity="1" />
+          <End Role="TB_Profesor" Type="Self.TB_Profesor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Ubigeo">
+              <PropertyRef Name="Id_Ubigeo" />
+            </Principal>
+            <Dependent Role="TB_Profesor">
+              <PropertyRef Name="Id_Ubi" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="usp_ActualizarAlumno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdAlum" Type="char" Mode="In" />
+          <Parameter Name="NomAlu" Type="varchar" Mode="In" />
+          <Parameter Name="ApePat" Type="varchar" Mode="In" />
+          <Parameter Name="ApeMat" Type="varchar" Mode="In" />
+          <Parameter Name="TelAlu" Type="char" Mode="In" />
+          <Parameter Name="FecNac" Type="date" Mode="In" />
+          <Parameter Name="Estado" Type="bit" Mode="In" />
+          <Parameter Name="Ndocum" Type="char" Mode="In" />
+          <Parameter Name="Id_Ubi" Type="char" Mode="In" />
+          <Parameter Name="Sexoal" Type="char" Mode="In" />
+          <Parameter Name="CorAlu" Type="varchar" Mode="In" />
+          <Parameter Name="Usu_Regi" Type="varchar" Mode="In" />
+          <Parameter Name="CodCar" Type="char" Mode="In" />
+          <Parameter Name="FotoAlum" Type="image" Mode="In" />
+          <Parameter Name="direcc" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="usp_ActualizarCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="vcod" Type="char" Mode="In" />
+          <Parameter Name="vidfacu" Type="char" Mode="In" />
+          <Parameter Name="vdescar" Type="varchar" Mode="In" />
+          <Parameter Name="vusu_ult_regis" Type="varchar" Mode="In" />
+          <Parameter Name="vdesFac" Type="varchar" Mode="In" />
+          <Parameter Name="vest_carr" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_ActualizarCurso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdCurs" Type="char" Mode="In" />
+          <Parameter Name="NomCur" Type="varchar" Mode="In" />
+          <Parameter Name="Activo" Type="bit" Mode="In" />
+          <Parameter Name="CodCar" Type="char" Mode="In" />
+          <Parameter Name="Usu_Ult_Mod" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="usp_ActualizarCursoActivo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdCurs" Type="char" Mode="In" />
+        </Function>
+        <Function Name="usp_ActulizarProfesor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdProf" Type="char" Mode="In" />
+          <Parameter Name="NomPro" Type="varchar" Mode="In" />
+          <Parameter Name="ApePat" Type="varchar" Mode="In" />
+          <Parameter Name="ApeMat" Type="varchar" Mode="In" />
+          <Parameter Name="TelPro" Type="char" Mode="In" />
+          <Parameter Name="Estado" Type="bit" Mode="In" />
+          <Parameter Name="FecIng" Type="date" Mode="In" />
+          <Parameter Name="Ndocum" Type="char" Mode="In" />
+          <Parameter Name="Sexopr" Type="char" Mode="In" />
+          <Parameter Name="Id_Ubi" Type="char" Mode="In" />
+          <Parameter Name="Usu_Ult_Mod" Type="varchar" Mode="In" />
+          <Parameter Name="Foto" Type="image" Mode="In" />
+        </Function>
+        <Function Name="usp_BorrarAlumno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdAlum" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_BorrarCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="vcod" Type="char" Mode="In" />
+        </Function>
+        <Function Name="usp_BorrarCurso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdCurso" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_BorrarProfesor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdProfesor" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_CarreraXGenero" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_ConsultaProfesor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cod" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="usp_ConsultarAlumno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdAlum" Type="char" Mode="In" />
+        </Function>
+        <Function Name="usp_ConsultarCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="vcod" Type="char" Mode="In" />
+        </Function>
+        <Function Name="usp_ConsultarCurso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdCurs" Type="char" Mode="In" />
+        </Function>
+        <Function Name="usp_ConsultarUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Login_Usuario" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="usp_ConsultaWebAlumno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idAlu" Type="char" Mode="In" />
+        </Function>
+        <Function Name="usp_CursosDisponiblesAlumno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="dni" Type="char" Mode="In" />
+        </Function>
+        <Function Name="usp_detalleMatricula" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="dni" Type="char" Mode="In" />
+        </Function>
+        <Function Name="usp_facultadCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodCar" Type="char" Mode="In" />
+        </Function>
+        <Function Name="usp_InserCurso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="NomCur" Type="varchar" Mode="In" />
+          <Parameter Name="Activo" Type="bit" Mode="In" />
+          <Parameter Name="CodCar" Type="char" Mode="In" />
+          <Parameter Name="Usu_Registro" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="usp_InsertarAlumnos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="NomAlu" Type="varchar" Mode="In" />
+          <Parameter Name="ApePat" Type="varchar" Mode="In" />
+          <Parameter Name="ApeMat" Type="varchar" Mode="In" />
+          <Parameter Name="Ndocum" Type="char" Mode="In" />
+          <Parameter Name="Id_Ubi" Type="char" Mode="In" />
+          <Parameter Name="Sexoal" Type="char" Mode="In" />
+          <Parameter Name="FecNac" Type="date" Mode="In" />
+          <Parameter Name="CorAlu" Type="varchar" Mode="In" />
+          <Parameter Name="TelAlu" Type="char" Mode="In" />
+          <Parameter Name="Usu_Regi" Type="varchar" Mode="In" />
+          <Parameter Name="Estado" Type="bit" Mode="In" />
+          <Parameter Name="CodCar" Type="char" Mode="In" />
+          <Parameter Name="FotoAlum" Type="image" Mode="In" />
+          <Parameter Name="direcc" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="usp_InsertarCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="vIdFacu" Type="char" Mode="In" />
+          <Parameter Name="vDesCar" Type="varchar" Mode="In" />
+          <Parameter Name="vUsu_regi" Type="varchar" Mode="In" />
+          <Parameter Name="vest_carr" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_InsertarProfesor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Ndocum" Type="char" Mode="In" />
+          <Parameter Name="NomPro" Type="varchar" Mode="In" />
+          <Parameter Name="ApePat" Type="varchar" Mode="In" />
+          <Parameter Name="ApeMat" Type="varchar" Mode="In" />
+          <Parameter Name="Sexopr" Type="char" Mode="In" />
+          <Parameter Name="Id_Ubi" Type="char" Mode="In" />
+          <Parameter Name="Foto" Type="image" Mode="In" />
+          <Parameter Name="Usu_Registro" Type="varchar" Mode="In" />
+          <Parameter Name="Estado" Type="bit" Mode="In" />
+          <Parameter Name="CorIns" Type="varchar" Mode="In" />
+          <Parameter Name="TelPro" Type="char" Mode="In" />
+          <Parameter Name="FecNac" Type="date" Mode="In" />
+          <Parameter Name="FecIng" Type="date" Mode="In" />
+        </Function>
+        <Function Name="usp_InsertarSeccion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdCurs" Type="char" Mode="In" />
+          <Parameter Name="IdProf" Type="char" Mode="In" />
+          <Parameter Name="Activo" Type="bit" Mode="In" />
+          <Parameter Name="Vacant" Type="tinyint" Mode="In" />
+          <Parameter Name="DIA" Type="varchar" Mode="In" />
+          <Parameter Name="HorIni" Type="time" Mode="In" />
+          <Parameter Name="HorFin" Type="time" Mode="In" />
+          <Parameter Name="IdCent" Type="char" Mode="In" />
+        </Function>
+        <Function Name="usp_InsertMatricula" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdSeme" Type="char" Mode="In" />
+          <Parameter Name="EstMat" Type="tinyint" Mode="In" />
+          <Parameter Name="IdAlum" Type="char" Mode="In" />
+          <Parameter Name="FecMat" Type="date" Mode="In" />
+        </Function>
+        <Function Name="usp_ListaConsultarProfesorCurso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="vcod" Type="char" Mode="In" />
+        </Function>
+        <Function Name="usp_ListarAlumno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="char" Mode="In" />
+        </Function>
+        <Function Name="usp_ListarCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_ListarCurso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_ListarCursosAlumnoFechas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdAlum" Type="char" Mode="In" />
+          <Parameter Name="FecInc" Type="date" Mode="In" />
+          <Parameter Name="FecFin" Type="date" Mode="In" />
+        </Function>
+        <Function Name="usp_ListarFacultad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_ListarProfesor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="char" Mode="In" />
+        </Function>
+        <Function Name="usp_ListarVerDetMatricula" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Dni" Type="char" Mode="In" />
+        </Function>
+        <Function Name="usp_MatriculadosSeccion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_Matricular" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="NroMat" Type="char" Mode="In" />
+          <Parameter Name="IdCods" Type="char" Mode="In" />
+        </Function>
+        <Function Name="usp_ObtenerCarreraAlumno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdAlum" Type="char" Mode="In" />
+        </Function>
+        <Function Name="usp_ObtenerFacultadAlumno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdAlum" Type="char" Mode="In" />
+        </Function>
+        <Function Name="usp_PreMatricula" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="dni" Type="char" Mode="In" />
+        </Function>
+        <Function Name="usp_prematriculaCursos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="codcar" Type="char" Mode="In" />
+        </Function>
+        <Function Name="usp_Ubigeo_Departamentos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_Ubigeo_DistritosProvinciaDepartamento" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdDepartamento" Type="char" Mode="In" />
+          <Parameter Name="IdProvincia" Type="char" Mode="In" />
+        </Function>
+        <Function Name="usp_Ubigeo_ProvinciasDepartamento" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdDepartamento" Type="char" Mode="In" />
+        </Function>
+        <Function Name="usp_VerAlumno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_VerAlumnoDetallado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_VerCursoActivo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_VerCursoInactivo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_VerDetMatricula" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="dni" Type="char" Mode="In" />
+        </Function>
+        <Function Name="usp_verEspcProfesor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idprofe" Type="char" Mode="In" />
+        </Function>
+        <Function Name="usp_VerMatricula" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_VerProfesor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_VerProfesorDetallado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_VerSeccion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="InstituTecModelStoreContainer">
+          <EntitySet Name="TB_Alumno" EntityType="Self.TB_Alumno" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Aula" EntityType="Self.TB_Aula" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tb_Carrera" EntityType="Self.Tb_Carrera" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tb_Curso" EntityType="Self.Tb_Curso" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Det_Espc" EntityType="Self.TB_Det_Espc" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Det_Mat" EntityType="Self.TB_Det_Mat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Espc_Prof" EntityType="Self.TB_Espc_Prof" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Facultad" EntityType="Self.TB_Facultad" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_local" EntityType="Self.TB_local" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Matricula" EntityType="Self.TB_Matricula" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Profesor" EntityType="Self.TB_Profesor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tb_Seccion" EntityType="Self.Tb_Seccion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Semestre" EntityType="Self.TB_Semestre" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tb_Ubigeo" EntityType="Self.Tb_Ubigeo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tb_Usuario" EntityType="Self.Tb_Usuario" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Asi_Car" Association="Self.FK_Asi_Car">
+            <End Role="Tb_Carrera" EntitySet="Tb_Carrera" />
+            <End Role="Tb_Curso" EntitySet="Tb_Curso" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cur_Sec" Association="Self.FK_Cur_Sec">
+            <End Role="Tb_Curso" EntitySet="Tb_Curso" />
+            <End Role="Tb_Seccion" EntitySet="Tb_Seccion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Loc_Aula" Association="Self.FK_Loc_Aula">
+            <End Role="TB_local" EntitySet="TB_local" />
+            <End Role="TB_Aula" EntitySet="TB_Aula" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Local_Seccion" Association="Self.FK_Local_Seccion">
+            <End Role="TB_local" EntitySet="TB_local" />
+            <End Role="Tb_Seccion" EntitySet="Tb_Seccion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Mat_Alu" Association="Self.FK_Mat_Alu">
+            <End Role="TB_Alumno" EntitySet="TB_Alumno" />
+            <End Role="TB_Matricula" EntitySet="TB_Matricula" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SecProf" Association="Self.FK_SecProf">
+            <End Role="TB_Profesor" EntitySet="TB_Profesor" />
+            <End Role="Tb_Seccion" EntitySet="Tb_Seccion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_Alumno_Tb_Carrera" Association="Self.FK_TB_Alumno_Tb_Carrera">
+            <End Role="Tb_Carrera" EntitySet="Tb_Carrera" />
+            <End Role="TB_Alumno" EntitySet="TB_Alumno" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_Alumno_Tb_Ubigeo" Association="Self.FK_TB_Alumno_Tb_Ubigeo">
+            <End Role="Tb_Ubigeo" EntitySet="Tb_Ubigeo" />
+            <End Role="TB_Alumno" EntitySet="TB_Alumno" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tb_Carrera_TB_Facultad" Association="Self.FK_Tb_Carrera_TB_Facultad">
+            <End Role="TB_Facultad" EntitySet="TB_Facultad" />
+            <End Role="Tb_Carrera" EntitySet="Tb_Carrera" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_Det_Espc_Profe" Association="Self.FK_TB_Det_Espc_Profe">
+            <End Role="TB_Profesor" EntitySet="TB_Profesor" />
+            <End Role="TB_Det_Espc" EntitySet="TB_Det_Espc" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_Det_Mat_TB_Matricula" Association="Self.FK_TB_Det_Mat_TB_Matricula">
+            <End Role="TB_Matricula" EntitySet="TB_Matricula" />
+            <End Role="TB_Det_Mat" EntitySet="TB_Det_Mat" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_Det_Mat_Tb_Seccion" Association="Self.FK_TB_Det_Mat_Tb_Seccion">
+            <End Role="Tb_Seccion" EntitySet="Tb_Seccion" />
+            <End Role="TB_Det_Mat" EntitySet="TB_Det_Mat" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_Espc_Prof" Association="Self.FK_TB_Espc_Prof">
+            <End Role="TB_Espc_Prof" EntitySet="TB_Espc_Prof" />
+            <End Role="TB_Det_Espc" EntitySet="TB_Det_Espc" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_Matricula_TB_Semestre" Association="Self.FK_TB_Matricula_TB_Semestre">
+            <End Role="TB_Semestre" EntitySet="TB_Semestre" />
+            <End Role="TB_Matricula" EntitySet="TB_Matricula" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_Profesor_Tb_Ubigeo" Association="Self.FK_TB_Profesor_Tb_Ubigeo">
+            <End Role="Tb_Ubigeo" EntitySet="Tb_Ubigeo" />
+            <End Role="TB_Profesor" EntitySet="TB_Profesor" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="InstituTecModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TB_Alumno">
+          <Key>
+            <PropertyRef Name="IdAlum" />
+          </Key>
+          <Property Name="IdAlum" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Ndocum" Type="String" MaxLength="8" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="NomAlu" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ApePat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ApeMat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TelAlu" Type="String" MaxLength="9" FixedLength="true" Unicode="false" />
+          <Property Name="CorAlu" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Boolean" />
+          <Property Name="Sexoal" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="FecNac" Type="DateTime" Precision="0" />
+          <Property Name="CodCar" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Fec_Registro" Type="DateTime" Precision="3" />
+          <Property Name="Usu_Registro" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Fec_Ult_Mod" Type="DateTime" Precision="3" />
+          <Property Name="Usu_Ult_Mod" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="direccion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Id_Ubi" Type="String" MaxLength="6" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="foto" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="TB_Matricula" Relationship="Self.FK_Mat_Alu" FromRole="TB_Alumno" ToRole="TB_Matricula" />
+          <NavigationProperty Name="Tb_Carrera" Relationship="Self.FK_TB_Alumno_Tb_Carrera" FromRole="TB_Alumno" ToRole="Tb_Carrera" />
+          <NavigationProperty Name="Tb_Ubigeo" Relationship="Self.FK_TB_Alumno_Tb_Ubigeo" FromRole="TB_Alumno" ToRole="Tb_Ubigeo" />
+        </EntityType>
+        <EntityType Name="TB_Aula">
+          <Key>
+            <PropertyRef Name="IdAula" />
+          </Key>
+          <Property Name="IdAula" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="IdCent" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="AfoAul" Type="Byte" />
+          <Property Name="Habita" Type="Boolean" />
+          <Property Name="Fec_Registro" Type="DateTime" Precision="3" />
+          <Property Name="Usu_Registro" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Fec_Ult_Mod" Type="DateTime" Precision="3" />
+          <Property Name="Usu_Ult_Mod" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TB_local" Relationship="Self.FK_Loc_Aula" FromRole="TB_Aula" ToRole="TB_local" />
+        </EntityType>
+        <EntityType Name="Tb_Carrera">
+          <Key>
+            <PropertyRef Name="CodCar" />
+          </Key>
+          <Property Name="CodCar" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="IdFacu" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="DesCar" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Fec_Registro" Type="DateTime" Precision="3" />
+          <Property Name="Usu_Registro" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Fec_Ult_Mod" Type="DateTime" Precision="3" />
+          <Property Name="Usu_Ult_Mod" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Est_carr" Type="Int32" />
+          <NavigationProperty Name="TB_Alumno" Relationship="Self.FK_TB_Alumno_Tb_Carrera" FromRole="Tb_Carrera" ToRole="TB_Alumno" />
+          <NavigationProperty Name="Tb_Curso" Relationship="Self.FK_Asi_Car" FromRole="Tb_Carrera" ToRole="Tb_Curso" />
+          <NavigationProperty Name="TB_Facultad" Relationship="Self.FK_Tb_Carrera_TB_Facultad" FromRole="Tb_Carrera" ToRole="TB_Facultad" />
+        </EntityType>
+        <EntityType Name="Tb_Curso">
+          <Key>
+            <PropertyRef Name="IdCurs" />
+          </Key>
+          <Property Name="IdCurs" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="NomCur" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Activo" Type="Boolean" />
+          <Property Name="CodCar" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Fec_Registro" Type="DateTime" Precision="3" />
+          <Property Name="Usu_Registro" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Fec_Ult_Mod" Type="DateTime" Precision="3" />
+          <Property Name="Usu_Ult_Mod" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Tb_Carrera" Relationship="Self.FK_Asi_Car" FromRole="Tb_Curso" ToRole="Tb_Carrera" />
+          <NavigationProperty Name="Tb_Seccion" Relationship="Self.FK_Cur_Sec" FromRole="Tb_Curso" ToRole="Tb_Seccion" />
+        </EntityType>
+        <EntityType Name="TB_Espc_Prof">
+          <Key>
+            <PropertyRef Name="IdEspc" />
+          </Key>
+          <Property Name="IdEspc" Type="Byte" Nullable="false" />
+          <Property Name="DesEsc" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="Fec_Registro" Type="DateTime" Precision="3" />
+          <Property Name="Usu_Registro" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Fec_Ult_Mod" Type="DateTime" Precision="3" />
+          <Property Name="Usu_Ult_Mod" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TB_Profesor" Relationship="Self.TB_Det_Espc" FromRole="TB_Espc_Prof" ToRole="TB_Profesor" />
+        </EntityType>
+        <EntityType Name="TB_Facultad">
+          <Key>
+            <PropertyRef Name="IdFacu" />
+          </Key>
+          <Property Name="IdFacu" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="DesFac" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fec_Registro" Type="DateTime" Precision="3" />
+          <Property Name="Usu_Registro" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Fec_Ult_Mod" Type="DateTime" Precision="3" />
+          <Property Name="Usu_Ult_Mod" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Tb_Carrera" Relationship="Self.FK_Tb_Carrera_TB_Facultad" FromRole="TB_Facultad" ToRole="Tb_Carrera" />
+        </EntityType>
+        <EntityType Name="TB_local">
+          <Key>
+            <PropertyRef Name="IdCent" />
+          </Key>
+          <Property Name="IdCent" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Desloc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Dirloc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fec_Registro" Type="DateTime" Precision="3" />
+          <Property Name="Usu_Registro" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Fec_Ult_Mod" Type="DateTime" Precision="3" />
+          <Property Name="Usu_Ult_Mod" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TB_Aula" Relationship="Self.FK_Loc_Aula" FromRole="TB_local" ToRole="TB_Aula" />
+          <NavigationProperty Name="Tb_Seccion" Relationship="Self.FK_Local_Seccion" FromRole="TB_local" ToRole="Tb_Seccion" />
+        </EntityType>
+        <EntityType Name="TB_Matricula">
+          <Key>
+            <PropertyRef Name="NroMat" />
+          </Key>
+          <Property Name="NroMat" Type="String" MaxLength="7" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="IdSeme" Type="String" MaxLength="7" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="EstMat" Type="Byte" Nullable="false" />
+          <Property Name="IdAlum" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="FecMat" Type="DateTime" Precision="0" />
+          <Property Name="CodCar" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="TB_Alumno" Relationship="Self.FK_Mat_Alu" FromRole="TB_Matricula" ToRole="TB_Alumno" />
+          <NavigationProperty Name="TB_Semestre" Relationship="Self.FK_TB_Matricula_TB_Semestre" FromRole="TB_Matricula" ToRole="TB_Semestre" />
+          <NavigationProperty Name="Tb_Seccion" Relationship="Self.TB_Det_Mat" FromRole="TB_Matricula" ToRole="Tb_Seccion" />
+        </EntityType>
+        <EntityType Name="TB_Profesor">
+          <Key>
+            <PropertyRef Name="IdProf" />
+          </Key>
+          <Property Name="IdProf" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Ndocum" Type="String" MaxLength="8" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="NomPro" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ApePat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ApeMat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CorIns" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TelPro" Type="String" MaxLength="9" FixedLength="true" Unicode="false" />
+          <Property Name="FecNac" Type="DateTime" Precision="0" />
+          <Property Name="Sexopr" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="FecIng" Type="DateTime" Precision="0" />
+          <Property Name="Estado" Type="Boolean" />
+          <Property Name="Fec_Registro" Type="DateTime" Precision="3" />
+          <Property Name="Usu_Registro" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Fec_Ult_Mod" Type="DateTime" Precision="3" />
+          <Property Name="Usu_Ult_Mod" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="direccion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Id_Ubi" Type="String" MaxLength="6" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Foto" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="Tb_Seccion" Relationship="Self.FK_SecProf" FromRole="TB_Profesor" ToRole="Tb_Seccion" />
+          <NavigationProperty Name="Tb_Ubigeo" Relationship="Self.FK_TB_Profesor_Tb_Ubigeo" FromRole="TB_Profesor" ToRole="Tb_Ubigeo" />
+          <NavigationProperty Name="TB_Espc_Prof" Relationship="Self.TB_Det_Espc" FromRole="TB_Profesor" ToRole="TB_Espc_Prof" />
+        </EntityType>
+        <EntityType Name="Tb_Seccion">
+          <Key>
+            <PropertyRef Name="IdCods" />
+          </Key>
+          <Property Name="IdCods" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="IdCurs" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="IdProf" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Activo" Type="Boolean" />
+          <Property Name="Vacant" Type="Byte" />
+          <Property Name="DIA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IdCent" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Fec_Registro" Type="DateTime" Precision="3" />
+          <Property Name="Usu_Registro" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Fec_Ult_Mod" Type="DateTime" Precision="3" />
+          <Property Name="Usu_Ult_Mod" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="HorIni" Type="Time" Precision="0" />
+          <Property Name="HorFin" Type="Time" Precision="0" />
+          <NavigationProperty Name="Tb_Curso" Relationship="Self.FK_Cur_Sec" FromRole="Tb_Seccion" ToRole="Tb_Curso" />
+          <NavigationProperty Name="TB_local" Relationship="Self.FK_Local_Seccion" FromRole="Tb_Seccion" ToRole="TB_local" />
+          <NavigationProperty Name="TB_Profesor" Relationship="Self.FK_SecProf" FromRole="Tb_Seccion" ToRole="TB_Profesor" />
+          <NavigationProperty Name="TB_Matricula" Relationship="Self.TB_Det_Mat" FromRole="Tb_Seccion" ToRole="TB_Matricula" />
+        </EntityType>
+        <EntityType Name="TB_Semestre">
+          <Key>
+            <PropertyRef Name="IdSeme" />
+          </Key>
+          <Property Name="IdSeme" Type="String" MaxLength="7" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Descrp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FecInc" Type="DateTime" Precision="0" />
+          <Property Name="FecFin" Type="DateTime" Precision="0" />
+          <Property Name="Fec_Registro" Type="DateTime" Precision="3" />
+          <Property Name="Usu_Registro" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Fec_Ult_Mod" Type="DateTime" Precision="3" />
+          <Property Name="Usu_Ult_Mod" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TB_Matricula" Relationship="Self.FK_TB_Matricula_TB_Semestre" FromRole="TB_Semestre" ToRole="TB_Matricula" />
+        </EntityType>
+        <EntityType Name="Tb_Ubigeo">
+          <Key>
+            <PropertyRef Name="Id_Ubigeo" />
+          </Key>
+          <Property Name="Id_Ubigeo" Type="String" MaxLength="6" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="IdDepa" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IdProv" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IdDist" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Departamento" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Provincia" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Distrito" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TB_Alumno" Relationship="Self.FK_TB_Alumno_Tb_Ubigeo" FromRole="Tb_Ubigeo" ToRole="TB_Alumno" />
+          <NavigationProperty Name="TB_Profesor" Relationship="Self.FK_TB_Profesor_Tb_Ubigeo" FromRole="Tb_Ubigeo" ToRole="TB_Profesor" />
+        </EntityType>
+        <EntityType Name="Tb_Usuario">
+          <Key>
+            <PropertyRef Name="Login_Usuario" />
+          </Key>
+          <Property Name="Login_Usuario" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Pass_Usuario" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Niv_Usuario" Type="Int32" />
+          <Property Name="Est_Usuario" Type="Int32" />
+          <Property Name="Fec_Registro" Type="DateTime" Precision="3" />
+          <Property Name="Usu_Registro" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_Mat_Alu">
+          <End Role="TB_Alumno" Type="Self.TB_Alumno" Multiplicity="1" />
+          <End Role="TB_Matricula" Type="Self.TB_Matricula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Alumno">
+              <PropertyRef Name="IdAlum" />
+            </Principal>
+            <Dependent Role="TB_Matricula">
+              <PropertyRef Name="IdAlum" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_Alumno_Tb_Carrera">
+          <End Role="Tb_Carrera" Type="Self.Tb_Carrera" Multiplicity="1" />
+          <End Role="TB_Alumno" Type="Self.TB_Alumno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Carrera">
+              <PropertyRef Name="CodCar" />
+            </Principal>
+            <Dependent Role="TB_Alumno">
+              <PropertyRef Name="CodCar" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_Alumno_Tb_Ubigeo">
+          <End Role="Tb_Ubigeo" Type="Self.Tb_Ubigeo" Multiplicity="1" />
+          <End Role="TB_Alumno" Type="Self.TB_Alumno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Ubigeo">
+              <PropertyRef Name="Id_Ubigeo" />
+            </Principal>
+            <Dependent Role="TB_Alumno">
+              <PropertyRef Name="Id_Ubi" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Loc_Aula">
+          <End Role="TB_local" Type="Self.TB_local" Multiplicity="1" />
+          <End Role="TB_Aula" Type="Self.TB_Aula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_local">
+              <PropertyRef Name="IdCent" />
+            </Principal>
+            <Dependent Role="TB_Aula">
+              <PropertyRef Name="IdCent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Asi_Car">
+          <End Role="Tb_Carrera" Type="Self.Tb_Carrera" Multiplicity="1" />
+          <End Role="Tb_Curso" Type="Self.Tb_Curso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Carrera">
+              <PropertyRef Name="CodCar" />
+            </Principal>
+            <Dependent Role="Tb_Curso">
+              <PropertyRef Name="CodCar" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tb_Carrera_TB_Facultad">
+          <End Role="TB_Facultad" Type="Self.TB_Facultad" Multiplicity="1" />
+          <End Role="Tb_Carrera" Type="Self.Tb_Carrera" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Facultad">
+              <PropertyRef Name="IdFacu" />
+            </Principal>
+            <Dependent Role="Tb_Carrera">
+              <PropertyRef Name="IdFacu" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cur_Sec">
+          <End Role="Tb_Curso" Type="Self.Tb_Curso" Multiplicity="1" />
+          <End Role="Tb_Seccion" Type="Self.Tb_Seccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Curso">
+              <PropertyRef Name="IdCurs" />
+            </Principal>
+            <Dependent Role="Tb_Seccion">
+              <PropertyRef Name="IdCurs" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Local_Seccion">
+          <End Role="TB_local" Type="Self.TB_local" Multiplicity="1" />
+          <End Role="Tb_Seccion" Type="Self.Tb_Seccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_local">
+              <PropertyRef Name="IdCent" />
+            </Principal>
+            <Dependent Role="Tb_Seccion">
+              <PropertyRef Name="IdCent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_Matricula_TB_Semestre">
+          <End Role="TB_Semestre" Type="Self.TB_Semestre" Multiplicity="1" />
+          <End Role="TB_Matricula" Type="Self.TB_Matricula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Semestre">
+              <PropertyRef Name="IdSeme" />
+            </Principal>
+            <Dependent Role="TB_Matricula">
+              <PropertyRef Name="IdSeme" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SecProf">
+          <End Role="TB_Profesor" Type="Self.TB_Profesor" Multiplicity="1" />
+          <End Role="Tb_Seccion" Type="Self.Tb_Seccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Profesor">
+              <PropertyRef Name="IdProf" />
+            </Principal>
+            <Dependent Role="Tb_Seccion">
+              <PropertyRef Name="IdProf" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_Profesor_Tb_Ubigeo">
+          <End Role="Tb_Ubigeo" Type="Self.Tb_Ubigeo" Multiplicity="1" />
+          <End Role="TB_Profesor" Type="Self.TB_Profesor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tb_Ubigeo">
+              <PropertyRef Name="Id_Ubigeo" />
+            </Principal>
+            <Dependent Role="TB_Profesor">
+              <PropertyRef Name="Id_Ubi" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TB_Det_Espc">
+          <End Role="TB_Profesor" Type="Self.TB_Profesor" Multiplicity="*" />
+          <End Role="TB_Espc_Prof" Type="Self.TB_Espc_Prof" Multiplicity="*" />
+        </Association>
+        <Association Name="TB_Det_Mat">
+          <End Role="TB_Matricula" Type="Self.TB_Matricula" Multiplicity="*" />
+          <End Role="Tb_Seccion" Type="Self.Tb_Seccion" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="InstituTecEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TB_Alumno" EntityType="Self.TB_Alumno" />
+          <EntitySet Name="TB_Aula" EntityType="Self.TB_Aula" />
+          <EntitySet Name="Tb_Carrera" EntityType="Self.Tb_Carrera" />
+          <EntitySet Name="Tb_Curso" EntityType="Self.Tb_Curso" />
+          <EntitySet Name="TB_Espc_Prof" EntityType="Self.TB_Espc_Prof" />
+          <EntitySet Name="TB_Facultad" EntityType="Self.TB_Facultad" />
+          <EntitySet Name="TB_local" EntityType="Self.TB_local" />
+          <EntitySet Name="TB_Matricula" EntityType="Self.TB_Matricula" />
+          <EntitySet Name="TB_Profesor" EntityType="Self.TB_Profesor" />
+          <EntitySet Name="Tb_Seccion" EntityType="Self.Tb_Seccion" />
+          <EntitySet Name="TB_Semestre" EntityType="Self.TB_Semestre" />
+          <EntitySet Name="Tb_Ubigeo" EntityType="Self.Tb_Ubigeo" />
+          <EntitySet Name="Tb_Usuario" EntityType="Self.Tb_Usuario" />
+          <AssociationSet Name="FK_Mat_Alu" Association="Self.FK_Mat_Alu">
+            <End Role="TB_Alumno" EntitySet="TB_Alumno" />
+            <End Role="TB_Matricula" EntitySet="TB_Matricula" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_Alumno_Tb_Carrera" Association="Self.FK_TB_Alumno_Tb_Carrera">
+            <End Role="Tb_Carrera" EntitySet="Tb_Carrera" />
+            <End Role="TB_Alumno" EntitySet="TB_Alumno" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_Alumno_Tb_Ubigeo" Association="Self.FK_TB_Alumno_Tb_Ubigeo">
+            <End Role="Tb_Ubigeo" EntitySet="Tb_Ubigeo" />
+            <End Role="TB_Alumno" EntitySet="TB_Alumno" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Loc_Aula" Association="Self.FK_Loc_Aula">
+            <End Role="TB_local" EntitySet="TB_local" />
+            <End Role="TB_Aula" EntitySet="TB_Aula" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Asi_Car" Association="Self.FK_Asi_Car">
+            <End Role="Tb_Carrera" EntitySet="Tb_Carrera" />
+            <End Role="Tb_Curso" EntitySet="Tb_Curso" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tb_Carrera_TB_Facultad" Association="Self.FK_Tb_Carrera_TB_Facultad">
+            <End Role="TB_Facultad" EntitySet="TB_Facultad" />
+            <End Role="Tb_Carrera" EntitySet="Tb_Carrera" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cur_Sec" Association="Self.FK_Cur_Sec">
+            <End Role="Tb_Curso" EntitySet="Tb_Curso" />
+            <End Role="Tb_Seccion" EntitySet="Tb_Seccion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Local_Seccion" Association="Self.FK_Local_Seccion">
+            <End Role="TB_local" EntitySet="TB_local" />
+            <End Role="Tb_Seccion" EntitySet="Tb_Seccion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_Matricula_TB_Semestre" Association="Self.FK_TB_Matricula_TB_Semestre">
+            <End Role="TB_Semestre" EntitySet="TB_Semestre" />
+            <End Role="TB_Matricula" EntitySet="TB_Matricula" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SecProf" Association="Self.FK_SecProf">
+            <End Role="TB_Profesor" EntitySet="TB_Profesor" />
+            <End Role="Tb_Seccion" EntitySet="Tb_Seccion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_Profesor_Tb_Ubigeo" Association="Self.FK_TB_Profesor_Tb_Ubigeo">
+            <End Role="Tb_Ubigeo" EntitySet="Tb_Ubigeo" />
+            <End Role="TB_Profesor" EntitySet="TB_Profesor" />
+          </AssociationSet>
+          <AssociationSet Name="TB_Det_Espc" Association="Self.TB_Det_Espc">
+            <End Role="TB_Profesor" EntitySet="TB_Profesor" />
+            <End Role="TB_Espc_Prof" EntitySet="TB_Espc_Prof" />
+          </AssociationSet>
+          <AssociationSet Name="TB_Det_Mat" Association="Self.TB_Det_Mat">
+            <End Role="TB_Matricula" EntitySet="TB_Matricula" />
+            <End Role="Tb_Seccion" EntitySet="Tb_Seccion" />
+          </AssociationSet>
+          <FunctionImport Name="usp_ActualizarAlumno">
+            <Parameter Name="IdAlum" Mode="In" Type="String" />
+            <Parameter Name="NomAlu" Mode="In" Type="String" />
+            <Parameter Name="ApePat" Mode="In" Type="String" />
+            <Parameter Name="ApeMat" Mode="In" Type="String" />
+            <Parameter Name="TelAlu" Mode="In" Type="String" />
+            <Parameter Name="FecNac" Mode="In" Type="DateTime" />
+            <Parameter Name="Estado" Mode="In" Type="Boolean" />
+            <Parameter Name="Ndocum" Mode="In" Type="String" />
+            <Parameter Name="Id_Ubi" Mode="In" Type="String" />
+            <Parameter Name="Sexoal" Mode="In" Type="String" />
+            <Parameter Name="CorAlu" Mode="In" Type="String" />
+            <Parameter Name="Usu_Regi" Mode="In" Type="String" />
+            <Parameter Name="CodCar" Mode="In" Type="String" />
+            <Parameter Name="FotoAlum" Mode="In" Type="Binary" />
+            <Parameter Name="direcc" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_ActualizarCarrera">
+            <Parameter Name="vcod" Mode="In" Type="String" />
+            <Parameter Name="vidfacu" Mode="In" Type="String" />
+            <Parameter Name="vdescar" Mode="In" Type="String" />
+            <Parameter Name="vusu_ult_regis" Mode="In" Type="String" />
+            <Parameter Name="vdesFac" Mode="In" Type="String" />
+            <Parameter Name="vest_carr" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_ActualizarCurso">
+            <Parameter Name="IdCurs" Mode="In" Type="String" />
+            <Parameter Name="NomCur" Mode="In" Type="String" />
+            <Parameter Name="Activo" Mode="In" Type="Boolean" />
+            <Parameter Name="CodCar" Mode="In" Type="String" />
+            <Parameter Name="Usu_Ult_Mod" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_ActualizarCursoActivo">
+            <Parameter Name="IdCurs" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_ActulizarProfesor">
+            <Parameter Name="IdProf" Mode="In" Type="String" />
+            <Parameter Name="NomPro" Mode="In" Type="String" />
+            <Parameter Name="ApePat" Mode="In" Type="String" />
+            <Parameter Name="ApeMat" Mode="In" Type="String" />
+            <Parameter Name="TelPro" Mode="In" Type="String" />
+            <Parameter Name="Estado" Mode="In" Type="Boolean" />
+            <Parameter Name="FecIng" Mode="In" Type="DateTime" />
+            <Parameter Name="Ndocum" Mode="In" Type="String" />
+            <Parameter Name="Sexopr" Mode="In" Type="String" />
+            <Parameter Name="Id_Ubi" Mode="In" Type="String" />
+            <Parameter Name="Usu_Ult_Mod" Mode="In" Type="String" />
+            <Parameter Name="Foto" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="usp_BorrarAlumno">
+            <Parameter Name="IdAlum" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_BorrarCarrera">
+            <Parameter Name="vcod" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_BorrarCurso">
+            <Parameter Name="IdCurso" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_BorrarProfesor">
+            <Parameter Name="IdProfesor" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_CarreraXGenero" ReturnType="Collection(InstituTecModel.usp_CarreraXGenero_Result)" />
+          <FunctionImport Name="usp_ConsultaProfesor" ReturnType="Collection(InstituTecModel.usp_ConsultaProfesor_Result)">
+            <Parameter Name="cod" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_ConsultarAlumno" ReturnType="Collection(InstituTecModel.usp_ConsultarAlumno_Result)">
+            <Parameter Name="IdAlum" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_ConsultarCarrera" ReturnType="Collection(InstituTecModel.usp_ConsultarCarrera_Result)">
+            <Parameter Name="vcod" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_ConsultarCurso" ReturnType="Collection(InstituTecModel.usp_ConsultarCurso_Result)">
+            <Parameter Name="IdCurs" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_ConsultarUsuario" ReturnType="Collection(InstituTecModel.usp_ConsultarUsuario_Result)">
+            <Parameter Name="Login_Usuario" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_ConsultaWebAlumno" ReturnType="Collection(InstituTecModel.usp_ConsultaWebAlumno_Result)">
+            <Parameter Name="idAlu" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_CursosDisponiblesAlumno" ReturnType="Collection(String)">
+            <Parameter Name="dni" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_detalleMatricula" ReturnType="Collection(InstituTecModel.usp_detalleMatricula_Result)">
+            <Parameter Name="dni" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_facultadCarrera" ReturnType="Collection(InstituTecModel.usp_facultadCarrera_Result)">
+            <Parameter Name="CodCar" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_InserCurso">
+            <Parameter Name="NomCur" Mode="In" Type="String" />
+            <Parameter Name="Activo" Mode="In" Type="Boolean" />
+            <Parameter Name="CodCar" Mode="In" Type="String" />
+            <Parameter Name="Usu_Registro" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_InsertarAlumnos">
+            <Parameter Name="NomAlu" Mode="In" Type="String" />
+            <Parameter Name="ApePat" Mode="In" Type="String" />
+            <Parameter Name="ApeMat" Mode="In" Type="String" />
+            <Parameter Name="Ndocum" Mode="In" Type="String" />
+            <Parameter Name="Id_Ubi" Mode="In" Type="String" />
+            <Parameter Name="Sexoal" Mode="In" Type="String" />
+            <Parameter Name="FecNac" Mode="In" Type="DateTime" />
+            <Parameter Name="CorAlu" Mode="In" Type="String" />
+            <Parameter Name="TelAlu" Mode="In" Type="String" />
+            <Parameter Name="Usu_Regi" Mode="In" Type="String" />
+            <Parameter Name="Estado" Mode="In" Type="Boolean" />
+            <Parameter Name="CodCar" Mode="In" Type="String" />
+            <Parameter Name="FotoAlum" Mode="In" Type="Binary" />
+            <Parameter Name="direcc" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_InsertarCarrera">
+            <Parameter Name="vIdFacu" Mode="In" Type="String" />
+            <Parameter Name="vDesCar" Mode="In" Type="String" />
+            <Parameter Name="vUsu_regi" Mode="In" Type="String" />
+            <Parameter Name="vest_carr" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_InsertarProfesor">
+            <Parameter Name="Ndocum" Mode="In" Type="String" />
+            <Parameter Name="NomPro" Mode="In" Type="String" />
+            <Parameter Name="ApePat" Mode="In" Type="String" />
+            <Parameter Name="ApeMat" Mode="In" Type="String" />
+            <Parameter Name="Sexopr" Mode="In" Type="String" />
+            <Parameter Name="Id_Ubi" Mode="In" Type="String" />
+            <Parameter Name="Foto" Mode="In" Type="Binary" />
+            <Parameter Name="Usu_Registro" Mode="In" Type="String" />
+            <Parameter Name="Estado" Mode="In" Type="Boolean" />
+            <Parameter Name="CorIns" Mode="In" Type="String" />
+            <Parameter Name="TelPro" Mode="In" Type="String" />
+            <Parameter Name="FecNac" Mode="In" Type="DateTime" />
+            <Parameter Name="FecIng" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="usp_InsertarSeccion">
+            <Parameter Name="IdCurs" Mode="In" Type="String" />
+            <Parameter Name="IdProf" Mode="In" Type="String" />
+            <Parameter Name="Activo" Mode="In" Type="Boolean" />
+            <Parameter Name="Vacant" Mode="In" Type="Byte" />
+            <Parameter Name="DIA" Mode="In" Type="String" />
+            <Parameter Name="HorIni" Mode="In" Type="Time" />
+            <Parameter Name="HorFin" Mode="In" Type="Time" />
+            <Parameter Name="IdCent" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_InsertMatricula">
+            <Parameter Name="IdSeme" Mode="In" Type="String" />
+            <Parameter Name="EstMat" Mode="In" Type="Byte" />
+            <Parameter Name="IdAlum" Mode="In" Type="String" />
+            <Parameter Name="FecMat" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="usp_ListaConsultarProfesorCurso" ReturnType="Collection(InstituTecModel.usp_ListaConsultarProfesorCurso_Result)">
+            <Parameter Name="vcod" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_ListarAlumno" ReturnType="Collection(InstituTecModel.usp_ListarAlumno_Result)">
+            <Parameter Name="id" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_ListarCarrera" ReturnType="Collection(InstituTecModel.usp_ListarCarrera_Result)" />
+          <FunctionImport Name="usp_ListarCurso" ReturnType="Collection(InstituTecModel.usp_ListarCurso_Result)" />
+          <FunctionImport Name="usp_ListarCursosAlumnoFechas" ReturnType="Collection(InstituTecModel.usp_ListarCursosAlumnoFechas_Result)">
+            <Parameter Name="IdAlum" Mode="In" Type="String" />
+            <Parameter Name="FecInc" Mode="In" Type="DateTime" />
+            <Parameter Name="FecFin" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="usp_ListarFacultad" ReturnType="Collection(InstituTecModel.usp_ListarFacultad_Result)" />
+          <FunctionImport Name="usp_ListarProfesor" ReturnType="Collection(InstituTecModel.usp_ListarProfesor_Result)">
+            <Parameter Name="id" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_ListarVerDetMatricula" ReturnType="Collection(InstituTecModel.usp_ListarVerDetMatricula_Result)">
+            <Parameter Name="Dni" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_MatriculadosSeccion" ReturnType="Collection(InstituTecModel.usp_MatriculadosSeccion_Result)" />
+          <FunctionImport Name="usp_Matricular">
+            <Parameter Name="NroMat" Mode="In" Type="String" />
+            <Parameter Name="IdCods" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_ObtenerCarreraAlumno" ReturnType="Collection(String)">
+            <Parameter Name="IdAlum" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_ObtenerFacultadAlumno" ReturnType="Collection(String)">
+            <Parameter Name="IdAlum" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_PreMatricula" ReturnType="Collection(InstituTecModel.usp_PreMatricula_Result)">
+            <Parameter Name="dni" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_prematriculaCursos" ReturnType="Collection(InstituTecModel.usp_prematriculaCursos_Result)">
+            <Parameter Name="codcar" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Ubigeo_Departamentos" ReturnType="Collection(InstituTecModel.usp_Ubigeo_Departamentos_Result)" />
+          <FunctionImport Name="usp_Ubigeo_DistritosProvinciaDepartamento" ReturnType="Collection(InstituTecModel.usp_Ubigeo_DistritosProvinciaDepartamento_Result)">
+            <Parameter Name="IdDepartamento" Mode="In" Type="String" />
+            <Parameter Name="IdProvincia" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_Ubigeo_ProvinciasDepartamento" ReturnType="Collection(InstituTecModel.usp_Ubigeo_ProvinciasDepartamento_Result)">
+            <Parameter Name="IdDepartamento" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_VerAlumno" ReturnType="Collection(InstituTecModel.usp_VerAlumno_Result)" />
+          <FunctionImport Name="usp_VerAlumnoDetallado" />
+          <FunctionImport Name="usp_VerCursoActivo" ReturnType="Collection(InstituTecModel.usp_VerCursoActivo_Result)" />
+          <FunctionImport Name="usp_VerCursoInactivo" ReturnType="Collection(InstituTecModel.usp_VerCursoInactivo_Result)" />
+          <FunctionImport Name="usp_VerDetMatricula" ReturnType="Collection(InstituTecModel.usp_VerDetMatricula_Result)">
+            <Parameter Name="dni" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_verEspcProfesor" ReturnType="Collection(InstituTecModel.usp_verEspcProfesor_Result)">
+            <Parameter Name="idprofe" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_VerMatricula" ReturnType="Collection(InstituTecModel.usp_VerMatricula_Result)" />
+          <FunctionImport Name="usp_VerProfesor" ReturnType="Collection(InstituTecModel.usp_VerProfesor_Result)" />
+          <FunctionImport Name="usp_VerProfesorDetallado" />
+          <FunctionImport Name="usp_VerSeccion" ReturnType="Collection(InstituTecModel.usp_VerSeccion_Result)" />
+        </EntityContainer>
+        <ComplexType Name="usp_CarreraXGenero_Result">
+          <Property Type="Int32" Name="Mujeres" Nullable="true" />
+          <Property Type="Int32" Name="Hombres" Nullable="true" />
+          <Property Type="String" Name="Carrera" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="Total" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_ConsultaProfesor_Result">
+          <Property Type="String" Name="Día" Nullable="false" MaxLength="10" />
+          <Property Type="Time" Name="Hora_Inicio" Nullable="true" />
+          <Property Type="Time" Name="Hora_Fin" Nullable="true" />
+          <Property Type="String" Name="Nombre_Curso" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Estado" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="Centro" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Aula" Nullable="false" MaxLength="4" />
+        </ComplexType>
+        <ComplexType Name="usp_ConsultarAlumno_Result">
+          <Property Type="String" Name="IdAlum" Nullable="false" MaxLength="4" />
+          <Property Type="String" Name="Ndocum" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="NomAlu" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="ApePat" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ApeMat" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Sexoal" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="Id_Ubi" Nullable="false" MaxLength="6" />
+          <Property Type="Boolean" Name="Estado" Nullable="true" />
+          <Property Type="DateTime" Name="FecNac" Nullable="true" />
+          <Property Type="String" Name="TelAlu" Nullable="true" MaxLength="9" />
+          <Property Type="Binary" Name="Foto" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="CorAlu" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="direccion" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="usp_ConsultarCarrera_Result">
+          <Property Type="String" Name="CodCar" Nullable="false" MaxLength="4" />
+          <Property Type="String" Name="DesCar" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="DesFac" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="IdFacu" Nullable="false" MaxLength="6" />
+          <Property Type="String" Name="Est_carr" Nullable="true" MaxLength="8" />
+          <Property Type="Int32" Name="Est_carr_2" Nullable="true" />
+          <Property Type="DateTime" Name="Fec_Registro" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Usu_Registro" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="Fec_Ult_Mod" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Usu_Ult_Mod" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="usp_ConsultarCurso_Result">
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="4" />
+          <Property Type="String" Name="Facultad" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Carrera" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="CodCar" Nullable="false" MaxLength="4" />
+          <Property Type="String" Name="Curso" Nullable="false" MaxLength="50" />
+          <Property Type="Boolean" Name="Activo" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_ConsultarUsuario_Result">
+          <Property Type="String" Name="Login_Usuario" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Pass_Usuario" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="Niv_Usuario" Nullable="true" />
+          <Property Type="Int32" Name="Est_usuario" Nullable="true" />
+          <Property Type="DateTime" Name="Fec_Registro" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Usu_Registro" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="usp_ConsultaWebAlumno_Result">
+          <Property Type="String" Name="IdAlum" Nullable="false" MaxLength="4" />
+          <Property Type="String" Name="Ndocum" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="NomAlu" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="ApePat" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ApeMat" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="TelAlu" Nullable="true" MaxLength="9" />
+          <Property Type="String" Name="CorAlu" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="DesCar" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="DesFac" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Departamento" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="Distrito" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="Provincia" Nullable="true" MaxLength="255" />
+          <Property Type="Boolean" Name="Estado" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_detalleMatricula_Result">
+          <Property Type="String" Name="NRC" Nullable="false" MaxLength="6" />
+          <Property Type="String" Name="Curso" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Profesor" Nullable="false" MaxLength="202" />
+          <Property Type="String" Name="Local" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Aula" Nullable="false" MaxLength="4" />
+          <Property Type="String" Name="DIA" Nullable="false" MaxLength="10" />
+          <Property Type="Time" Name="Inicio" Nullable="true" />
+          <Property Type="Time" Name="Fin" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_facultadCarrera_Result">
+          <Property Type="String" Name="IdFacu" Nullable="false" MaxLength="6" />
+          <Property Type="String" Name="DesFac" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="usp_ListaConsultarProfesorCurso_Result">
+          <Property Type="String" Name="IdProf" Nullable="false" MaxLength="4" />
+          <Property Type="String" Name="Ndocum" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="NomPro" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="ApePat" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ApeMat" Nullable="false" MaxLength="50" />
+          <Property Type="Boolean" Name="Estado" Nullable="true" />
+          <Property Type="String" Name="direccion" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="FecIng" Nullable="true" />
+          <Property Type="String" Name="CorIns" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Departamento" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="Provincia" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="Distrito" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="Usu_Registro" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Usu_Ult_Mod" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="Fec_Ult_Mod" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="usp_ListarAlumno_Result">
+          <Property Type="String" Name="IdAlum" Nullable="false" MaxLength="4" />
+          <Property Type="String" Name="NomAlu" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Ndocum" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="CorAlu" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="TelAlu" Nullable="true" MaxLength="9" />
+          <Property Type="String" Name="CorAlu1" Nullable="true" MaxLength="50" />
+          <Property Type="Boolean" Name="Estado" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_ListarCarrera_Result">
+          <Property Type="String" Name="CodCar" Nullable="false" MaxLength="4" />
+          <Property Type="String" Name="DesCar" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="Fec_Registro" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Usu_Registro" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="Fec_Ult_Mod" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Usu_Ult_Mod" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="DesFac" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="IdFacu" Nullable="false" MaxLength="6" />
+          <Property Type="String" Name="Est_carr" Nullable="true" MaxLength="8" />
+        </ComplexType>
+        <ComplexType Name="usp_ListarCurso_Result">
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="4" />
+          <Property Type="String" Name="Facultad" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Carrera" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="CodCar" Nullable="false" MaxLength="4" />
+          <Property Type="String" Name="Curso" Nullable="false" MaxLength="50" />
+          <Property Type="Boolean" Name="Activo" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_ListarCursosAlumnoFechas_Result">
+          <Property Type="String" Name="NomCur" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Activo" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="DIA" Nullable="false" MaxLength="10" />
+          <Property Type="Time" Name="HorIni" Nullable="true" />
+          <Property Type="Time" Name="HorFin" Nullable="true" />
+          <Property Type="String" Name="Desloc" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="IdAula" Nullable="false" MaxLength="4" />
+        </ComplexType>
+        <ComplexType Name="usp_ListarFacultad_Result">
+          <Property Type="String" Name="IdFacu" Nullable="false" MaxLength="6" />
+          <Property Type="String" Name="DesFac" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="usp_ListarProfesor_Result">
+          <Property Type="String" Name="IdProf" Nullable="false" MaxLength="4" />
+          <Property Type="String" Name="NomPro" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Ndocum" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ApePat" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ApeMat" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="TelPro" Nullable="true" MaxLength="9" />
+          <Property Type="Boolean" Name="Estado" Nullable="true" />
+          <Property Type="DateTime" Name="FecIng" Nullable="true" />
+          <Property Type="String" Name="Ndocum1" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="Sexopr" Nullable="false" MaxLength="1" />
+          <Property Type="Binary" Name="Foto" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="Id_Ubi" Nullable="false" MaxLength="6" />
+        </ComplexType>
+        <ComplexType Name="usp_ListarVerDetMatricula_Result">
+          <Property Type="String" Name="NRC" Nullable="false" MaxLength="6" />
+          <Property Type="String" Name="Curso" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Profesor" Nullable="false" MaxLength="202" />
+          <Property Type="String" Name="Local" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Aula" Nullable="false" MaxLength="4" />
+          <Property Type="String" Name="Dia" Nullable="false" MaxLength="10" />
+          <Property Type="Time" Name="Inicio" Nullable="true" />
+          <Property Type="Time" Name="Fin" Nullable="true" />
+          <Property Type="String" Name="Dni" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="Alumno" Nullable="false" MaxLength="202" />
+        </ComplexType>
+        <ComplexType Name="usp_MatriculadosSeccion_Result">
+          <Property Type="String" Name="NRC" Nullable="false" MaxLength="6" />
+          <Property Type="String" Name="Curso" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="Alumnos" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_PreMatricula_Result">
+          <Property Type="String" Name="NomAlu" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="ApePat" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ApeMat" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="DesCar" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Ndocum" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="Estado" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="Matricula" Nullable="true" MaxLength="11" />
+          <Property Type="String" Name="CodCar" Nullable="false" MaxLength="4" />
+          <Property Type="String" Name="NroMat" Nullable="false" MaxLength="7" />
+        </ComplexType>
+        <ComplexType Name="usp_prematriculaCursos_Result">
+          <Property Type="String" Name="NRC" Nullable="false" MaxLength="6" />
+          <Property Type="String" Name="Curso" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Codigo" Nullable="false" MaxLength="4" />
+          <Property Type="String" Name="Profesor" Nullable="false" MaxLength="203" />
+          <Property Type="String" Name="Estado" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="Local" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="DIA" Nullable="false" MaxLength="10" />
+          <Property Type="Time" Name="Inicio" Nullable="true" />
+          <Property Type="Time" Name="Fin" Nullable="true" />
+          <Property Type="String" Name="Carrera" Nullable="false" MaxLength="50" />
+          <Property Type="Byte" Name="Vacant" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_Ubigeo_Departamentos_Result">
+          <Property Type="String" Name="IDDEPA" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="DEPARTAMENTO" Nullable="true" MaxLength="255" />
+        </ComplexType>
+        <ComplexType Name="usp_Ubigeo_DistritosProvinciaDepartamento_Result">
+          <Property Type="String" Name="IDDIST" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="DISTRITO" Nullable="true" MaxLength="255" />
+        </ComplexType>
+        <ComplexType Name="usp_Ubigeo_ProvinciasDepartamento_Result">
+          <Property Type="String" Name="IDPROV" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="PROVINCIA" Nullable="true" MaxLength="255" />
+        </ComplexType>
+        <ComplexType Name="usp_VerAlumno_Result">
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="4" />
+          <Property Type="String" Name="DNI" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="Alumno" Nullable="false" MaxLength="202" />
+          <Property Type="DateTime" Name="Fecha_nacimiento" Nullable="true" />
+          <Property Type="String" Name="Genero" Nullable="true" MaxLength="9" />
+          <Property Type="String" Name="Correo" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Telefono" Nullable="true" MaxLength="9" />
+          <Property Type="String" Name="Direccion" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Departamento" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="carrera" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Facultad" Nullable="true" MaxLength="50" />
+          <Property Type="Binary" Name="Foto" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="Estado" Nullable="true" MaxLength="8" />
+        </ComplexType>
+        <ComplexType Name="usp_VerCursoActivo_Result">
+          <Property Type="String" Name="Facultad" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Carrera" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Curso" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Activo" Nullable="true" MaxLength="8" />
+        </ComplexType>
+        <ComplexType Name="usp_VerCursoInactivo_Result">
+          <Property Type="String" Name="Facultad" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Carrera" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Curso" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Activo" Nullable="true" MaxLength="8" />
+        </ComplexType>
+        <ComplexType Name="usp_VerDetMatricula_Result">
+          <Property Type="String" Name="NRC" Nullable="false" MaxLength="6" />
+          <Property Type="String" Name="Curso" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Profesor" Nullable="false" MaxLength="202" />
+          <Property Type="String" Name="Local" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Aula" Nullable="false" MaxLength="4" />
+          <Property Type="String" Name="Dia" Nullable="false" MaxLength="10" />
+          <Property Type="Time" Name="Inicio" Nullable="true" />
+          <Property Type="Time" Name="Fin" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_verEspcProfesor_Result">
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="4" />
+          <Property Type="String" Name="Profesor" Nullable="false" MaxLength="202" />
+          <Property Type="String" Name="Especialidad" Nullable="true" MaxLength="60" />
+        </ComplexType>
+        <ComplexType Name="usp_VerMatricula_Result">
+          <Property Type="String" Name="Ciclo" Nullable="false" MaxLength="7" />
+          <Property Type="String" Name="Matricula" Nullable="false" MaxLength="7" />
+          <Property Type="String" Name="Estado" Nullable="true" MaxLength="11" />
+          <Property Type="String" Name="Alumno" Nullable="false" MaxLength="202" />
+          <Property Type="String" Name="Carrera" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="Inscrito" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_VerProfesor_Result">
+          <Property Type="String" Name="Id" Nullable="false" MaxLength="4" />
+          <Property Type="String" Name="Profesor" Nullable="false" MaxLength="202" />
+          <Property Type="String" Name="DNI" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="Telefono" Nullable="true" MaxLength="9" />
+          <Property Type="DateTime" Name="Fecha_Ingreso" Nullable="true" />
+          <Property Type="String" Name="Estado" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="Genero" Nullable="true" MaxLength="9" />
+          <Property Type="String" Name="Departamento" Nullable="true" MaxLength="255" />
+        </ComplexType>
+        <ComplexType Name="usp_VerSeccion_Result">
+          <Property Type="String" Name="NRC" Nullable="false" MaxLength="6" />
+          <Property Type="String" Name="Curso" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Profesor" Nullable="false" MaxLength="203" />
+          <Property Type="String" Name="DIA" Nullable="false" MaxLength="10" />
+          <Property Type="Time" Name="Inicio" Nullable="true" />
+          <Property Type="Time" Name="Fin" Nullable="true" />
+          <Property Type="String" Name="Local" Nullable="true" MaxLength="50" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="InstituTecModelStoreContainer" CdmEntityContainer="InstituTecEntities">
+          <EntitySetMapping Name="TB_Alumno">
+            <EntityTypeMapping TypeName="InstituTecModel.TB_Alumno">
+              <MappingFragment StoreEntitySet="TB_Alumno">
+                <ScalarProperty Name="IdAlum" ColumnName="IdAlum" />
+                <ScalarProperty Name="Ndocum" ColumnName="Ndocum" />
+                <ScalarProperty Name="NomAlu" ColumnName="NomAlu" />
+                <ScalarProperty Name="ApePat" ColumnName="ApePat" />
+                <ScalarProperty Name="ApeMat" ColumnName="ApeMat" />
+                <ScalarProperty Name="TelAlu" ColumnName="TelAlu" />
+                <ScalarProperty Name="CorAlu" ColumnName="CorAlu" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Sexoal" ColumnName="Sexoal" />
+                <ScalarProperty Name="FecNac" ColumnName="FecNac" />
+                <ScalarProperty Name="CodCar" ColumnName="CodCar" />
+                <ScalarProperty Name="Fec_Registro" ColumnName="Fec_Registro" />
+                <ScalarProperty Name="Usu_Registro" ColumnName="Usu_Registro" />
+                <ScalarProperty Name="Fec_Ult_Mod" ColumnName="Fec_Ult_Mod" />
+                <ScalarProperty Name="Usu_Ult_Mod" ColumnName="Usu_Ult_Mod" />
+                <ScalarProperty Name="direccion" ColumnName="direccion" />
+                <ScalarProperty Name="Id_Ubi" ColumnName="Id_Ubi" />
+                <ScalarProperty Name="foto" ColumnName="foto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Aula">
+            <EntityTypeMapping TypeName="InstituTecModel.TB_Aula">
+              <MappingFragment StoreEntitySet="TB_Aula">
+                <ScalarProperty Name="IdAula" ColumnName="IdAula" />
+                <ScalarProperty Name="IdCent" ColumnName="IdCent" />
+                <ScalarProperty Name="AfoAul" ColumnName="AfoAul" />
+                <ScalarProperty Name="Habita" ColumnName="Habita" />
+                <ScalarProperty Name="Fec_Registro" ColumnName="Fec_Registro" />
+                <ScalarProperty Name="Usu_Registro" ColumnName="Usu_Registro" />
+                <ScalarProperty Name="Fec_Ult_Mod" ColumnName="Fec_Ult_Mod" />
+                <ScalarProperty Name="Usu_Ult_Mod" ColumnName="Usu_Ult_Mod" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tb_Carrera">
+            <EntityTypeMapping TypeName="InstituTecModel.Tb_Carrera">
+              <MappingFragment StoreEntitySet="Tb_Carrera">
+                <ScalarProperty Name="CodCar" ColumnName="CodCar" />
+                <ScalarProperty Name="IdFacu" ColumnName="IdFacu" />
+                <ScalarProperty Name="DesCar" ColumnName="DesCar" />
+                <ScalarProperty Name="Fec_Registro" ColumnName="Fec_Registro" />
+                <ScalarProperty Name="Usu_Registro" ColumnName="Usu_Registro" />
+                <ScalarProperty Name="Fec_Ult_Mod" ColumnName="Fec_Ult_Mod" />
+                <ScalarProperty Name="Usu_Ult_Mod" ColumnName="Usu_Ult_Mod" />
+                <ScalarProperty Name="Est_carr" ColumnName="Est_carr" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tb_Curso">
+            <EntityTypeMapping TypeName="InstituTecModel.Tb_Curso">
+              <MappingFragment StoreEntitySet="Tb_Curso">
+                <ScalarProperty Name="IdCurs" ColumnName="IdCurs" />
+                <ScalarProperty Name="NomCur" ColumnName="NomCur" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="CodCar" ColumnName="CodCar" />
+                <ScalarProperty Name="Fec_Registro" ColumnName="Fec_Registro" />
+                <ScalarProperty Name="Usu_Registro" ColumnName="Usu_Registro" />
+                <ScalarProperty Name="Fec_Ult_Mod" ColumnName="Fec_Ult_Mod" />
+                <ScalarProperty Name="Usu_Ult_Mod" ColumnName="Usu_Ult_Mod" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Espc_Prof">
+            <EntityTypeMapping TypeName="InstituTecModel.TB_Espc_Prof">
+              <MappingFragment StoreEntitySet="TB_Espc_Prof">
+                <ScalarProperty Name="IdEspc" ColumnName="IdEspc" />
+                <ScalarProperty Name="DesEsc" ColumnName="DesEsc" />
+                <ScalarProperty Name="Fec_Registro" ColumnName="Fec_Registro" />
+                <ScalarProperty Name="Usu_Registro" ColumnName="Usu_Registro" />
+                <ScalarProperty Name="Fec_Ult_Mod" ColumnName="Fec_Ult_Mod" />
+                <ScalarProperty Name="Usu_Ult_Mod" ColumnName="Usu_Ult_Mod" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Facultad">
+            <EntityTypeMapping TypeName="InstituTecModel.TB_Facultad">
+              <MappingFragment StoreEntitySet="TB_Facultad">
+                <ScalarProperty Name="IdFacu" ColumnName="IdFacu" />
+                <ScalarProperty Name="DesFac" ColumnName="DesFac" />
+                <ScalarProperty Name="Fec_Registro" ColumnName="Fec_Registro" />
+                <ScalarProperty Name="Usu_Registro" ColumnName="Usu_Registro" />
+                <ScalarProperty Name="Fec_Ult_Mod" ColumnName="Fec_Ult_Mod" />
+                <ScalarProperty Name="Usu_Ult_Mod" ColumnName="Usu_Ult_Mod" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_local">
+            <EntityTypeMapping TypeName="InstituTecModel.TB_local">
+              <MappingFragment StoreEntitySet="TB_local">
+                <ScalarProperty Name="IdCent" ColumnName="IdCent" />
+                <ScalarProperty Name="Desloc" ColumnName="Desloc" />
+                <ScalarProperty Name="Dirloc" ColumnName="Dirloc" />
+                <ScalarProperty Name="Fec_Registro" ColumnName="Fec_Registro" />
+                <ScalarProperty Name="Usu_Registro" ColumnName="Usu_Registro" />
+                <ScalarProperty Name="Fec_Ult_Mod" ColumnName="Fec_Ult_Mod" />
+                <ScalarProperty Name="Usu_Ult_Mod" ColumnName="Usu_Ult_Mod" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Matricula">
+            <EntityTypeMapping TypeName="InstituTecModel.TB_Matricula">
+              <MappingFragment StoreEntitySet="TB_Matricula">
+                <ScalarProperty Name="NroMat" ColumnName="NroMat" />
+                <ScalarProperty Name="IdSeme" ColumnName="IdSeme" />
+                <ScalarProperty Name="EstMat" ColumnName="EstMat" />
+                <ScalarProperty Name="IdAlum" ColumnName="IdAlum" />
+                <ScalarProperty Name="FecMat" ColumnName="FecMat" />
+                <ScalarProperty Name="CodCar" ColumnName="CodCar" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Profesor">
+            <EntityTypeMapping TypeName="InstituTecModel.TB_Profesor">
+              <MappingFragment StoreEntitySet="TB_Profesor">
+                <ScalarProperty Name="IdProf" ColumnName="IdProf" />
+                <ScalarProperty Name="Ndocum" ColumnName="Ndocum" />
+                <ScalarProperty Name="NomPro" ColumnName="NomPro" />
+                <ScalarProperty Name="ApePat" ColumnName="ApePat" />
+                <ScalarProperty Name="ApeMat" ColumnName="ApeMat" />
+                <ScalarProperty Name="CorIns" ColumnName="CorIns" />
+                <ScalarProperty Name="TelPro" ColumnName="TelPro" />
+                <ScalarProperty Name="FecNac" ColumnName="FecNac" />
+                <ScalarProperty Name="Sexopr" ColumnName="Sexopr" />
+                <ScalarProperty Name="FecIng" ColumnName="FecIng" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Fec_Registro" ColumnName="Fec_Registro" />
+                <ScalarProperty Name="Usu_Registro" ColumnName="Usu_Registro" />
+                <ScalarProperty Name="Fec_Ult_Mod" ColumnName="Fec_Ult_Mod" />
+                <ScalarProperty Name="Usu_Ult_Mod" ColumnName="Usu_Ult_Mod" />
+                <ScalarProperty Name="direccion" ColumnName="direccion" />
+                <ScalarProperty Name="Id_Ubi" ColumnName="Id_Ubi" />
+                <ScalarProperty Name="Foto" ColumnName="Foto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tb_Seccion">
+            <EntityTypeMapping TypeName="InstituTecModel.Tb_Seccion">
+              <MappingFragment StoreEntitySet="Tb_Seccion">
+                <ScalarProperty Name="IdCods" ColumnName="IdCods" />
+                <ScalarProperty Name="IdCurs" ColumnName="IdCurs" />
+                <ScalarProperty Name="IdProf" ColumnName="IdProf" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="Vacant" ColumnName="Vacant" />
+                <ScalarProperty Name="DIA" ColumnName="DIA" />
+                <ScalarProperty Name="IdCent" ColumnName="IdCent" />
+                <ScalarProperty Name="Fec_Registro" ColumnName="Fec_Registro" />
+                <ScalarProperty Name="Usu_Registro" ColumnName="Usu_Registro" />
+                <ScalarProperty Name="Fec_Ult_Mod" ColumnName="Fec_Ult_Mod" />
+                <ScalarProperty Name="Usu_Ult_Mod" ColumnName="Usu_Ult_Mod" />
+                <ScalarProperty Name="HorIni" ColumnName="HorIni" />
+                <ScalarProperty Name="HorFin" ColumnName="HorFin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Semestre">
+            <EntityTypeMapping TypeName="InstituTecModel.TB_Semestre">
+              <MappingFragment StoreEntitySet="TB_Semestre">
+                <ScalarProperty Name="IdSeme" ColumnName="IdSeme" />
+                <ScalarProperty Name="Descrp" ColumnName="Descrp" />
+                <ScalarProperty Name="FecInc" ColumnName="FecInc" />
+                <ScalarProperty Name="FecFin" ColumnName="FecFin" />
+                <ScalarProperty Name="Fec_Registro" ColumnName="Fec_Registro" />
+                <ScalarProperty Name="Usu_Registro" ColumnName="Usu_Registro" />
+                <ScalarProperty Name="Fec_Ult_Mod" ColumnName="Fec_Ult_Mod" />
+                <ScalarProperty Name="Usu_Ult_Mod" ColumnName="Usu_Ult_Mod" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tb_Ubigeo">
+            <EntityTypeMapping TypeName="InstituTecModel.Tb_Ubigeo">
+              <MappingFragment StoreEntitySet="Tb_Ubigeo">
+                <ScalarProperty Name="Id_Ubigeo" ColumnName="Id_Ubigeo" />
+                <ScalarProperty Name="IdDepa" ColumnName="IdDepa" />
+                <ScalarProperty Name="IdProv" ColumnName="IdProv" />
+                <ScalarProperty Name="IdDist" ColumnName="IdDist" />
+                <ScalarProperty Name="Departamento" ColumnName="Departamento" />
+                <ScalarProperty Name="Provincia" ColumnName="Provincia" />
+                <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tb_Usuario">
+            <EntityTypeMapping TypeName="InstituTecModel.Tb_Usuario">
+              <MappingFragment StoreEntitySet="Tb_Usuario">
+                <ScalarProperty Name="Login_Usuario" ColumnName="Login_Usuario" />
+                <ScalarProperty Name="Pass_Usuario" ColumnName="Pass_Usuario" />
+                <ScalarProperty Name="Niv_Usuario" ColumnName="Niv_Usuario" />
+                <ScalarProperty Name="Est_Usuario" ColumnName="Est_Usuario" />
+                <ScalarProperty Name="Fec_Registro" ColumnName="Fec_Registro" />
+                <ScalarProperty Name="Usu_Registro" ColumnName="Usu_Registro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="TB_Det_Espc" TypeName="InstituTecModel.TB_Det_Espc" StoreEntitySet="TB_Det_Espc">
+            <EndProperty Name="TB_Profesor">
+              <ScalarProperty Name="IdProf" ColumnName="IdProf" />
+            </EndProperty>
+            <EndProperty Name="TB_Espc_Prof">
+              <ScalarProperty Name="IdEspc" ColumnName="IdEspc" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="TB_Det_Mat" TypeName="InstituTecModel.TB_Det_Mat" StoreEntitySet="TB_Det_Mat">
+            <EndProperty Name="TB_Matricula">
+              <ScalarProperty Name="NroMat" ColumnName="NroMat" />
+            </EndProperty>
+            <EndProperty Name="Tb_Seccion">
+              <ScalarProperty Name="IdCods" ColumnName="IdCods" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <FunctionImportMapping FunctionImportName="usp_ActualizarAlumno" FunctionName="InstituTecModel.Store.usp_ActualizarAlumno" />
+          <FunctionImportMapping FunctionImportName="usp_ActualizarCarrera" FunctionName="InstituTecModel.Store.usp_ActualizarCarrera" />
+          <FunctionImportMapping FunctionImportName="usp_ActualizarCurso" FunctionName="InstituTecModel.Store.usp_ActualizarCurso" />
+          <FunctionImportMapping FunctionImportName="usp_ActualizarCursoActivo" FunctionName="InstituTecModel.Store.usp_ActualizarCursoActivo" />
+          <FunctionImportMapping FunctionImportName="usp_ActulizarProfesor" FunctionName="InstituTecModel.Store.usp_ActulizarProfesor" />
+          <FunctionImportMapping FunctionImportName="usp_BorrarAlumno" FunctionName="InstituTecModel.Store.usp_BorrarAlumno" />
+          <FunctionImportMapping FunctionImportName="usp_BorrarCarrera" FunctionName="InstituTecModel.Store.usp_BorrarCarrera" />
+          <FunctionImportMapping FunctionImportName="usp_BorrarCurso" FunctionName="InstituTecModel.Store.usp_BorrarCurso" />
+          <FunctionImportMapping FunctionImportName="usp_BorrarProfesor" FunctionName="InstituTecModel.Store.usp_BorrarProfesor" />
+          <FunctionImportMapping FunctionImportName="usp_CarreraXGenero" FunctionName="InstituTecModel.Store.usp_CarreraXGenero">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstituTecModel.usp_CarreraXGenero_Result">
+                <ScalarProperty Name="Mujeres" ColumnName="Mujeres" />
+                <ScalarProperty Name="Hombres" ColumnName="Hombres" />
+                <ScalarProperty Name="Carrera" ColumnName="Carrera" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_ConsultaProfesor" FunctionName="InstituTecModel.Store.usp_ConsultaProfesor">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstituTecModel.usp_ConsultaProfesor_Result">
+                <ScalarProperty Name="Día" ColumnName="Día" />
+                <ScalarProperty Name="Hora_Inicio" ColumnName="Hora Inicio" />
+                <ScalarProperty Name="Hora_Fin" ColumnName="Hora Fin" />
+                <ScalarProperty Name="Nombre_Curso" ColumnName="Nombre Curso" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Centro" ColumnName="Centro" />
+                <ScalarProperty Name="Aula" ColumnName="Aula" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_ConsultarAlumno" FunctionName="InstituTecModel.Store.usp_ConsultarAlumno">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstituTecModel.usp_ConsultarAlumno_Result">
+                <ScalarProperty Name="IdAlum" ColumnName="IdAlum" />
+                <ScalarProperty Name="Ndocum" ColumnName="Ndocum" />
+                <ScalarProperty Name="NomAlu" ColumnName="NomAlu" />
+                <ScalarProperty Name="ApePat" ColumnName="ApePat" />
+                <ScalarProperty Name="ApeMat" ColumnName="ApeMat" />
+                <ScalarProperty Name="Sexoal" ColumnName="Sexoal" />
+                <ScalarProperty Name="Id_Ubi" ColumnName="Id_Ubi" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="FecNac" ColumnName="FecNac" />
+                <ScalarProperty Name="TelAlu" ColumnName="TelAlu" />
+                <ScalarProperty Name="Foto" ColumnName="Foto" />
+                <ScalarProperty Name="CorAlu" ColumnName="CorAlu" />
+                <ScalarProperty Name="direccion" ColumnName="direccion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_ConsultarCarrera" FunctionName="InstituTecModel.Store.usp_ConsultarCarrera">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstituTecModel.usp_ConsultarCarrera_Result">
+                <ScalarProperty Name="CodCar" ColumnName="CodCar" />
+                <ScalarProperty Name="DesCar" ColumnName="DesCar" />
+                <ScalarProperty Name="DesFac" ColumnName="DesFac" />
+                <ScalarProperty Name="IdFacu" ColumnName="IdFacu" />
+                <ScalarProperty Name="Est_carr" ColumnName="Est_carr" />
+                <ScalarProperty Name="Est_carr_2" ColumnName="Est_carr_2" />
+                <ScalarProperty Name="Fec_Registro" ColumnName="Fec_Registro" />
+                <ScalarProperty Name="Usu_Registro" ColumnName="Usu_Registro" />
+                <ScalarProperty Name="Fec_Ult_Mod" ColumnName="Fec_Ult_Mod" />
+                <ScalarProperty Name="Usu_Ult_Mod" ColumnName="Usu_Ult_Mod" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_ConsultarCurso" FunctionName="InstituTecModel.Store.usp_ConsultarCurso">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstituTecModel.usp_ConsultarCurso_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Facultad" ColumnName="Facultad" />
+                <ScalarProperty Name="Carrera" ColumnName="Carrera" />
+                <ScalarProperty Name="CodCar" ColumnName="CodCar" />
+                <ScalarProperty Name="Curso" ColumnName="Curso" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_ConsultarUsuario" FunctionName="InstituTecModel.Store.usp_ConsultarUsuario">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstituTecModel.usp_ConsultarUsuario_Result">
+                <ScalarProperty Name="Login_Usuario" ColumnName="Login_Usuario" />
+                <ScalarProperty Name="Pass_Usuario" ColumnName="Pass_Usuario" />
+                <ScalarProperty Name="Niv_Usuario" ColumnName="Niv_Usuario" />
+                <ScalarProperty Name="Est_usuario" ColumnName="Est_usuario" />
+                <ScalarProperty Name="Fec_Registro" ColumnName="Fec_Registro" />
+                <ScalarProperty Name="Usu_Registro" ColumnName="Usu_Registro" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_ConsultaWebAlumno" FunctionName="InstituTecModel.Store.usp_ConsultaWebAlumno">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstituTecModel.usp_ConsultaWebAlumno_Result">
+                <ScalarProperty Name="IdAlum" ColumnName="IdAlum" />
+                <ScalarProperty Name="Ndocum" ColumnName="Ndocum" />
+                <ScalarProperty Name="NomAlu" ColumnName="NomAlu" />
+                <ScalarProperty Name="ApePat" ColumnName="ApePat" />
+                <ScalarProperty Name="ApeMat" ColumnName="ApeMat" />
+                <ScalarProperty Name="TelAlu" ColumnName="TelAlu" />
+                <ScalarProperty Name="CorAlu" ColumnName="CorAlu" />
+                <ScalarProperty Name="DesCar" ColumnName="DesCar" />
+                <ScalarProperty Name="DesFac" ColumnName="DesFac" />
+                <ScalarProperty Name="Departamento" ColumnName="Departamento" />
+                <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+                <ScalarProperty Name="Provincia" ColumnName="Provincia" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_CursosDisponiblesAlumno" FunctionName="InstituTecModel.Store.usp_CursosDisponiblesAlumno" />
+          <FunctionImportMapping FunctionImportName="usp_detalleMatricula" FunctionName="InstituTecModel.Store.usp_detalleMatricula">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstituTecModel.usp_detalleMatricula_Result">
+                <ScalarProperty Name="NRC" ColumnName="NRC" />
+                <ScalarProperty Name="Curso" ColumnName="Curso" />
+                <ScalarProperty Name="Profesor" ColumnName="Profesor" />
+                <ScalarProperty Name="Local" ColumnName="Local" />
+                <ScalarProperty Name="Aula" ColumnName="Aula" />
+                <ScalarProperty Name="DIA" ColumnName="DIA" />
+                <ScalarProperty Name="Inicio" ColumnName="Inicio" />
+                <ScalarProperty Name="Fin" ColumnName="Fin" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_facultadCarrera" FunctionName="InstituTecModel.Store.usp_facultadCarrera">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstituTecModel.usp_facultadCarrera_Result">
+                <ScalarProperty Name="IdFacu" ColumnName="IdFacu" />
+                <ScalarProperty Name="DesFac" ColumnName="DesFac" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_InserCurso" FunctionName="InstituTecModel.Store.usp_InserCurso" />
+          <FunctionImportMapping FunctionImportName="usp_InsertarAlumnos" FunctionName="InstituTecModel.Store.usp_InsertarAlumnos" />
+          <FunctionImportMapping FunctionImportName="usp_InsertarCarrera" FunctionName="InstituTecModel.Store.usp_InsertarCarrera" />
+          <FunctionImportMapping FunctionImportName="usp_InsertarProfesor" FunctionName="InstituTecModel.Store.usp_InsertarProfesor" />
+          <FunctionImportMapping FunctionImportName="usp_InsertarSeccion" FunctionName="InstituTecModel.Store.usp_InsertarSeccion" />
+          <FunctionImportMapping FunctionImportName="usp_InsertMatricula" FunctionName="InstituTecModel.Store.usp_InsertMatricula" />
+          <FunctionImportMapping FunctionImportName="usp_ListaConsultarProfesorCurso" FunctionName="InstituTecModel.Store.usp_ListaConsultarProfesorCurso">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstituTecModel.usp_ListaConsultarProfesorCurso_Result">
+                <ScalarProperty Name="IdProf" ColumnName="IdProf" />
+                <ScalarProperty Name="Ndocum" ColumnName="Ndocum" />
+                <ScalarProperty Name="NomPro" ColumnName="NomPro" />
+                <ScalarProperty Name="ApePat" ColumnName="ApePat" />
+                <ScalarProperty Name="ApeMat" ColumnName="ApeMat" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="direccion" ColumnName="direccion" />
+                <ScalarProperty Name="FecIng" ColumnName="FecIng" />
+                <ScalarProperty Name="CorIns" ColumnName="CorIns" />
+                <ScalarProperty Name="Departamento" ColumnName="Departamento" />
+                <ScalarProperty Name="Provincia" ColumnName="Provincia" />
+                <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+                <ScalarProperty Name="Usu_Registro" ColumnName="Usu_Registro" />
+                <ScalarProperty Name="Usu_Ult_Mod" ColumnName="Usu_Ult_Mod" />
+                <ScalarProperty Name="Fec_Ult_Mod" ColumnName="Fec_Ult_Mod" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_ListarAlumno" FunctionName="InstituTecModel.Store.usp_ListarAlumno">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstituTecModel.usp_ListarAlumno_Result">
+                <ScalarProperty Name="IdAlum" ColumnName="IdAlum" />
+                <ScalarProperty Name="NomAlu" ColumnName="NomAlu" />
+                <ScalarProperty Name="Ndocum" ColumnName="Ndocum" />
+                <ScalarProperty Name="CorAlu" ColumnName="CorAlu" />
+                <ScalarProperty Name="TelAlu" ColumnName="TelAlu" />
+                <ScalarProperty Name="CorAlu1" ColumnName="CorAlu1" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_ListarCarrera" FunctionName="InstituTecModel.Store.usp_ListarCarrera">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstituTecModel.usp_ListarCarrera_Result">
+                <ScalarProperty Name="CodCar" ColumnName="CodCar" />
+                <ScalarProperty Name="DesCar" ColumnName="DesCar" />
+                <ScalarProperty Name="Fec_Registro" ColumnName="Fec_Registro" />
+                <ScalarProperty Name="Usu_Registro" ColumnName="Usu_Registro" />
+                <ScalarProperty Name="Fec_Ult_Mod" ColumnName="Fec_Ult_Mod" />
+                <ScalarProperty Name="Usu_Ult_Mod" ColumnName="Usu_Ult_Mod" />
+                <ScalarProperty Name="DesFac" ColumnName="DesFac" />
+                <ScalarProperty Name="IdFacu" ColumnName="IdFacu" />
+                <ScalarProperty Name="Est_carr" ColumnName="Est_carr" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_ListarCurso" FunctionName="InstituTecModel.Store.usp_ListarCurso">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstituTecModel.usp_ListarCurso_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Facultad" ColumnName="Facultad" />
+                <ScalarProperty Name="Carrera" ColumnName="Carrera" />
+                <ScalarProperty Name="CodCar" ColumnName="CodCar" />
+                <ScalarProperty Name="Curso" ColumnName="Curso" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_ListarCursosAlumnoFechas" FunctionName="InstituTecModel.Store.usp_ListarCursosAlumnoFechas">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstituTecModel.usp_ListarCursosAlumnoFechas_Result">
+                <ScalarProperty Name="NomCur" ColumnName="NomCur" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="DIA" ColumnName="DIA" />
+                <ScalarProperty Name="HorIni" ColumnName="HorIni" />
+                <ScalarProperty Name="HorFin" ColumnName="HorFin" />
+                <ScalarProperty Name="Desloc" ColumnName="Desloc" />
+                <ScalarProperty Name="IdAula" ColumnName="IdAula" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_ListarFacultad" FunctionName="InstituTecModel.Store.usp_ListarFacultad">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstituTecModel.usp_ListarFacultad_Result">
+                <ScalarProperty Name="IdFacu" ColumnName="IdFacu" />
+                <ScalarProperty Name="DesFac" ColumnName="DesFac" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_ListarProfesor" FunctionName="InstituTecModel.Store.usp_ListarProfesor">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstituTecModel.usp_ListarProfesor_Result">
+                <ScalarProperty Name="IdProf" ColumnName="IdProf" />
+                <ScalarProperty Name="NomPro" ColumnName="NomPro" />
+                <ScalarProperty Name="Ndocum" ColumnName="Ndocum" />
+                <ScalarProperty Name="ApePat" ColumnName="ApePat" />
+                <ScalarProperty Name="ApeMat" ColumnName="ApeMat" />
+                <ScalarProperty Name="TelPro" ColumnName="TelPro" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="FecIng" ColumnName="FecIng" />
+                <ScalarProperty Name="Ndocum1" ColumnName="Ndocum1" />
+                <ScalarProperty Name="Sexopr" ColumnName="Sexopr" />
+                <ScalarProperty Name="Foto" ColumnName="Foto" />
+                <ScalarProperty Name="Id_Ubi" ColumnName="Id_Ubi" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_ListarVerDetMatricula" FunctionName="InstituTecModel.Store.usp_ListarVerDetMatricula">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstituTecModel.usp_ListarVerDetMatricula_Result">
+                <ScalarProperty Name="NRC" ColumnName="NRC" />
+                <ScalarProperty Name="Curso" ColumnName="Curso" />
+                <ScalarProperty Name="Profesor" ColumnName="Profesor" />
+                <ScalarProperty Name="Local" ColumnName="Local" />
+                <ScalarProperty Name="Aula" ColumnName="Aula" />
+                <ScalarProperty Name="Dia" ColumnName="Dia" />
+                <ScalarProperty Name="Inicio" ColumnName="Inicio" />
+                <ScalarProperty Name="Fin" ColumnName="Fin" />
+                <ScalarProperty Name="Dni" ColumnName="Dni" />
+                <ScalarProperty Name="Alumno" ColumnName="Alumno" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_MatriculadosSeccion" FunctionName="InstituTecModel.Store.usp_MatriculadosSeccion">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstituTecModel.usp_MatriculadosSeccion_Result">
+                <ScalarProperty Name="NRC" ColumnName="NRC" />
+                <ScalarProperty Name="Curso" ColumnName="Curso" />
+                <ScalarProperty Name="Alumnos" ColumnName="Alumnos" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_Matricular" FunctionName="InstituTecModel.Store.usp_Matricular" />
+          <FunctionImportMapping FunctionImportName="usp_ObtenerCarreraAlumno" FunctionName="InstituTecModel.Store.usp_ObtenerCarreraAlumno" />
+          <FunctionImportMapping FunctionImportName="usp_ObtenerFacultadAlumno" FunctionName="InstituTecModel.Store.usp_ObtenerFacultadAlumno" />
+          <FunctionImportMapping FunctionImportName="usp_PreMatricula" FunctionName="InstituTecModel.Store.usp_PreMatricula">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstituTecModel.usp_PreMatricula_Result">
+                <ScalarProperty Name="NomAlu" ColumnName="NomAlu" />
+                <ScalarProperty Name="ApePat" ColumnName="ApePat" />
+                <ScalarProperty Name="ApeMat" ColumnName="ApeMat" />
+                <ScalarProperty Name="DesCar" ColumnName="DesCar" />
+                <ScalarProperty Name="Ndocum" ColumnName="Ndocum" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+                <ScalarProperty Name="CodCar" ColumnName="CodCar" />
+                <ScalarProperty Name="NroMat" ColumnName="NroMat" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_prematriculaCursos" FunctionName="InstituTecModel.Store.usp_prematriculaCursos">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstituTecModel.usp_prematriculaCursos_Result">
+                <ScalarProperty Name="NRC" ColumnName="NRC" />
+                <ScalarProperty Name="Curso" ColumnName="Curso" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Profesor" ColumnName="Profesor" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Local" ColumnName="Local" />
+                <ScalarProperty Name="DIA" ColumnName="DIA" />
+                <ScalarProperty Name="Inicio" ColumnName="Inicio" />
+                <ScalarProperty Name="Fin" ColumnName="Fin" />
+                <ScalarProperty Name="Carrera" ColumnName="Carrera" />
+                <ScalarProperty Name="Vacant" ColumnName="Vacant" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_Ubigeo_Departamentos" FunctionName="InstituTecModel.Store.usp_Ubigeo_Departamentos">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstituTecModel.usp_Ubigeo_Departamentos_Result">
+                <ScalarProperty Name="IDDEPA" ColumnName="IDDEPA" />
+                <ScalarProperty Name="DEPARTAMENTO" ColumnName="DEPARTAMENTO" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_Ubigeo_DistritosProvinciaDepartamento" FunctionName="InstituTecModel.Store.usp_Ubigeo_DistritosProvinciaDepartamento">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstituTecModel.usp_Ubigeo_DistritosProvinciaDepartamento_Result">
+                <ScalarProperty Name="IDDIST" ColumnName="IDDIST" />
+                <ScalarProperty Name="DISTRITO" ColumnName="DISTRITO" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_Ubigeo_ProvinciasDepartamento" FunctionName="InstituTecModel.Store.usp_Ubigeo_ProvinciasDepartamento">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstituTecModel.usp_Ubigeo_ProvinciasDepartamento_Result">
+                <ScalarProperty Name="IDPROV" ColumnName="IDPROV" />
+                <ScalarProperty Name="PROVINCIA" ColumnName="PROVINCIA" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_VerAlumno" FunctionName="InstituTecModel.Store.usp_VerAlumno">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstituTecModel.usp_VerAlumno_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="DNI" ColumnName="DNI" />
+                <ScalarProperty Name="Alumno" ColumnName="Alumno" />
+                <ScalarProperty Name="Fecha_nacimiento" ColumnName="Fecha nacimiento" />
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Departamento" ColumnName="Departamento" />
+                <ScalarProperty Name="carrera" ColumnName="carrera" />
+                <ScalarProperty Name="Facultad" ColumnName="Facultad" />
+                <ScalarProperty Name="Foto" ColumnName="Foto" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_VerAlumnoDetallado" FunctionName="InstituTecModel.Store.usp_VerAlumnoDetallado" />
+          <FunctionImportMapping FunctionImportName="usp_VerCursoActivo" FunctionName="InstituTecModel.Store.usp_VerCursoActivo">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstituTecModel.usp_VerCursoActivo_Result">
+                <ScalarProperty Name="Facultad" ColumnName="Facultad" />
+                <ScalarProperty Name="Carrera" ColumnName="Carrera" />
+                <ScalarProperty Name="Curso" ColumnName="Curso" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_VerCursoInactivo" FunctionName="InstituTecModel.Store.usp_VerCursoInactivo">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstituTecModel.usp_VerCursoInactivo_Result">
+                <ScalarProperty Name="Facultad" ColumnName="Facultad" />
+                <ScalarProperty Name="Carrera" ColumnName="Carrera" />
+                <ScalarProperty Name="Curso" ColumnName="Curso" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_VerDetMatricula" FunctionName="InstituTecModel.Store.usp_VerDetMatricula">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstituTecModel.usp_VerDetMatricula_Result">
+                <ScalarProperty Name="NRC" ColumnName="NRC" />
+                <ScalarProperty Name="Curso" ColumnName="Curso" />
+                <ScalarProperty Name="Profesor" ColumnName="Profesor" />
+                <ScalarProperty Name="Local" ColumnName="Local" />
+                <ScalarProperty Name="Aula" ColumnName="Aula" />
+                <ScalarProperty Name="Dia" ColumnName="Dia" />
+                <ScalarProperty Name="Inicio" ColumnName="Inicio" />
+                <ScalarProperty Name="Fin" ColumnName="Fin" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_verEspcProfesor" FunctionName="InstituTecModel.Store.usp_verEspcProfesor">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstituTecModel.usp_verEspcProfesor_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Profesor" ColumnName="Profesor" />
+                <ScalarProperty Name="Especialidad" ColumnName="Especialidad" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_VerMatricula" FunctionName="InstituTecModel.Store.usp_VerMatricula">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstituTecModel.usp_VerMatricula_Result">
+                <ScalarProperty Name="Ciclo" ColumnName="Ciclo" />
+                <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Alumno" ColumnName="Alumno" />
+                <ScalarProperty Name="Carrera" ColumnName="Carrera" />
+                <ScalarProperty Name="Inscrito" ColumnName="Inscrito" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_VerProfesor" FunctionName="InstituTecModel.Store.usp_VerProfesor">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstituTecModel.usp_VerProfesor_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Profesor" ColumnName="Profesor" />
+                <ScalarProperty Name="DNI" ColumnName="DNI" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Fecha_Ingreso" ColumnName="Fecha Ingreso" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
+                <ScalarProperty Name="Departamento" ColumnName="Departamento" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_VerProfesorDetallado" FunctionName="InstituTecModel.Store.usp_VerProfesorDetallado" />
+          <FunctionImportMapping FunctionImportName="usp_VerSeccion" FunctionName="InstituTecModel.Store.usp_VerSeccion">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstituTecModel.usp_VerSeccion_Result">
+                <ScalarProperty Name="NRC" ColumnName="NRC" />
+                <ScalarProperty Name="Curso" ColumnName="Curso" />
+                <ScalarProperty Name="Profesor" ColumnName="Profesor" />
+                <ScalarProperty Name="DIA" ColumnName="DIA" />
+                <ScalarProperty Name="Inicio" ColumnName="Inicio" />
+                <ScalarProperty Name="Fin" ColumnName="Fin" />
+                <ScalarProperty Name="Local" ColumnName="Local" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

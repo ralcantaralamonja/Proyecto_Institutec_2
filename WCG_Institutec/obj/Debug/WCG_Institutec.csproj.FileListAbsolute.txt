@@ -1,0 +1,2 @@
+F:\ambar\isil 2023 02\desarrollo de aplicaciones 2\proyecto02\Proyecto_Institutec_2\WCG_Institutec\obj\Debug\WCG_Institutec.csproj.AssemblyReference.cache
+F:\ambar\isil 2023 02\desarrollo de aplicaciones 2\proyecto02\Proyecto_Institutec_2\WCG_Institutec\obj\Debug\WCG_Institutec.csproj.CoreCompileInputs.cache

@@ -1,0 +1,667 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="InstituTecModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TB_Alumno">
+    <Key>
+      <PropertyRef Name="IdAlum" />
+    </Key>
+    <Property Name="IdAlum" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="Ndocum" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="NomAlu" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ApePat" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ApeMat" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TelAlu" Type="char" MaxLength="9" />
+    <Property Name="CorAlu" Type="varchar" MaxLength="50" />
+    <Property Name="Estado" Type="bit" />
+    <Property Name="Sexoal" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="FecNac" Type="date" />
+    <Property Name="CodCar" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="Fec_Registro" Type="datetime" />
+    <Property Name="Usu_Registro" Type="varchar" MaxLength="20" />
+    <Property Name="Fec_Ult_Mod" Type="datetime" />
+    <Property Name="Usu_Ult_Mod" Type="varchar" MaxLength="20" />
+    <Property Name="direccion" Type="varchar" MaxLength="100" />
+    <Property Name="Id_Ubi" Type="nchar" MaxLength="6" Nullable="false" />
+    <Property Name="foto" Type="image" />
+  </EntityType>
+  <EntityType Name="TB_Aula">
+    <Key>
+      <PropertyRef Name="IdAula" />
+    </Key>
+    <Property Name="IdAula" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="IdCent" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="AfoAul" Type="tinyint" />
+    <Property Name="Habita" Type="bit" />
+    <Property Name="Fec_Registro" Type="datetime" />
+    <Property Name="Usu_Registro" Type="varchar" MaxLength="20" />
+    <Property Name="Fec_Ult_Mod" Type="datetime" />
+    <Property Name="Usu_Ult_Mod" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Tb_Carrera">
+    <Key>
+      <PropertyRef Name="CodCar" />
+    </Key>
+    <Property Name="CodCar" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="IdFacu" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="DesCar" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Fec_Registro" Type="datetime" />
+    <Property Name="Usu_Registro" Type="varchar" MaxLength="20" />
+    <Property Name="Fec_Ult_Mod" Type="datetime" />
+    <Property Name="Usu_Ult_Mod" Type="varchar" MaxLength="20" />
+    <Property Name="Est_carr" Type="int" />
+  </EntityType>
+  <EntityType Name="Tb_Curso">
+    <Key>
+      <PropertyRef Name="IdCurs" />
+    </Key>
+    <Property Name="IdCurs" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="NomCur" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Activo" Type="bit" />
+    <Property Name="CodCar" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="Fec_Registro" Type="datetime" />
+    <Property Name="Usu_Registro" Type="varchar" MaxLength="20" />
+    <Property Name="Fec_Ult_Mod" Type="datetime" />
+    <Property Name="Usu_Ult_Mod" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TB_Det_Espc">
+    <Key>
+      <PropertyRef Name="IdEspc" />
+      <PropertyRef Name="IdProf" />
+    </Key>
+    <Property Name="IdEspc" Type="tinyint" Nullable="false" />
+    <Property Name="IdProf" Type="char" MaxLength="4" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_Det_Mat">
+    <Key>
+      <PropertyRef Name="NroMat" />
+      <PropertyRef Name="IdCods" />
+    </Key>
+    <Property Name="NroMat" Type="char" MaxLength="7" Nullable="false" />
+    <Property Name="IdCods" Type="char" MaxLength="6" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_Espc_Prof">
+    <Key>
+      <PropertyRef Name="IdEspc" />
+    </Key>
+    <Property Name="IdEspc" Type="tinyint" Nullable="false" />
+    <Property Name="DesEsc" Type="varchar" MaxLength="60" />
+    <Property Name="Fec_Registro" Type="datetime" />
+    <Property Name="Usu_Registro" Type="varchar" MaxLength="20" />
+    <Property Name="Fec_Ult_Mod" Type="datetime" />
+    <Property Name="Usu_Ult_Mod" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TB_Facultad">
+    <Key>
+      <PropertyRef Name="IdFacu" />
+    </Key>
+    <Property Name="IdFacu" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="DesFac" Type="varchar" MaxLength="50" />
+    <Property Name="Fec_Registro" Type="datetime" />
+    <Property Name="Usu_Registro" Type="varchar" MaxLength="20" />
+    <Property Name="Fec_Ult_Mod" Type="datetime" />
+    <Property Name="Usu_Ult_Mod" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TB_local">
+    <Key>
+      <PropertyRef Name="IdCent" />
+    </Key>
+    <Property Name="IdCent" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="Desloc" Type="varchar" MaxLength="50" />
+    <Property Name="Dirloc" Type="varchar" MaxLength="50" />
+    <Property Name="Fec_Registro" Type="datetime" />
+    <Property Name="Usu_Registro" Type="varchar" MaxLength="20" />
+    <Property Name="Fec_Ult_Mod" Type="datetime" />
+    <Property Name="Usu_Ult_Mod" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TB_Matricula">
+    <Key>
+      <PropertyRef Name="NroMat" />
+    </Key>
+    <Property Name="NroMat" Type="char" MaxLength="7" Nullable="false" />
+    <Property Name="IdSeme" Type="char" MaxLength="7" Nullable="false" />
+    <Property Name="EstMat" Type="tinyint" Nullable="false" />
+    <Property Name="IdAlum" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="FecMat" Type="date" />
+    <Property Name="CodCar" Type="char" MaxLength="4" />
+  </EntityType>
+  <EntityType Name="TB_Profesor">
+    <Key>
+      <PropertyRef Name="IdProf" />
+    </Key>
+    <Property Name="IdProf" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="Ndocum" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="NomPro" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ApePat" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ApeMat" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CorIns" Type="varchar" MaxLength="50" />
+    <Property Name="TelPro" Type="char" MaxLength="9" />
+    <Property Name="FecNac" Type="date" />
+    <Property Name="Sexopr" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="FecIng" Type="date" />
+    <Property Name="Estado" Type="bit" />
+    <Property Name="Fec_Registro" Type="datetime" />
+    <Property Name="Usu_Registro" Type="varchar" MaxLength="20" />
+    <Property Name="Fec_Ult_Mod" Type="datetime" />
+    <Property Name="Usu_Ult_Mod" Type="varchar" MaxLength="20" />
+    <Property Name="direccion" Type="varchar" MaxLength="100" />
+    <Property Name="Id_Ubi" Type="nchar" MaxLength="6" Nullable="false" />
+    <Property Name="Foto" Type="image" />
+  </EntityType>
+  <EntityType Name="Tb_Seccion">
+    <Key>
+      <PropertyRef Name="IdCods" />
+    </Key>
+    <Property Name="IdCods" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="IdCurs" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="IdProf" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="Activo" Type="bit" />
+    <Property Name="Vacant" Type="tinyint" />
+    <Property Name="DIA" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="IdCent" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="Fec_Registro" Type="datetime" />
+    <Property Name="Usu_Registro" Type="varchar" MaxLength="20" />
+    <Property Name="Fec_Ult_Mod" Type="datetime" />
+    <Property Name="Usu_Ult_Mod" Type="varchar" MaxLength="20" />
+    <Property Name="HorIni" Type="time" Precision="0" />
+    <Property Name="HorFin" Type="time" Precision="0" />
+  </EntityType>
+  <EntityType Name="TB_Semestre">
+    <Key>
+      <PropertyRef Name="IdSeme" />
+    </Key>
+    <Property Name="IdSeme" Type="char" MaxLength="7" Nullable="false" />
+    <Property Name="Descrp" Type="varchar" MaxLength="50" />
+    <Property Name="FecInc" Type="date" />
+    <Property Name="FecFin" Type="date" />
+    <Property Name="Fec_Registro" Type="datetime" />
+    <Property Name="Usu_Registro" Type="varchar" MaxLength="20" />
+    <Property Name="Fec_Ult_Mod" Type="datetime" />
+    <Property Name="Usu_Ult_Mod" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Tb_Ubigeo">
+    <Key>
+      <PropertyRef Name="Id_Ubigeo" />
+    </Key>
+    <Property Name="Id_Ubigeo" Type="nchar" MaxLength="6" Nullable="false" />
+    <Property Name="IdDepa" Type="nvarchar" MaxLength="255" />
+    <Property Name="IdProv" Type="nvarchar" MaxLength="255" />
+    <Property Name="IdDist" Type="nvarchar" MaxLength="255" />
+    <Property Name="Departamento" Type="nvarchar" MaxLength="255" />
+    <Property Name="Provincia" Type="nvarchar" MaxLength="255" />
+    <Property Name="Distrito" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Tb_Usuario">
+    <Key>
+      <PropertyRef Name="Login_Usuario" />
+    </Key>
+    <Property Name="Login_Usuario" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Pass_Usuario" Type="varchar" MaxLength="20" />
+    <Property Name="Niv_Usuario" Type="int" />
+    <Property Name="Est_Usuario" Type="int" />
+    <Property Name="Fec_Registro" Type="datetime" />
+    <Property Name="Usu_Registro" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <Association Name="FK_Asi_Car">
+    <End Role="Tb_Carrera" Type="Self.Tb_Carrera" Multiplicity="1" />
+    <End Role="Tb_Curso" Type="Self.Tb_Curso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Carrera">
+        <PropertyRef Name="CodCar" />
+      </Principal>
+      <Dependent Role="Tb_Curso">
+        <PropertyRef Name="CodCar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cur_Sec">
+    <End Role="Tb_Curso" Type="Self.Tb_Curso" Multiplicity="1" />
+    <End Role="Tb_Seccion" Type="Self.Tb_Seccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Curso">
+        <PropertyRef Name="IdCurs" />
+      </Principal>
+      <Dependent Role="Tb_Seccion">
+        <PropertyRef Name="IdCurs" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Loc_Aula">
+    <End Role="TB_local" Type="Self.TB_local" Multiplicity="1" />
+    <End Role="TB_Aula" Type="Self.TB_Aula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_local">
+        <PropertyRef Name="IdCent" />
+      </Principal>
+      <Dependent Role="TB_Aula">
+        <PropertyRef Name="IdCent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Local_Seccion">
+    <End Role="TB_local" Type="Self.TB_local" Multiplicity="1" />
+    <End Role="Tb_Seccion" Type="Self.Tb_Seccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_local">
+        <PropertyRef Name="IdCent" />
+      </Principal>
+      <Dependent Role="Tb_Seccion">
+        <PropertyRef Name="IdCent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mat_Alu">
+    <End Role="TB_Alumno" Type="Self.TB_Alumno" Multiplicity="1" />
+    <End Role="TB_Matricula" Type="Self.TB_Matricula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_Alumno">
+        <PropertyRef Name="IdAlum" />
+      </Principal>
+      <Dependent Role="TB_Matricula">
+        <PropertyRef Name="IdAlum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SecProf">
+    <End Role="TB_Profesor" Type="Self.TB_Profesor" Multiplicity="1" />
+    <End Role="Tb_Seccion" Type="Self.Tb_Seccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_Profesor">
+        <PropertyRef Name="IdProf" />
+      </Principal>
+      <Dependent Role="Tb_Seccion">
+        <PropertyRef Name="IdProf" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_Alumno_Tb_Carrera">
+    <End Role="Tb_Carrera" Type="Self.Tb_Carrera" Multiplicity="1" />
+    <End Role="TB_Alumno" Type="Self.TB_Alumno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Carrera">
+        <PropertyRef Name="CodCar" />
+      </Principal>
+      <Dependent Role="TB_Alumno">
+        <PropertyRef Name="CodCar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_Alumno_Tb_Ubigeo">
+    <End Role="Tb_Ubigeo" Type="Self.Tb_Ubigeo" Multiplicity="1" />
+    <End Role="TB_Alumno" Type="Self.TB_Alumno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Ubigeo">
+        <PropertyRef Name="Id_Ubigeo" />
+      </Principal>
+      <Dependent Role="TB_Alumno">
+        <PropertyRef Name="Id_Ubi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_Carrera_TB_Facultad">
+    <End Role="TB_Facultad" Type="Self.TB_Facultad" Multiplicity="1" />
+    <End Role="Tb_Carrera" Type="Self.Tb_Carrera" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_Facultad">
+        <PropertyRef Name="IdFacu" />
+      </Principal>
+      <Dependent Role="Tb_Carrera">
+        <PropertyRef Name="IdFacu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_Det_Espc_Profe">
+    <End Role="TB_Profesor" Type="Self.TB_Profesor" Multiplicity="1" />
+    <End Role="TB_Det_Espc" Type="Self.TB_Det_Espc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_Profesor">
+        <PropertyRef Name="IdProf" />
+      </Principal>
+      <Dependent Role="TB_Det_Espc">
+        <PropertyRef Name="IdProf" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_Det_Mat_TB_Matricula">
+    <End Role="TB_Matricula" Type="Self.TB_Matricula" Multiplicity="1" />
+    <End Role="TB_Det_Mat" Type="Self.TB_Det_Mat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_Matricula">
+        <PropertyRef Name="NroMat" />
+      </Principal>
+      <Dependent Role="TB_Det_Mat">
+        <PropertyRef Name="NroMat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_Det_Mat_Tb_Seccion">
+    <End Role="Tb_Seccion" Type="Self.Tb_Seccion" Multiplicity="1" />
+    <End Role="TB_Det_Mat" Type="Self.TB_Det_Mat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Seccion">
+        <PropertyRef Name="IdCods" />
+      </Principal>
+      <Dependent Role="TB_Det_Mat">
+        <PropertyRef Name="IdCods" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_Espc_Prof">
+    <End Role="TB_Espc_Prof" Type="Self.TB_Espc_Prof" Multiplicity="1" />
+    <End Role="TB_Det_Espc" Type="Self.TB_Det_Espc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_Espc_Prof">
+        <PropertyRef Name="IdEspc" />
+      </Principal>
+      <Dependent Role="TB_Det_Espc">
+        <PropertyRef Name="IdEspc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_Matricula_TB_Semestre">
+    <End Role="TB_Semestre" Type="Self.TB_Semestre" Multiplicity="1" />
+    <End Role="TB_Matricula" Type="Self.TB_Matricula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_Semestre">
+        <PropertyRef Name="IdSeme" />
+      </Principal>
+      <Dependent Role="TB_Matricula">
+        <PropertyRef Name="IdSeme" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_Profesor_Tb_Ubigeo">
+    <End Role="Tb_Ubigeo" Type="Self.Tb_Ubigeo" Multiplicity="1" />
+    <End Role="TB_Profesor" Type="Self.TB_Profesor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Ubigeo">
+        <PropertyRef Name="Id_Ubigeo" />
+      </Principal>
+      <Dependent Role="TB_Profesor">
+        <PropertyRef Name="Id_Ubi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="usp_ActualizarAlumno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAlum" Type="char" Mode="In" />
+    <Parameter Name="NomAlu" Type="varchar" Mode="In" />
+    <Parameter Name="ApePat" Type="varchar" Mode="In" />
+    <Parameter Name="ApeMat" Type="varchar" Mode="In" />
+    <Parameter Name="TelAlu" Type="char" Mode="In" />
+    <Parameter Name="FecNac" Type="date" Mode="In" />
+    <Parameter Name="Estado" Type="bit" Mode="In" />
+    <Parameter Name="Ndocum" Type="char" Mode="In" />
+    <Parameter Name="Id_Ubi" Type="char" Mode="In" />
+    <Parameter Name="Sexoal" Type="char" Mode="In" />
+    <Parameter Name="CorAlu" Type="varchar" Mode="In" />
+    <Parameter Name="Usu_Regi" Type="varchar" Mode="In" />
+    <Parameter Name="CodCar" Type="char" Mode="In" />
+    <Parameter Name="FotoAlum" Type="image" Mode="In" />
+    <Parameter Name="direcc" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ActualizarCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vcod" Type="char" Mode="In" />
+    <Parameter Name="vidfacu" Type="char" Mode="In" />
+    <Parameter Name="vdescar" Type="varchar" Mode="In" />
+    <Parameter Name="vusu_ult_regis" Type="varchar" Mode="In" />
+    <Parameter Name="vdesFac" Type="varchar" Mode="In" />
+    <Parameter Name="vest_carr" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_ActualizarCurso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdCurs" Type="char" Mode="In" />
+    <Parameter Name="NomCur" Type="varchar" Mode="In" />
+    <Parameter Name="Activo" Type="bit" Mode="In" />
+    <Parameter Name="CodCar" Type="char" Mode="In" />
+    <Parameter Name="Usu_Ult_Mod" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ActualizarCursoActivo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdCurs" Type="char" Mode="In" />
+  </Function>
+  <Function Name="usp_ActulizarProfesor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdProf" Type="char" Mode="In" />
+    <Parameter Name="NomPro" Type="varchar" Mode="In" />
+    <Parameter Name="ApePat" Type="varchar" Mode="In" />
+    <Parameter Name="ApeMat" Type="varchar" Mode="In" />
+    <Parameter Name="TelPro" Type="char" Mode="In" />
+    <Parameter Name="Estado" Type="bit" Mode="In" />
+    <Parameter Name="FecIng" Type="date" Mode="In" />
+    <Parameter Name="Ndocum" Type="char" Mode="In" />
+    <Parameter Name="Sexopr" Type="char" Mode="In" />
+    <Parameter Name="Id_Ubi" Type="char" Mode="In" />
+    <Parameter Name="Usu_Ult_Mod" Type="varchar" Mode="In" />
+    <Parameter Name="Foto" Type="image" Mode="In" />
+  </Function>
+  <Function Name="usp_BorrarAlumno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAlum" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_BorrarCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vcod" Type="char" Mode="In" />
+  </Function>
+  <Function Name="usp_BorrarCurso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdCurso" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_BorrarProfesor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdProfesor" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_CarreraXGenero" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_ConsultaProfesor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cod" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ConsultarAlumno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAlum" Type="char" Mode="In" />
+  </Function>
+  <Function Name="usp_ConsultarCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vcod" Type="char" Mode="In" />
+  </Function>
+  <Function Name="usp_ConsultarCurso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdCurs" Type="char" Mode="In" />
+  </Function>
+  <Function Name="usp_ConsultarUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Login_Usuario" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ConsultaWebAlumno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAlu" Type="char" Mode="In" />
+  </Function>
+  <Function Name="usp_CursosDisponiblesAlumno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dni" Type="char" Mode="In" />
+  </Function>
+  <Function Name="usp_detalleMatricula" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dni" Type="char" Mode="In" />
+  </Function>
+  <Function Name="usp_facultadCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodCar" Type="char" Mode="In" />
+  </Function>
+  <Function Name="usp_InserCurso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NomCur" Type="varchar" Mode="In" />
+    <Parameter Name="Activo" Type="bit" Mode="In" />
+    <Parameter Name="CodCar" Type="char" Mode="In" />
+    <Parameter Name="Usu_Registro" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_InsertarAlumnos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NomAlu" Type="varchar" Mode="In" />
+    <Parameter Name="ApePat" Type="varchar" Mode="In" />
+    <Parameter Name="ApeMat" Type="varchar" Mode="In" />
+    <Parameter Name="Ndocum" Type="char" Mode="In" />
+    <Parameter Name="Id_Ubi" Type="char" Mode="In" />
+    <Parameter Name="Sexoal" Type="char" Mode="In" />
+    <Parameter Name="FecNac" Type="date" Mode="In" />
+    <Parameter Name="CorAlu" Type="varchar" Mode="In" />
+    <Parameter Name="TelAlu" Type="char" Mode="In" />
+    <Parameter Name="Usu_Regi" Type="varchar" Mode="In" />
+    <Parameter Name="Estado" Type="bit" Mode="In" />
+    <Parameter Name="CodCar" Type="char" Mode="In" />
+    <Parameter Name="FotoAlum" Type="image" Mode="In" />
+    <Parameter Name="direcc" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_InsertarCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vIdFacu" Type="char" Mode="In" />
+    <Parameter Name="vDesCar" Type="varchar" Mode="In" />
+    <Parameter Name="vUsu_regi" Type="varchar" Mode="In" />
+    <Parameter Name="vest_carr" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_InsertarProfesor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Ndocum" Type="char" Mode="In" />
+    <Parameter Name="NomPro" Type="varchar" Mode="In" />
+    <Parameter Name="ApePat" Type="varchar" Mode="In" />
+    <Parameter Name="ApeMat" Type="varchar" Mode="In" />
+    <Parameter Name="Sexopr" Type="char" Mode="In" />
+    <Parameter Name="Id_Ubi" Type="char" Mode="In" />
+    <Parameter Name="Foto" Type="image" Mode="In" />
+    <Parameter Name="Usu_Registro" Type="varchar" Mode="In" />
+    <Parameter Name="Estado" Type="bit" Mode="In" />
+    <Parameter Name="CorIns" Type="varchar" Mode="In" />
+    <Parameter Name="TelPro" Type="char" Mode="In" />
+    <Parameter Name="FecNac" Type="date" Mode="In" />
+    <Parameter Name="FecIng" Type="date" Mode="In" />
+  </Function>
+  <Function Name="usp_InsertarSeccion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdCurs" Type="char" Mode="In" />
+    <Parameter Name="IdProf" Type="char" Mode="In" />
+    <Parameter Name="Activo" Type="bit" Mode="In" />
+    <Parameter Name="Vacant" Type="tinyint" Mode="In" />
+    <Parameter Name="DIA" Type="varchar" Mode="In" />
+    <Parameter Name="HorIni" Type="time" Mode="In" />
+    <Parameter Name="HorFin" Type="time" Mode="In" />
+    <Parameter Name="IdCent" Type="char" Mode="In" />
+  </Function>
+  <Function Name="usp_InsertMatricula" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdSeme" Type="char" Mode="In" />
+    <Parameter Name="EstMat" Type="tinyint" Mode="In" />
+    <Parameter Name="IdAlum" Type="char" Mode="In" />
+    <Parameter Name="FecMat" Type="date" Mode="In" />
+  </Function>
+  <Function Name="usp_ListaConsultarProfesorCurso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vcod" Type="char" Mode="In" />
+  </Function>
+  <Function Name="usp_ListarAlumno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="char" Mode="In" />
+  </Function>
+  <Function Name="usp_ListarCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_ListarCurso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_ListarCursosAlumnoFechas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAlum" Type="char" Mode="In" />
+    <Parameter Name="FecInc" Type="date" Mode="In" />
+    <Parameter Name="FecFin" Type="date" Mode="In" />
+  </Function>
+  <Function Name="usp_ListarFacultad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_ListarProfesor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="char" Mode="In" />
+  </Function>
+  <Function Name="usp_ListarVerDetMatricula" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Dni" Type="char" Mode="In" />
+  </Function>
+  <Function Name="usp_MatriculadosSeccion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_Matricular" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NroMat" Type="char" Mode="In" />
+    <Parameter Name="IdCods" Type="char" Mode="In" />
+  </Function>
+  <Function Name="usp_ObtenerCarreraAlumno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAlum" Type="char" Mode="In" />
+  </Function>
+  <Function Name="usp_ObtenerFacultadAlumno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAlum" Type="char" Mode="In" />
+  </Function>
+  <Function Name="usp_PreMatricula" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dni" Type="char" Mode="In" />
+  </Function>
+  <Function Name="usp_prematriculaCursos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codcar" Type="char" Mode="In" />
+  </Function>
+  <Function Name="usp_Ubigeo_Departamentos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_Ubigeo_DistritosProvinciaDepartamento" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdDepartamento" Type="char" Mode="In" />
+    <Parameter Name="IdProvincia" Type="char" Mode="In" />
+  </Function>
+  <Function Name="usp_Ubigeo_ProvinciasDepartamento" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdDepartamento" Type="char" Mode="In" />
+  </Function>
+  <Function Name="usp_VerAlumno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_VerAlumnoDetallado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_VerCursoActivo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_VerCursoInactivo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_VerDetMatricula" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dni" Type="char" Mode="In" />
+  </Function>
+  <Function Name="usp_verEspcProfesor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idprofe" Type="char" Mode="In" />
+  </Function>
+  <Function Name="usp_VerMatricula" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_VerProfesor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_VerProfesorDetallado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_VerSeccion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="InstituTecModelStoreContainer">
+    <EntitySet Name="TB_Alumno" EntityType="Self.TB_Alumno" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_Aula" EntityType="Self.TB_Aula" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Carrera" EntityType="Self.Tb_Carrera" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Curso" EntityType="Self.Tb_Curso" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_Det_Espc" EntityType="Self.TB_Det_Espc" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_Det_Mat" EntityType="Self.TB_Det_Mat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_Espc_Prof" EntityType="Self.TB_Espc_Prof" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_Facultad" EntityType="Self.TB_Facultad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_local" EntityType="Self.TB_local" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_Matricula" EntityType="Self.TB_Matricula" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_Profesor" EntityType="Self.TB_Profesor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Seccion" EntityType="Self.Tb_Seccion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_Semestre" EntityType="Self.TB_Semestre" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Ubigeo" EntityType="Self.Tb_Ubigeo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Usuario" EntityType="Self.Tb_Usuario" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Asi_Car" Association="Self.FK_Asi_Car">
+      <End Role="Tb_Carrera" EntitySet="Tb_Carrera" />
+      <End Role="Tb_Curso" EntitySet="Tb_Curso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cur_Sec" Association="Self.FK_Cur_Sec">
+      <End Role="Tb_Curso" EntitySet="Tb_Curso" />
+      <End Role="Tb_Seccion" EntitySet="Tb_Seccion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Loc_Aula" Association="Self.FK_Loc_Aula">
+      <End Role="TB_local" EntitySet="TB_local" />
+      <End Role="TB_Aula" EntitySet="TB_Aula" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Local_Seccion" Association="Self.FK_Local_Seccion">
+      <End Role="TB_local" EntitySet="TB_local" />
+      <End Role="Tb_Seccion" EntitySet="Tb_Seccion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mat_Alu" Association="Self.FK_Mat_Alu">
+      <End Role="TB_Alumno" EntitySet="TB_Alumno" />
+      <End Role="TB_Matricula" EntitySet="TB_Matricula" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SecProf" Association="Self.FK_SecProf">
+      <End Role="TB_Profesor" EntitySet="TB_Profesor" />
+      <End Role="Tb_Seccion" EntitySet="Tb_Seccion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_Alumno_Tb_Carrera" Association="Self.FK_TB_Alumno_Tb_Carrera">
+      <End Role="Tb_Carrera" EntitySet="Tb_Carrera" />
+      <End Role="TB_Alumno" EntitySet="TB_Alumno" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_Alumno_Tb_Ubigeo" Association="Self.FK_TB_Alumno_Tb_Ubigeo">
+      <End Role="Tb_Ubigeo" EntitySet="Tb_Ubigeo" />
+      <End Role="TB_Alumno" EntitySet="TB_Alumno" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_Carrera_TB_Facultad" Association="Self.FK_Tb_Carrera_TB_Facultad">
+      <End Role="TB_Facultad" EntitySet="TB_Facultad" />
+      <End Role="Tb_Carrera" EntitySet="Tb_Carrera" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_Det_Espc_Profe" Association="Self.FK_TB_Det_Espc_Profe">
+      <End Role="TB_Profesor" EntitySet="TB_Profesor" />
+      <End Role="TB_Det_Espc" EntitySet="TB_Det_Espc" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_Det_Mat_TB_Matricula" Association="Self.FK_TB_Det_Mat_TB_Matricula">
+      <End Role="TB_Matricula" EntitySet="TB_Matricula" />
+      <End Role="TB_Det_Mat" EntitySet="TB_Det_Mat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_Det_Mat_Tb_Seccion" Association="Self.FK_TB_Det_Mat_Tb_Seccion">
+      <End Role="Tb_Seccion" EntitySet="Tb_Seccion" />
+      <End Role="TB_Det_Mat" EntitySet="TB_Det_Mat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_Espc_Prof" Association="Self.FK_TB_Espc_Prof">
+      <End Role="TB_Espc_Prof" EntitySet="TB_Espc_Prof" />
+      <End Role="TB_Det_Espc" EntitySet="TB_Det_Espc" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_Matricula_TB_Semestre" Association="Self.FK_TB_Matricula_TB_Semestre">
+      <End Role="TB_Semestre" EntitySet="TB_Semestre" />
+      <End Role="TB_Matricula" EntitySet="TB_Matricula" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_Profesor_Tb_Ubigeo" Association="Self.FK_TB_Profesor_Tb_Ubigeo">
+      <End Role="Tb_Ubigeo" EntitySet="Tb_Ubigeo" />
+      <End Role="TB_Profesor" EntitySet="TB_Profesor" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
