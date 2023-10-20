@@ -1,5 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="InstituTecModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
   <EntityType Name="TB_Alumno">
     <Key>
       <PropertyRef Name="IdAlum" />
@@ -200,6 +210,333 @@
     <Property Name="Fec_Registro" Type="datetime" />
     <Property Name="Usu_Registro" Type="varchar" MaxLength="20" />
   </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'InstituTec.dbo.VerDetAlum' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="VerDetAlum">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Alumno" />
+      <PropertyRef Name="DNI" />
+      <PropertyRef Name="Carrera" />
+    </Key>
+    <Property Name="Id" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="Alumno" Type="varchar" MaxLength="202" Nullable="false" />
+    <Property Name="Genero" Type="varchar" MaxLength="9" />
+    <Property Name="DNI" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="Correo" Type="varchar" MaxLength="50" />
+    <Property Name="Carrera" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Facultad" Type="varchar" MaxLength="50" />
+    <Property Name="Estado" Type="varchar" MaxLength="8" />
+    <Property Name="Distrito" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'InstituTec.dbo.vw_alumno' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="vw_alumno">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="DNI" />
+      <PropertyRef Name="Alumno" />
+      <PropertyRef Name="Carrera" />
+    </Key>
+    <Property Name="ID" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="DNI" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="Alumno" Type="varchar" MaxLength="202" Nullable="false" />
+    <Property Name="Direccion" Type="varchar" MaxLength="100" />
+    <Property Name="Foto" Type="varbinary(max)" />
+    <Property Name="Telefono" Type="char" MaxLength="9" />
+    <Property Name="Correo" Type="varchar" MaxLength="50" />
+    <Property Name="Estado" Type="varchar" MaxLength="8" />
+    <Property Name="Genero" Type="varchar" MaxLength="9" />
+    <Property Name="Fecha nacimiento" Type="date" />
+    <Property Name="Departamento" Type="nvarchar" MaxLength="255" />
+    <Property Name="Carrera" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Facultad" Type="varchar" MaxLength="50" />
+    <Property Name="Fecha Registro" Type="datetime" />
+    <Property Name="Registro" Type="varchar" MaxLength="20" />
+    <Property Name="Ultima modificacion" Type="datetime" />
+    <Property Name="Usuario ultima modificacion" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'InstituTec.dbo.vw_AlumnoCursos' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="vw_AlumnoCursos">
+    <Key>
+      <PropertyRef Name="IdAlum" />
+      <PropertyRef Name="CodCar" />
+      <PropertyRef Name="NomCur" />
+      <PropertyRef Name="DIA" />
+      <PropertyRef Name="IdAula" />
+    </Key>
+    <Property Name="IdAlum" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="FecMat" Type="date" />
+    <Property Name="Descrp" Type="varchar" MaxLength="50" />
+    <Property Name="FecIni" Type="date" />
+    <Property Name="FecFin" Type="date" />
+    <Property Name="CodCar" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="NomCur" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Activo" Type="varchar" MaxLength="8" />
+    <Property Name="DIA" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="HorIni" Type="time" Precision="0" />
+    <Property Name="HorFin" Type="time" Precision="0" />
+    <Property Name="Desloc" Type="varchar" MaxLength="50" />
+    <Property Name="IdAula" Type="char" MaxLength="4" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'InstituTec.dbo.vw_Carrera' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="vw_Carrera">
+    <Key>
+      <PropertyRef Name="CodCar" />
+      <PropertyRef Name="DesCar" />
+      <PropertyRef Name="IdFacu" />
+    </Key>
+    <Property Name="CodCar" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="DesCar" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Fec_Registro" Type="datetime" />
+    <Property Name="Usu_Registro" Type="varchar" MaxLength="20" />
+    <Property Name="Fec_Ult_Mod" Type="datetime" />
+    <Property Name="Usu_Ult_Mod" Type="varchar" MaxLength="20" />
+    <Property Name="Est_carr_2" Type="int" />
+    <Property Name="Est_carr" Type="varchar" MaxLength="8" />
+    <Property Name="IdFacu" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="DesFac" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'InstituTec.dbo.vw_CarreraXGenero' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="vw_CarreraXGenero">
+    <Key>
+      <PropertyRef Name="DesCar" />
+    </Key>
+    <Property Name="Mujeres" Type="int" />
+    <Property Name="Hombres" Type="int" />
+    <Property Name="DesCar" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Total" Type="int" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'InstituTec.dbo.vw_ConsultaListaAlumnoCurso' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="vw_ConsultaListaAlumnoCurso">
+    <Key>
+      <PropertyRef Name="IdAlum" />
+      <PropertyRef Name="Ndocum" />
+      <PropertyRef Name="NomAlu" />
+      <PropertyRef Name="ApePat" />
+      <PropertyRef Name="ApeMat" />
+      <PropertyRef Name="DesCar" />
+    </Key>
+    <Property Name="IdAlum" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="Ndocum" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="NomAlu" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ApePat" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ApeMat" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TelAlu" Type="char" MaxLength="9" />
+    <Property Name="CorAlu" Type="varchar" MaxLength="50" />
+    <Property Name="Estado" Type="bit" />
+    <Property Name="DesFac" Type="varchar" MaxLength="50" />
+    <Property Name="DesCar" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Departamento" Type="nvarchar" MaxLength="255" />
+    <Property Name="Provincia" Type="nvarchar" MaxLength="255" />
+    <Property Name="Distrito" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'InstituTec.dbo.vw_ConsultaListaProfesorCurso' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="vw_ConsultaListaProfesorCurso">
+    <Key>
+      <PropertyRef Name="IdProf" />
+      <PropertyRef Name="Ndocum" />
+      <PropertyRef Name="NomPro" />
+      <PropertyRef Name="ApePat" />
+      <PropertyRef Name="ApeMat" />
+    </Key>
+    <Property Name="IdProf" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="Ndocum" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="NomPro" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ApePat" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ApeMat" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Estado" Type="bit" />
+    <Property Name="direccion" Type="varchar" MaxLength="100" />
+    <Property Name="FecIng" Type="date" />
+    <Property Name="FecNac" Type="date" />
+    <Property Name="CorIns" Type="varchar" MaxLength="50" />
+    <Property Name="Departamento" Type="nvarchar" MaxLength="255" />
+    <Property Name="Provincia" Type="nvarchar" MaxLength="255" />
+    <Property Name="Distrito" Type="nvarchar" MaxLength="255" />
+    <Property Name="Usu_Registro" Type="varchar" MaxLength="20" />
+    <Property Name="Usu_Ult_Mod" Type="varchar" MaxLength="20" />
+    <Property Name="Fec_Ult_Mod" Type="datetime" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'InstituTec.dbo.vw_ConsultaProfesorCurso' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="vw_ConsultaProfesorCurso">
+    <Key>
+      <PropertyRef Name="Cod" />
+      <PropertyRef Name="DNI" />
+      <PropertyRef Name="Nombre y Apellido" />
+      <PropertyRef Name="Día" />
+      <PropertyRef Name="Nombre Curso" />
+      <PropertyRef Name="Aula" />
+    </Key>
+    <Property Name="Cod" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="DNI" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="Nombre y Apellido" Type="varchar" MaxLength="202" Nullable="false" />
+    <Property Name="Día" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hora Inicio" Type="time" Precision="0" />
+    <Property Name="Hora Fin" Type="time" Precision="0" />
+    <Property Name="Nombre Curso" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Estado" Type="varchar" MaxLength="8" />
+    <Property Name="Centro" Type="varchar" MaxLength="50" />
+    <Property Name="Aula" Type="char" MaxLength="4" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'InstituTec.dbo.vw_curso' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="vw_curso">
+    <Key>
+      <PropertyRef Name="Carrera" />
+      <PropertyRef Name="Curso" />
+    </Key>
+    <Property Name="Facultad" Type="varchar" MaxLength="50" />
+    <Property Name="Carrera" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Curso" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Activo" Type="varchar" MaxLength="8" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'InstituTec.dbo.vw_DetalleMatricula' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="vw_DetalleMatricula">
+    <Key>
+      <PropertyRef Name="NRC" />
+      <PropertyRef Name="Curso" />
+      <PropertyRef Name="Profesor" />
+      <PropertyRef Name="Aula" />
+      <PropertyRef Name="DIA" />
+      <PropertyRef Name="Dni" />
+      <PropertyRef Name="Alumno" />
+    </Key>
+    <Property Name="NRC" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="Curso" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Profesor" Type="varchar" MaxLength="202" Nullable="false" />
+    <Property Name="Local" Type="varchar" MaxLength="50" />
+    <Property Name="Aula" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="DIA" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Inicio" Type="time" Precision="0" />
+    <Property Name="Fin" Type="time" Precision="0" />
+    <Property Name="Dni" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="Alumno" Type="varchar" MaxLength="202" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'InstituTec.dbo.VW_Facultad' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="VW_Facultad">
+    <Key>
+      <PropertyRef Name="IdFacu" />
+    </Key>
+    <Property Name="IdFacu" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="DesFac" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'InstituTec.dbo.VW_Facultad_Carrera' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="VW_Facultad_Carrera">
+    <Key>
+      <PropertyRef Name="Codigo" />
+      <PropertyRef Name="Carrera" />
+    </Key>
+    <Property Name="Codigo" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="Carrera" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Facultad" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'InstituTec.dbo.vw_Matricula' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="vw_Matricula">
+    <Key>
+      <PropertyRef Name="Ciclo" />
+      <PropertyRef Name="Matricula" />
+      <PropertyRef Name="Alumno" />
+      <PropertyRef Name="Carrera" />
+    </Key>
+    <Property Name="Ciclo" Type="char" MaxLength="7" Nullable="false" />
+    <Property Name="Matricula" Type="char" MaxLength="7" Nullable="false" />
+    <Property Name="Estado" Type="varchar" MaxLength="11" />
+    <Property Name="Alumno" Type="varchar" MaxLength="202" Nullable="false" />
+    <Property Name="Carrera" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Inscrito" Type="date" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'InstituTec.dbo.vw_preMatricula' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="vw_preMatricula">
+    <Key>
+      <PropertyRef Name="NRC" />
+      <PropertyRef Name="Curso" />
+      <PropertyRef Name="Profesor" />
+      <PropertyRef Name="DIA" />
+      <PropertyRef Name="Carrera" />
+    </Key>
+    <Property Name="NRC" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="Curso" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Profesor" Type="varchar" MaxLength="202" Nullable="false" />
+    <Property Name="Estado" Type="varchar" MaxLength="8" />
+    <Property Name="Local" Type="varchar" MaxLength="50" />
+    <Property Name="DIA" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Inicio" Type="time" Precision="0" />
+    <Property Name="Fin" Type="time" Precision="0" />
+    <Property Name="Carrera" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Vacant" Type="tinyint" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'InstituTec.dbo.vw_Profesor' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="vw_Profesor">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Profesor" />
+      <PropertyRef Name="DNI" />
+    </Key>
+    <Property Name="Id" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="Profesor" Type="varchar" MaxLength="202" Nullable="false" />
+    <Property Name="Correo" Type="varchar" MaxLength="50" />
+    <Property Name="Foto" Type="varbinary(max)" />
+    <Property Name="Genero" Type="varchar" MaxLength="9" />
+    <Property Name="Telefono" Type="char" MaxLength="9" />
+    <Property Name="DNI" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="Fecha Ingreso" Type="date" />
+    <Property Name="Estado" Type="varchar" MaxLength="8" />
+    <Property Name="Departamento" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'InstituTec.dbo.vw_seccion' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="vw_seccion">
+    <Key>
+      <PropertyRef Name="NRC" />
+      <PropertyRef Name="Curso" />
+      <PropertyRef Name="Profesor" />
+      <PropertyRef Name="DIA" />
+    </Key>
+    <Property Name="NRC" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="Curso" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Profesor" Type="varchar" MaxLength="203" Nullable="false" />
+    <Property Name="DIA" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Inicio" Type="time" Precision="0" />
+    <Property Name="Fin" Type="time" Precision="0" />
+    <Property Name="Local" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'InstituTec.dbo.vw_vercurso' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="vw_vercurso">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Carrera" />
+      <PropertyRef Name="CodCar" />
+      <PropertyRef Name="Curso" />
+    </Key>
+    <Property Name="ID" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="Facultad" Type="varchar" MaxLength="50" />
+    <Property Name="Carrera" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CodCar" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="Curso" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Activo" Type="bit" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'InstituTec.dbo.VW_verDistrito' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="VW_verDistrito">
+    <Key>
+      <PropertyRef Name="Id_ubi" />
+    </Key>
+    <Property Name="Id_ubi" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="distri" Type="varchar" MaxLength="100" />
+  </EntityType>
   <Association Name="FK_Asi_Car">
     <End Role="Tb_Carrera" Type="Self.Tb_Carrera" Multiplicity="1" />
     <End Role="Tb_Curso" Type="Self.Tb_Curso" Multiplicity="*" />
@@ -380,6 +717,37 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="usp_ActualizarAlumno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="IdAlum" Type="char" Mode="In" />
     <Parameter Name="NomAlu" Type="varchar" Mode="In" />
@@ -430,13 +798,13 @@
     <Parameter Name="Foto" Type="image" Mode="In" />
   </Function>
   <Function Name="usp_BorrarAlumno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="IdAlum" Type="int" Mode="In" />
+    <Parameter Name="IdAlum" Type="char" Mode="In" />
   </Function>
   <Function Name="usp_BorrarCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="vcod" Type="char" Mode="In" />
   </Function>
   <Function Name="usp_BorrarCurso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="IdCurso" Type="int" Mode="In" />
+    <Parameter Name="IdCurso" Type="char" Mode="In" />
   </Function>
   <Function Name="usp_BorrarProfesor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="IdProfesor" Type="int" Mode="In" />
@@ -465,6 +833,9 @@
   </Function>
   <Function Name="usp_detalleMatricula" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="dni" Type="char" Mode="In" />
+  </Function>
+  <Function Name="usp_EliminarAlumno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="varchar" Mode="In" />
   </Function>
   <Function Name="usp_facultadCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="CodCar" Type="char" Mode="In" />
@@ -588,6 +959,7 @@
   <Function Name="usp_VerProfesorDetallado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="usp_VerSeccion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="InstituTecModelStoreContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TB_Alumno" EntityType="Self.TB_Alumno" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TB_Aula" EntityType="Self.TB_Aula" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Tb_Carrera" EntityType="Self.Tb_Carrera" Schema="dbo" store:Type="Tables" />
@@ -603,6 +975,230 @@
     <EntitySet Name="TB_Semestre" EntityType="Self.TB_Semestre" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Tb_Ubigeo" EntityType="Self.Tb_Ubigeo" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Tb_Usuario" EntityType="Self.Tb_Usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VerDetAlum" EntityType="Self.VerDetAlum" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VerDetAlum].[Id] AS [Id], 
+    [VerDetAlum].[Alumno] AS [Alumno], 
+    [VerDetAlum].[Genero] AS [Genero], 
+    [VerDetAlum].[DNI] AS [DNI], 
+    [VerDetAlum].[Correo] AS [Correo], 
+    [VerDetAlum].[Carrera] AS [Carrera], 
+    [VerDetAlum].[Facultad] AS [Facultad], 
+    [VerDetAlum].[Estado] AS [Estado], 
+    [VerDetAlum].[Distrito] AS [Distrito]
+    FROM [dbo].[VerDetAlum] AS [VerDetAlum]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_alumno" EntityType="Self.vw_alumno" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_alumno].[ID] AS [ID], 
+    [vw_alumno].[DNI] AS [DNI], 
+    [vw_alumno].[Alumno] AS [Alumno], 
+    [vw_alumno].[Direccion] AS [Direccion], 
+    [vw_alumno].[Foto] AS [Foto], 
+    [vw_alumno].[Telefono] AS [Telefono], 
+    [vw_alumno].[Correo] AS [Correo], 
+    [vw_alumno].[Estado] AS [Estado], 
+    [vw_alumno].[Genero] AS [Genero], 
+    [vw_alumno].[Fecha nacimiento] AS [Fecha nacimiento], 
+    [vw_alumno].[Departamento] AS [Departamento], 
+    [vw_alumno].[Carrera] AS [Carrera], 
+    [vw_alumno].[Facultad] AS [Facultad], 
+    [vw_alumno].[Fecha Registro] AS [Fecha Registro], 
+    [vw_alumno].[Registro] AS [Registro], 
+    [vw_alumno].[Ultima modificacion] AS [Ultima modificacion], 
+    [vw_alumno].[Usuario ultima modificacion] AS [Usuario ultima modificacion]
+    FROM [dbo].[vw_alumno] AS [vw_alumno]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_AlumnoCursos" EntityType="Self.vw_AlumnoCursos" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_AlumnoCursos].[IdAlum] AS [IdAlum], 
+    [vw_AlumnoCursos].[FecMat] AS [FecMat], 
+    [vw_AlumnoCursos].[Descrp] AS [Descrp], 
+    [vw_AlumnoCursos].[FecIni] AS [FecIni], 
+    [vw_AlumnoCursos].[FecFin] AS [FecFin], 
+    [vw_AlumnoCursos].[CodCar] AS [CodCar], 
+    [vw_AlumnoCursos].[NomCur] AS [NomCur], 
+    [vw_AlumnoCursos].[Activo] AS [Activo], 
+    [vw_AlumnoCursos].[DIA] AS [DIA], 
+    [vw_AlumnoCursos].[HorIni] AS [HorIni], 
+    [vw_AlumnoCursos].[HorFin] AS [HorFin], 
+    [vw_AlumnoCursos].[Desloc] AS [Desloc], 
+    [vw_AlumnoCursos].[IdAula] AS [IdAula]
+    FROM [dbo].[vw_AlumnoCursos] AS [vw_AlumnoCursos]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_Carrera" EntityType="Self.vw_Carrera" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_Carrera].[CodCar] AS [CodCar], 
+    [vw_Carrera].[DesCar] AS [DesCar], 
+    [vw_Carrera].[Fec_Registro] AS [Fec_Registro], 
+    [vw_Carrera].[Usu_Registro] AS [Usu_Registro], 
+    [vw_Carrera].[Fec_Ult_Mod] AS [Fec_Ult_Mod], 
+    [vw_Carrera].[Usu_Ult_Mod] AS [Usu_Ult_Mod], 
+    [vw_Carrera].[Est_carr_2] AS [Est_carr_2], 
+    [vw_Carrera].[Est_carr] AS [Est_carr], 
+    [vw_Carrera].[IdFacu] AS [IdFacu], 
+    [vw_Carrera].[DesFac] AS [DesFac]
+    FROM [dbo].[vw_Carrera] AS [vw_Carrera]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_CarreraXGenero" EntityType="Self.vw_CarreraXGenero" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_CarreraXGenero].[Mujeres] AS [Mujeres], 
+    [vw_CarreraXGenero].[Hombres] AS [Hombres], 
+    [vw_CarreraXGenero].[DesCar] AS [DesCar], 
+    [vw_CarreraXGenero].[Total] AS [Total]
+    FROM [dbo].[vw_CarreraXGenero] AS [vw_CarreraXGenero]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_ConsultaListaAlumnoCurso" EntityType="Self.vw_ConsultaListaAlumnoCurso" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_ConsultaListaAlumnoCurso].[IdAlum] AS [IdAlum], 
+    [vw_ConsultaListaAlumnoCurso].[Ndocum] AS [Ndocum], 
+    [vw_ConsultaListaAlumnoCurso].[NomAlu] AS [NomAlu], 
+    [vw_ConsultaListaAlumnoCurso].[ApePat] AS [ApePat], 
+    [vw_ConsultaListaAlumnoCurso].[ApeMat] AS [ApeMat], 
+    [vw_ConsultaListaAlumnoCurso].[TelAlu] AS [TelAlu], 
+    [vw_ConsultaListaAlumnoCurso].[CorAlu] AS [CorAlu], 
+    [vw_ConsultaListaAlumnoCurso].[Estado] AS [Estado], 
+    [vw_ConsultaListaAlumnoCurso].[DesFac] AS [DesFac], 
+    [vw_ConsultaListaAlumnoCurso].[DesCar] AS [DesCar], 
+    [vw_ConsultaListaAlumnoCurso].[Departamento] AS [Departamento], 
+    [vw_ConsultaListaAlumnoCurso].[Provincia] AS [Provincia], 
+    [vw_ConsultaListaAlumnoCurso].[Distrito] AS [Distrito]
+    FROM [dbo].[vw_ConsultaListaAlumnoCurso] AS [vw_ConsultaListaAlumnoCurso]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_ConsultaListaProfesorCurso" EntityType="Self.vw_ConsultaListaProfesorCurso" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_ConsultaListaProfesorCurso].[IdProf] AS [IdProf], 
+    [vw_ConsultaListaProfesorCurso].[Ndocum] AS [Ndocum], 
+    [vw_ConsultaListaProfesorCurso].[NomPro] AS [NomPro], 
+    [vw_ConsultaListaProfesorCurso].[ApePat] AS [ApePat], 
+    [vw_ConsultaListaProfesorCurso].[ApeMat] AS [ApeMat], 
+    [vw_ConsultaListaProfesorCurso].[Estado] AS [Estado], 
+    [vw_ConsultaListaProfesorCurso].[direccion] AS [direccion], 
+    [vw_ConsultaListaProfesorCurso].[FecIng] AS [FecIng], 
+    [vw_ConsultaListaProfesorCurso].[FecNac] AS [FecNac], 
+    [vw_ConsultaListaProfesorCurso].[CorIns] AS [CorIns], 
+    [vw_ConsultaListaProfesorCurso].[Departamento] AS [Departamento], 
+    [vw_ConsultaListaProfesorCurso].[Provincia] AS [Provincia], 
+    [vw_ConsultaListaProfesorCurso].[Distrito] AS [Distrito], 
+    [vw_ConsultaListaProfesorCurso].[Usu_Registro] AS [Usu_Registro], 
+    [vw_ConsultaListaProfesorCurso].[Usu_Ult_Mod] AS [Usu_Ult_Mod], 
+    [vw_ConsultaListaProfesorCurso].[Fec_Ult_Mod] AS [Fec_Ult_Mod]
+    FROM [dbo].[vw_ConsultaListaProfesorCurso] AS [vw_ConsultaListaProfesorCurso]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_ConsultaProfesorCurso" EntityType="Self.vw_ConsultaProfesorCurso" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_ConsultaProfesorCurso].[Cod] AS [Cod], 
+    [vw_ConsultaProfesorCurso].[DNI] AS [DNI], 
+    [vw_ConsultaProfesorCurso].[Nombre y Apellido] AS [Nombre y Apellido], 
+    [vw_ConsultaProfesorCurso].[Día] AS [Día], 
+    [vw_ConsultaProfesorCurso].[Hora Inicio] AS [Hora Inicio], 
+    [vw_ConsultaProfesorCurso].[Hora Fin] AS [Hora Fin], 
+    [vw_ConsultaProfesorCurso].[Nombre Curso] AS [Nombre Curso], 
+    [vw_ConsultaProfesorCurso].[Estado] AS [Estado], 
+    [vw_ConsultaProfesorCurso].[Centro] AS [Centro], 
+    [vw_ConsultaProfesorCurso].[Aula] AS [Aula]
+    FROM [dbo].[vw_ConsultaProfesorCurso] AS [vw_ConsultaProfesorCurso]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_curso" EntityType="Self.vw_curso" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_curso].[Facultad] AS [Facultad], 
+    [vw_curso].[Carrera] AS [Carrera], 
+    [vw_curso].[Curso] AS [Curso], 
+    [vw_curso].[Activo] AS [Activo]
+    FROM [dbo].[vw_curso] AS [vw_curso]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_DetalleMatricula" EntityType="Self.vw_DetalleMatricula" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_DetalleMatricula].[NRC] AS [NRC], 
+    [vw_DetalleMatricula].[Curso] AS [Curso], 
+    [vw_DetalleMatricula].[Profesor] AS [Profesor], 
+    [vw_DetalleMatricula].[Local] AS [Local], 
+    [vw_DetalleMatricula].[Aula] AS [Aula], 
+    [vw_DetalleMatricula].[DIA] AS [DIA], 
+    [vw_DetalleMatricula].[Inicio] AS [Inicio], 
+    [vw_DetalleMatricula].[Fin] AS [Fin], 
+    [vw_DetalleMatricula].[Dni] AS [Dni], 
+    [vw_DetalleMatricula].[Alumno] AS [Alumno]
+    FROM [dbo].[vw_DetalleMatricula] AS [vw_DetalleMatricula]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_Facultad" EntityType="Self.VW_Facultad" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_Facultad].[IdFacu] AS [IdFacu], 
+    [VW_Facultad].[DesFac] AS [DesFac]
+    FROM [dbo].[VW_Facultad] AS [VW_Facultad]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_Facultad_Carrera" EntityType="Self.VW_Facultad_Carrera" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_Facultad_Carrera].[Codigo] AS [Codigo], 
+    [VW_Facultad_Carrera].[Carrera] AS [Carrera], 
+    [VW_Facultad_Carrera].[Facultad] AS [Facultad]
+    FROM [dbo].[VW_Facultad_Carrera] AS [VW_Facultad_Carrera]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_Matricula" EntityType="Self.vw_Matricula" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_Matricula].[Ciclo] AS [Ciclo], 
+    [vw_Matricula].[Matricula] AS [Matricula], 
+    [vw_Matricula].[Estado] AS [Estado], 
+    [vw_Matricula].[Alumno] AS [Alumno], 
+    [vw_Matricula].[Carrera] AS [Carrera], 
+    [vw_Matricula].[Inscrito] AS [Inscrito]
+    FROM [dbo].[vw_Matricula] AS [vw_Matricula]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_preMatricula" EntityType="Self.vw_preMatricula" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_preMatricula].[NRC] AS [NRC], 
+    [vw_preMatricula].[Curso] AS [Curso], 
+    [vw_preMatricula].[Profesor] AS [Profesor], 
+    [vw_preMatricula].[Estado] AS [Estado], 
+    [vw_preMatricula].[Local] AS [Local], 
+    [vw_preMatricula].[DIA] AS [DIA], 
+    [vw_preMatricula].[Inicio] AS [Inicio], 
+    [vw_preMatricula].[Fin] AS [Fin], 
+    [vw_preMatricula].[Carrera] AS [Carrera], 
+    [vw_preMatricula].[Vacant] AS [Vacant]
+    FROM [dbo].[vw_preMatricula] AS [vw_preMatricula]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_Profesor" EntityType="Self.vw_Profesor" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_Profesor].[Id] AS [Id], 
+    [vw_Profesor].[Profesor] AS [Profesor], 
+    [vw_Profesor].[Correo] AS [Correo], 
+    [vw_Profesor].[Foto] AS [Foto], 
+    [vw_Profesor].[Genero] AS [Genero], 
+    [vw_Profesor].[Telefono] AS [Telefono], 
+    [vw_Profesor].[DNI] AS [DNI], 
+    [vw_Profesor].[Fecha Ingreso] AS [Fecha Ingreso], 
+    [vw_Profesor].[Estado] AS [Estado], 
+    [vw_Profesor].[Departamento] AS [Departamento]
+    FROM [dbo].[vw_Profesor] AS [vw_Profesor]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_seccion" EntityType="Self.vw_seccion" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_seccion].[NRC] AS [NRC], 
+    [vw_seccion].[Curso] AS [Curso], 
+    [vw_seccion].[Profesor] AS [Profesor], 
+    [vw_seccion].[DIA] AS [DIA], 
+    [vw_seccion].[Inicio] AS [Inicio], 
+    [vw_seccion].[Fin] AS [Fin], 
+    [vw_seccion].[Local] AS [Local]
+    FROM [dbo].[vw_seccion] AS [vw_seccion]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_vercurso" EntityType="Self.vw_vercurso" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_vercurso].[ID] AS [ID], 
+    [vw_vercurso].[Facultad] AS [Facultad], 
+    [vw_vercurso].[Carrera] AS [Carrera], 
+    [vw_vercurso].[CodCar] AS [CodCar], 
+    [vw_vercurso].[Curso] AS [Curso], 
+    [vw_vercurso].[Activo] AS [Activo]
+    FROM [dbo].[vw_vercurso] AS [vw_vercurso]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_verDistrito" EntityType="Self.VW_verDistrito" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_verDistrito].[Id_ubi] AS [Id_ubi], 
+    [VW_verDistrito].[distri] AS [distri]
+    FROM [dbo].[VW_verDistrito] AS [VW_verDistrito]</DefiningQuery>
+    </EntitySet>
     <AssociationSet Name="FK_Asi_Car" Association="Self.FK_Asi_Car">
       <End Role="Tb_Carrera" EntitySet="Tb_Carrera" />
       <End Role="Tb_Curso" EntitySet="Tb_Curso" />
