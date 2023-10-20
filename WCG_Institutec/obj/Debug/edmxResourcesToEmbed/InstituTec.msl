@@ -1,6 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="InstituTecModelStoreContainer" CdmEntityContainer="InstituTecEntities">
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="InstituTecModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="TB_Alumno">
       <EntityTypeMapping TypeName="InstituTecModel.TB_Alumno">
         <MappingFragment StoreEntitySet="TB_Alumno">
@@ -198,6 +209,266 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="VerDetAlum">
+      <EntityTypeMapping TypeName="InstituTecModel.VerDetAlum">
+        <MappingFragment StoreEntitySet="VerDetAlum">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Alumno" ColumnName="Alumno" />
+          <ScalarProperty Name="Genero" ColumnName="Genero" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="Carrera" ColumnName="Carrera" />
+          <ScalarProperty Name="Facultad" ColumnName="Facultad" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_alumno">
+      <EntityTypeMapping TypeName="InstituTecModel.vw_alumno">
+        <MappingFragment StoreEntitySet="vw_alumno">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="Alumno" ColumnName="Alumno" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Foto" ColumnName="Foto" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Genero" ColumnName="Genero" />
+          <ScalarProperty Name="Fecha_nacimiento" ColumnName="Fecha nacimiento" />
+          <ScalarProperty Name="Departamento" ColumnName="Departamento" />
+          <ScalarProperty Name="Carrera" ColumnName="Carrera" />
+          <ScalarProperty Name="Facultad" ColumnName="Facultad" />
+          <ScalarProperty Name="Fecha_Registro" ColumnName="Fecha Registro" />
+          <ScalarProperty Name="Registro" ColumnName="Registro" />
+          <ScalarProperty Name="Ultima_modificacion" ColumnName="Ultima modificacion" />
+          <ScalarProperty Name="Usuario_ultima_modificacion" ColumnName="Usuario ultima modificacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_AlumnoCursos">
+      <EntityTypeMapping TypeName="InstituTecModel.vw_AlumnoCursos">
+        <MappingFragment StoreEntitySet="vw_AlumnoCursos">
+          <ScalarProperty Name="IdAlum" ColumnName="IdAlum" />
+          <ScalarProperty Name="FecMat" ColumnName="FecMat" />
+          <ScalarProperty Name="Descrp" ColumnName="Descrp" />
+          <ScalarProperty Name="FecIni" ColumnName="FecIni" />
+          <ScalarProperty Name="FecFin" ColumnName="FecFin" />
+          <ScalarProperty Name="CodCar" ColumnName="CodCar" />
+          <ScalarProperty Name="NomCur" ColumnName="NomCur" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="DIA" ColumnName="DIA" />
+          <ScalarProperty Name="HorIni" ColumnName="HorIni" />
+          <ScalarProperty Name="HorFin" ColumnName="HorFin" />
+          <ScalarProperty Name="Desloc" ColumnName="Desloc" />
+          <ScalarProperty Name="IdAula" ColumnName="IdAula" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_Carrera">
+      <EntityTypeMapping TypeName="InstituTecModel.vw_Carrera">
+        <MappingFragment StoreEntitySet="vw_Carrera">
+          <ScalarProperty Name="CodCar" ColumnName="CodCar" />
+          <ScalarProperty Name="DesCar" ColumnName="DesCar" />
+          <ScalarProperty Name="Fec_Registro" ColumnName="Fec_Registro" />
+          <ScalarProperty Name="Usu_Registro" ColumnName="Usu_Registro" />
+          <ScalarProperty Name="Fec_Ult_Mod" ColumnName="Fec_Ult_Mod" />
+          <ScalarProperty Name="Usu_Ult_Mod" ColumnName="Usu_Ult_Mod" />
+          <ScalarProperty Name="Est_carr_2" ColumnName="Est_carr_2" />
+          <ScalarProperty Name="Est_carr" ColumnName="Est_carr" />
+          <ScalarProperty Name="IdFacu" ColumnName="IdFacu" />
+          <ScalarProperty Name="DesFac" ColumnName="DesFac" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_CarreraXGenero">
+      <EntityTypeMapping TypeName="InstituTecModel.vw_CarreraXGenero">
+        <MappingFragment StoreEntitySet="vw_CarreraXGenero">
+          <ScalarProperty Name="Mujeres" ColumnName="Mujeres" />
+          <ScalarProperty Name="Hombres" ColumnName="Hombres" />
+          <ScalarProperty Name="DesCar" ColumnName="DesCar" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_ConsultaListaAlumnoCurso">
+      <EntityTypeMapping TypeName="InstituTecModel.vw_ConsultaListaAlumnoCurso">
+        <MappingFragment StoreEntitySet="vw_ConsultaListaAlumnoCurso">
+          <ScalarProperty Name="IdAlum" ColumnName="IdAlum" />
+          <ScalarProperty Name="Ndocum" ColumnName="Ndocum" />
+          <ScalarProperty Name="NomAlu" ColumnName="NomAlu" />
+          <ScalarProperty Name="ApePat" ColumnName="ApePat" />
+          <ScalarProperty Name="ApeMat" ColumnName="ApeMat" />
+          <ScalarProperty Name="TelAlu" ColumnName="TelAlu" />
+          <ScalarProperty Name="CorAlu" ColumnName="CorAlu" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="DesFac" ColumnName="DesFac" />
+          <ScalarProperty Name="DesCar" ColumnName="DesCar" />
+          <ScalarProperty Name="Departamento" ColumnName="Departamento" />
+          <ScalarProperty Name="Provincia" ColumnName="Provincia" />
+          <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_ConsultaListaProfesorCurso">
+      <EntityTypeMapping TypeName="InstituTecModel.vw_ConsultaListaProfesorCurso">
+        <MappingFragment StoreEntitySet="vw_ConsultaListaProfesorCurso">
+          <ScalarProperty Name="IdProf" ColumnName="IdProf" />
+          <ScalarProperty Name="Ndocum" ColumnName="Ndocum" />
+          <ScalarProperty Name="NomPro" ColumnName="NomPro" />
+          <ScalarProperty Name="ApePat" ColumnName="ApePat" />
+          <ScalarProperty Name="ApeMat" ColumnName="ApeMat" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="FecIng" ColumnName="FecIng" />
+          <ScalarProperty Name="FecNac" ColumnName="FecNac" />
+          <ScalarProperty Name="CorIns" ColumnName="CorIns" />
+          <ScalarProperty Name="Departamento" ColumnName="Departamento" />
+          <ScalarProperty Name="Provincia" ColumnName="Provincia" />
+          <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+          <ScalarProperty Name="Usu_Registro" ColumnName="Usu_Registro" />
+          <ScalarProperty Name="Usu_Ult_Mod" ColumnName="Usu_Ult_Mod" />
+          <ScalarProperty Name="Fec_Ult_Mod" ColumnName="Fec_Ult_Mod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_ConsultaProfesorCurso">
+      <EntityTypeMapping TypeName="InstituTecModel.vw_ConsultaProfesorCurso">
+        <MappingFragment StoreEntitySet="vw_ConsultaProfesorCurso">
+          <ScalarProperty Name="Cod" ColumnName="Cod" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="Nombre_y_Apellido" ColumnName="Nombre y Apellido" />
+          <ScalarProperty Name="Día" ColumnName="Día" />
+          <ScalarProperty Name="Hora_Inicio" ColumnName="Hora Inicio" />
+          <ScalarProperty Name="Hora_Fin" ColumnName="Hora Fin" />
+          <ScalarProperty Name="Nombre_Curso" ColumnName="Nombre Curso" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Centro" ColumnName="Centro" />
+          <ScalarProperty Name="Aula" ColumnName="Aula" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_curso">
+      <EntityTypeMapping TypeName="InstituTecModel.vw_curso">
+        <MappingFragment StoreEntitySet="vw_curso">
+          <ScalarProperty Name="Facultad" ColumnName="Facultad" />
+          <ScalarProperty Name="Carrera" ColumnName="Carrera" />
+          <ScalarProperty Name="Curso" ColumnName="Curso" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_DetalleMatricula">
+      <EntityTypeMapping TypeName="InstituTecModel.vw_DetalleMatricula">
+        <MappingFragment StoreEntitySet="vw_DetalleMatricula">
+          <ScalarProperty Name="NRC" ColumnName="NRC" />
+          <ScalarProperty Name="Curso" ColumnName="Curso" />
+          <ScalarProperty Name="Profesor" ColumnName="Profesor" />
+          <ScalarProperty Name="Local" ColumnName="Local" />
+          <ScalarProperty Name="Aula" ColumnName="Aula" />
+          <ScalarProperty Name="DIA" ColumnName="DIA" />
+          <ScalarProperty Name="Inicio" ColumnName="Inicio" />
+          <ScalarProperty Name="Fin" ColumnName="Fin" />
+          <ScalarProperty Name="Dni" ColumnName="Dni" />
+          <ScalarProperty Name="Alumno" ColumnName="Alumno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_Facultad">
+      <EntityTypeMapping TypeName="InstituTecModel.VW_Facultad">
+        <MappingFragment StoreEntitySet="VW_Facultad">
+          <ScalarProperty Name="IdFacu" ColumnName="IdFacu" />
+          <ScalarProperty Name="DesFac" ColumnName="DesFac" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_Facultad_Carrera">
+      <EntityTypeMapping TypeName="InstituTecModel.VW_Facultad_Carrera">
+        <MappingFragment StoreEntitySet="VW_Facultad_Carrera">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Carrera" ColumnName="Carrera" />
+          <ScalarProperty Name="Facultad" ColumnName="Facultad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_Matricula">
+      <EntityTypeMapping TypeName="InstituTecModel.vw_Matricula">
+        <MappingFragment StoreEntitySet="vw_Matricula">
+          <ScalarProperty Name="Ciclo" ColumnName="Ciclo" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Alumno" ColumnName="Alumno" />
+          <ScalarProperty Name="Carrera" ColumnName="Carrera" />
+          <ScalarProperty Name="Inscrito" ColumnName="Inscrito" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_preMatricula">
+      <EntityTypeMapping TypeName="InstituTecModel.vw_preMatricula">
+        <MappingFragment StoreEntitySet="vw_preMatricula">
+          <ScalarProperty Name="NRC" ColumnName="NRC" />
+          <ScalarProperty Name="Curso" ColumnName="Curso" />
+          <ScalarProperty Name="Profesor" ColumnName="Profesor" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Local" ColumnName="Local" />
+          <ScalarProperty Name="DIA" ColumnName="DIA" />
+          <ScalarProperty Name="Inicio" ColumnName="Inicio" />
+          <ScalarProperty Name="Fin" ColumnName="Fin" />
+          <ScalarProperty Name="Carrera" ColumnName="Carrera" />
+          <ScalarProperty Name="Vacant" ColumnName="Vacant" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_Profesor">
+      <EntityTypeMapping TypeName="InstituTecModel.vw_Profesor">
+        <MappingFragment StoreEntitySet="vw_Profesor">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Profesor" ColumnName="Profesor" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="Foto" ColumnName="Foto" />
+          <ScalarProperty Name="Genero" ColumnName="Genero" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="Fecha_Ingreso" ColumnName="Fecha Ingreso" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Departamento" ColumnName="Departamento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_seccion">
+      <EntityTypeMapping TypeName="InstituTecModel.vw_seccion">
+        <MappingFragment StoreEntitySet="vw_seccion">
+          <ScalarProperty Name="NRC" ColumnName="NRC" />
+          <ScalarProperty Name="Curso" ColumnName="Curso" />
+          <ScalarProperty Name="Profesor" ColumnName="Profesor" />
+          <ScalarProperty Name="DIA" ColumnName="DIA" />
+          <ScalarProperty Name="Inicio" ColumnName="Inicio" />
+          <ScalarProperty Name="Fin" ColumnName="Fin" />
+          <ScalarProperty Name="Local" ColumnName="Local" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_vercurso">
+      <EntityTypeMapping TypeName="InstituTecModel.vw_vercurso">
+        <MappingFragment StoreEntitySet="vw_vercurso">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Facultad" ColumnName="Facultad" />
+          <ScalarProperty Name="Carrera" ColumnName="Carrera" />
+          <ScalarProperty Name="CodCar" ColumnName="CodCar" />
+          <ScalarProperty Name="Curso" ColumnName="Curso" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_verDistrito">
+      <EntityTypeMapping TypeName="InstituTecModel.VW_verDistrito">
+        <MappingFragment StoreEntitySet="VW_verDistrito">
+          <ScalarProperty Name="Id_ubi" ColumnName="Id_ubi" />
+          <ScalarProperty Name="distri" ColumnName="distri" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <AssociationSetMapping Name="TB_Det_Espc" TypeName="InstituTecModel.TB_Det_Espc" StoreEntitySet="TB_Det_Espc">
       <EndProperty Name="TB_Profesor">
         <ScalarProperty Name="IdProf" ColumnName="IdProf" />
@@ -214,6 +485,30 @@
         <ScalarProperty Name="IdCods" ColumnName="IdCods" />
       </EndProperty>
     </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="InstituTecModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="InstituTecModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="InstituTecModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="InstituTecModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstituTecModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="InstituTecModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InstituTecModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="InstituTecModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="InstituTecModel.Store.sp_upgraddiagrams" />
     <FunctionImportMapping FunctionImportName="usp_ActualizarAlumno" FunctionName="InstituTecModel.Store.usp_ActualizarAlumno" />
     <FunctionImportMapping FunctionImportName="usp_ActualizarCarrera" FunctionName="InstituTecModel.Store.usp_ActualizarCarrera" />
     <FunctionImportMapping FunctionImportName="usp_ActualizarCurso" FunctionName="InstituTecModel.Store.usp_ActualizarCurso" />
@@ -339,6 +634,7 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_EliminarAlumno" FunctionName="InstituTecModel.Store.usp_EliminarAlumno" />
     <FunctionImportMapping FunctionImportName="usp_facultadCarrera" FunctionName="InstituTecModel.Store.usp_facultadCarrera">
       <ResultMapping>
         <ComplexTypeMapping TypeName="InstituTecModel.usp_facultadCarrera_Result">

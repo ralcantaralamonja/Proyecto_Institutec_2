@@ -52,20 +52,20 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="InstituTec.Context.cs">
+    <Compile Include="Institutec.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>InstituTec.Context.tt</DependentUpon>
+      <DependentUpon>Institutec.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="InstituTec.cs">
+    <Compile Include="Institutec.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
-    <Compile Include="InstituTec.Designer.cs">
+    <Compile Include="Institutec.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>InstituTec.edmx</DependentUpon>
+      <DependentUpon>Institutec.edmx</DependentUpon>
     </Compile>
     <Compile Include="IService1.cs" />
     <Compile Include="IServicioAlumno.cs" />
@@ -78,164 +78,230 @@
     <Compile Include="ServicioCarrera.cs" />
     <Compile Include="ServicioCurso.cs" />
     <Compile Include="ServicioProfesor.cs" />
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Institutec.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>Institutec.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>Institutec.tt</DependentUpon>
+    </Compile>
     <Compile Include="TB_Alumno.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="TB_Aula.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="Tb_Carrera.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="Tb_Curso.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="TB_Espc_Prof.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="TB_Facultad.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="TB_local.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="TB_Matricula.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="TB_Profesor.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="Tb_Seccion.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="TB_Semestre.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="Tb_Ubigeo.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="Tb_Usuario.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="usp_CarreraXGenero_Result.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="usp_ConsultaProfesor_Result.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="usp_ConsultarAlumno_Result.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="usp_ConsultarCarrera_Result.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="usp_ConsultarCurso_Result.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="usp_ConsultarUsuario_Result.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="usp_ConsultaWebAlumno_Result.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="usp_detalleMatricula_Result.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="usp_facultadCarrera_Result.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="usp_ListaConsultarProfesorCurso_Result.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="usp_ListarAlumno_Result.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="usp_ListarCarrera_Result.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="usp_ListarCursosAlumnoFechas_Result.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="usp_ListarCurso_Result.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="usp_ListarFacultad_Result.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="usp_ListarProfesor_Result.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="usp_ListarVerDetMatricula_Result.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="usp_MatriculadosSeccion_Result.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="usp_prematriculaCursos_Result.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="usp_PreMatricula_Result.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="usp_Ubigeo_Departamentos_Result.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="usp_Ubigeo_DistritosProvinciaDepartamento_Result.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="usp_Ubigeo_ProvinciasDepartamento_Result.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="usp_VerAlumno_Result.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="usp_VerCursoActivo_Result.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="usp_VerCursoInactivo_Result.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="usp_VerDetMatricula_Result.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="usp_verEspcProfesor_Result.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="usp_VerMatricula_Result.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="usp_VerProfesor_Result.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="usp_VerSeccion_Result.cs">
-      <DependentUpon>InstituTec.tt</DependentUpon>
+      <DependentUpon>Institutec.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VerDetAlum.cs">
+      <DependentUpon>Institutec.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_alumno.cs">
+      <DependentUpon>Institutec.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_AlumnoCursos.cs">
+      <DependentUpon>Institutec.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Carrera.cs">
+      <DependentUpon>Institutec.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_CarreraXGenero.cs">
+      <DependentUpon>Institutec.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_ConsultaListaAlumnoCurso.cs">
+      <DependentUpon>Institutec.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_ConsultaListaProfesorCurso.cs">
+      <DependentUpon>Institutec.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_ConsultaProfesorCurso.cs">
+      <DependentUpon>Institutec.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_curso.cs">
+      <DependentUpon>Institutec.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_DetalleMatricula.cs">
+      <DependentUpon>Institutec.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VW_Facultad.cs">
+      <DependentUpon>Institutec.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VW_Facultad_Carrera.cs">
+      <DependentUpon>Institutec.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Matricula.cs">
+      <DependentUpon>Institutec.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_preMatricula.cs">
+      <DependentUpon>Institutec.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_Profesor.cs">
+      <DependentUpon>Institutec.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_seccion.cs">
+      <DependentUpon>Institutec.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_vercurso.cs">
+      <DependentUpon>Institutec.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VW_verDistrito.cs">
+      <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="InstituTec.edmx">
+    <EntityDeploy Include="Institutec.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>InstituTec.Designer.cs</LastGenOutput>
+      <LastGenOutput>Institutec.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="InstituTec.edmx.diagram">
-      <DependentUpon>InstituTec.edmx</DependentUpon>
+    <None Include="Institutec.edmx.diagram">
+      <DependentUpon>Institutec.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="InstituTec.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>InstituTec.Context.cs</LastGenOutput>
-      <DependentUpon>InstituTec.edmx</DependentUpon>
-    </Content>
-    <Content Include="InstituTec.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>InstituTec.edmx</DependentUpon>
-      <LastGenOutput>InstituTec.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Institutec.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Institutec.edmx</DependentUpon>
+      <LastGenOutput>Institutec.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Institutec.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Institutec.edmx</DependentUpon>
+      <LastGenOutput>Institutec.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

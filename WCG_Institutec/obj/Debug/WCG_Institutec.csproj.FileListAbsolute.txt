@@ -1,2 +1,14 @@
 F:\ambar\isil 2023 02\desarrollo de aplicaciones 2\proyecto02\Proyecto_Institutec_2\WCG_Institutec\obj\Debug\WCG_Institutec.csproj.AssemblyReference.cache
 F:\ambar\isil 2023 02\desarrollo de aplicaciones 2\proyecto02\Proyecto_Institutec_2\WCG_Institutec\obj\Debug\WCG_Institutec.csproj.CoreCompileInputs.cache
+C:\desarrolloDeAplicaciones2\Proyecto_Institutec_2\Proyecto_Institutec_2\WCG_Institutec\obj\Debug\WCG_Institutec.csproj.AssemblyReference.cache
+C:\desarrolloDeAplicaciones2\Proyecto_Institutec_2\Proyecto_Institutec_2\WCG_Institutec\obj\Debug\WCG_Institutec.csproj.CoreCompileInputs.cache
+C:\desarrolloDeAplicaciones2\Proyecto_Institutec_2\Proyecto_Institutec_2\WCG_Institutec\bin\Debug\WCG_Institutec.dll.config
+C:\desarrolloDeAplicaciones2\Proyecto_Institutec_2\Proyecto_Institutec_2\WCG_Institutec\bin\Debug\WCG_Institutec.dll
+C:\desarrolloDeAplicaciones2\Proyecto_Institutec_2\Proyecto_Institutec_2\WCG_Institutec\bin\Debug\WCG_Institutec.pdb
+C:\desarrolloDeAplicaciones2\Proyecto_Institutec_2\Proyecto_Institutec_2\WCG_Institutec\bin\Debug\EntityFramework.dll
+C:\desarrolloDeAplicaciones2\Proyecto_Institutec_2\Proyecto_Institutec_2\WCG_Institutec\bin\Debug\EntityFramework.SqlServer.dll
+C:\desarrolloDeAplicaciones2\Proyecto_Institutec_2\Proyecto_Institutec_2\WCG_Institutec\bin\Debug\EntityFramework.xml
+C:\desarrolloDeAplicaciones2\Proyecto_Institutec_2\Proyecto_Institutec_2\WCG_Institutec\bin\Debug\EntityFramework.SqlServer.xml
+C:\desarrolloDeAplicaciones2\Proyecto_Institutec_2\Proyecto_Institutec_2\WCG_Institutec\obj\Debug\WCG_Institutec.csproj.CopyComplete
+C:\desarrolloDeAplicaciones2\Proyecto_Institutec_2\Proyecto_Institutec_2\WCG_Institutec\obj\Debug\WCG_Institutec.dll
+C:\desarrolloDeAplicaciones2\Proyecto_Institutec_2\Proyecto_Institutec_2\WCG_Institutec\obj\Debug\WCG_Institutec.pdb
