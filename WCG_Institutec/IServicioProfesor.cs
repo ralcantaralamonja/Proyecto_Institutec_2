@@ -53,6 +53,10 @@ namespace WCG_Institutec
         public string ApeMat { get; set; }
 
         [DataMember]
+
+        public String ApellPat_Mat { get; set; }
+
+        [DataMember]
         public string CorIns { get; set; }
 
         [DataMember]
@@ -68,7 +72,10 @@ namespace WCG_Institutec
         public DateTime FecIng { get; set; }
 
         [DataMember]
-        public bool Estado { get; set; }
+        public Boolean Estado { get; set; }
+        [DataMember]
+        public string EstadoTexto { get; set; }
+
 
         [DataMember]
         public DateTime Fec_Registro { get; set; }
