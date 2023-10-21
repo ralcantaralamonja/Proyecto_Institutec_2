@@ -1,4 +1,4 @@
-﻿// La generación de código T4 está habilitada para el modelo 'C:\desarrolloDeAplicaciones2\Proyecto_Institutec_2\Proyecto_Institutec_2\WCG_Institutec\Institutec.edmx'. 
+﻿// La generación de código T4 está habilitada para el modelo 'F:\ambar\isil 2023 02\Proyecto_Institutec_2\WCG_Institutec\Institutec.edmx'. 
 // Para habilitar la generación de código heredada, cambie el valor de la propiedad del diseñador 'Estrategia de generación de código'
 // por 'ObjectContext heredado'. Esta propiedad está disponible en la ventana Propiedades cuando se abre
 // el modelo en el diseñador.

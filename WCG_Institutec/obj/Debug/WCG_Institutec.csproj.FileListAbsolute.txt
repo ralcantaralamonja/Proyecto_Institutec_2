@@ -24,3 +24,15 @@ D:\Software-development\5 ciclo\Proyecto_Institutec_2\WCG_Institutec\bin\Debug\E
 D:\Software-development\5 ciclo\Proyecto_Institutec_2\WCG_Institutec\bin\Debug\EntityFramework.xml
 D:\Software-development\5 ciclo\Proyecto_Institutec_2\WCG_Institutec\bin\Debug\EntityFramework.SqlServer.xml
 D:\Software-development\5 ciclo\Proyecto_Institutec_2\WCG_Institutec\obj\Debug\WCG_Institutec.csproj.CopyComplete
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\WCG_Institutec\bin\Debug\WCG_Institutec.dll.config
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\WCG_Institutec\bin\Debug\WCG_Institutec.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\WCG_Institutec\bin\Debug\WCG_Institutec.pdb
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\WCG_Institutec\bin\Debug\EntityFramework.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\WCG_Institutec\bin\Debug\EntityFramework.SqlServer.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\WCG_Institutec\bin\Debug\EntityFramework.xml
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\WCG_Institutec\bin\Debug\EntityFramework.SqlServer.xml
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\WCG_Institutec\obj\Debug\WCG_Institutec.csproj.AssemblyReference.cache
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\WCG_Institutec\obj\Debug\WCG_Institutec.csproj.CoreCompileInputs.cache
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\WCG_Institutec\obj\Debug\WCG_Institutec.csproj.CopyComplete
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\WCG_Institutec\obj\Debug\WCG_Institutec.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\WCG_Institutec\obj\Debug\WCG_Institutec.pdb

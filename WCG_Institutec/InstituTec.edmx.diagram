@@ -4,8 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="4931bf92a9254b3ab7741b46b24b26d3" Name="Diagram1">
-        <EntityTypeShape EntityType="InstituTecModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="1.125" IsExpanded="true" />
+      <Diagram DiagramId="1d8547cfc7e4455a866ecd36c1d1146d" Name="Diagram1">
         <EntityTypeShape EntityType="InstituTecModel.TB_Alumno" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
         <EntityTypeShape EntityType="InstituTecModel.TB_Aula" Width="1.5" PointX="7.5" PointY="15.125" IsExpanded="true" />
         <EntityTypeShape EntityType="InstituTecModel.Tb_Carrera" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
@@ -18,25 +17,25 @@
         <EntityTypeShape EntityType="InstituTecModel.Tb_Seccion" Width="1.5" PointX="7.5" PointY="8.5" IsExpanded="true" />
         <EntityTypeShape EntityType="InstituTecModel.TB_Semestre" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="InstituTecModel.Tb_Ubigeo" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="InstituTecModel.Tb_Usuario" Width="1.5" PointX="7.75" PointY="4.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="InstituTecModel.VerDetAlum" Width="1.5" PointX="9.75" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="InstituTecModel.vw_alumno" Width="1.5" PointX="9.75" PointY="5.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="InstituTecModel.vw_AlumnoCursos" Width="1.5" PointX="9.75" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstituTecModel.Tb_Usuario" Width="1.5" PointX="7.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstituTecModel.VerDetAlum" Width="1.5" PointX="7.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstituTecModel.vw_alumno" Width="1.5" PointX="9.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstituTecModel.vw_AlumnoCursos" Width="1.5" PointX="9.75" PointY="7.125" IsExpanded="true" />
         <EntityTypeShape EntityType="InstituTecModel.vw_Carrera" Width="1.5" PointX="11.75" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="InstituTecModel.vw_CarreraXGenero" Width="1.5" PointX="11.75" PointY="5.125" IsExpanded="true" />
         <EntityTypeShape EntityType="InstituTecModel.vw_ConsultaListaAlumnoCurso" Width="1.5" PointX="11.75" PointY="8.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="InstituTecModel.vw_ConsultaListaProfesorCurso" Width="1.5" PointX="11.75" PointY="13.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="InstituTecModel.vw_ConsultaProfesorCurso" Width="1.5" PointX="13.75" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="InstituTecModel.vw_curso" Width="1.5" PointX="13.75" PointY="5.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="InstituTecModel.vw_DetalleMatricula" Width="1.5" PointX="13.75" PointY="8.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="InstituTecModel.VW_Facultad" Width="1.5" PointX="13.75" PointY="12.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="InstituTecModel.VW_Facultad_Carrera" Width="1.5" PointX="13.75" PointY="15.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="InstituTecModel.vw_Matricula" Width="1.5" PointX="15.75" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="InstituTecModel.vw_preMatricula" Width="1.5" PointX="15.75" PointY="4.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="InstituTecModel.vw_Profesor" Width="1.5" PointX="15.75" PointY="8.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="InstituTecModel.vw_seccion" Width="1.5" PointX="15.75" PointY="12.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="InstituTecModel.vw_vercurso" Width="1.5" PointX="15.75" PointY="16.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="InstituTecModel.VW_verDistrito" Width="1.5" PointX="17.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstituTecModel.vw_ConsultaListaProfesorCurso" Width="1.5" PointX="9.75" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstituTecModel.vw_ConsultaProfesorCurso" Width="1.5" PointX="11.75" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstituTecModel.vw_curso" Width="1.5" PointX="13.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstituTecModel.vw_DetalleMatricula" Width="1.5" PointX="13.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstituTecModel.VW_Facultad" Width="1.5" PointX="13.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstituTecModel.VW_Facultad_Carrera" Width="1.5" PointX="13.75" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstituTecModel.vw_Matricula" Width="1.5" PointX="13.75" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstituTecModel.vw_preMatricula" Width="1.5" PointX="15.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstituTecModel.vw_Profesor" Width="1.5" PointX="15.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstituTecModel.vw_seccion" Width="1.5" PointX="15.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstituTecModel.vw_vercurso" Width="1.5" PointX="15.75" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="InstituTecModel.VW_verDistrito" Width="1.5" PointX="15.75" PointY="16.125" IsExpanded="true" />
         <AssociationConnector Association="InstituTecModel.FK_Mat_Alu" ManuallyRouted="false" />
         <AssociationConnector Association="InstituTecModel.FK_TB_Alumno_Tb_Carrera" ManuallyRouted="false" />
         <AssociationConnector Association="InstituTecModel.FK_TB_Alumno_Tb_Ubigeo" ManuallyRouted="false" />

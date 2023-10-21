@@ -1,15 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="InstituTecModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-  </EntityType>
   <EntityType Name="TB_Alumno">
     <Key>
       <PropertyRef Name="IdAlum" />
@@ -652,7 +642,6 @@
     <End Role="Tb_Seccion" Type="Self.Tb_Seccion" Multiplicity="*" />
   </Association>
   <EntityContainer Name="InstituTecEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="TB_Alumno" EntityType="Self.TB_Alumno" />
     <EntitySet Name="TB_Aula" EntityType="Self.TB_Aula" />
     <EntitySet Name="Tb_Carrera" EntityType="Self.Tb_Carrera" />
@@ -736,36 +725,6 @@
       <End Role="TB_Matricula" EntitySet="TB_Matricula" />
       <End Role="Tb_Seccion" EntitySet="Tb_Seccion" />
     </AssociationSet>
-    <FunctionImport Name="sp_alterdiagram">
-      <Parameter Name="diagramname" Mode="In" Type="String" />
-      <Parameter Name="owner_id" Mode="In" Type="Int32" />
-      <Parameter Name="version" Mode="In" Type="Int32" />
-      <Parameter Name="definition" Mode="In" Type="Binary" />
-    </FunctionImport>
-    <FunctionImport Name="sp_creatediagram">
-      <Parameter Name="diagramname" Mode="In" Type="String" />
-      <Parameter Name="owner_id" Mode="In" Type="Int32" />
-      <Parameter Name="version" Mode="In" Type="Int32" />
-      <Parameter Name="definition" Mode="In" Type="Binary" />
-    </FunctionImport>
-    <FunctionImport Name="sp_dropdiagram">
-      <Parameter Name="diagramname" Mode="In" Type="String" />
-      <Parameter Name="owner_id" Mode="In" Type="Int32" />
-    </FunctionImport>
-    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(InstituTecModel.sp_helpdiagramdefinition_Result)">
-      <Parameter Name="diagramname" Mode="In" Type="String" />
-      <Parameter Name="owner_id" Mode="In" Type="Int32" />
-    </FunctionImport>
-    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(InstituTecModel.sp_helpdiagrams_Result)">
-      <Parameter Name="diagramname" Mode="In" Type="String" />
-      <Parameter Name="owner_id" Mode="In" Type="Int32" />
-    </FunctionImport>
-    <FunctionImport Name="sp_renamediagram">
-      <Parameter Name="diagramname" Mode="In" Type="String" />
-      <Parameter Name="owner_id" Mode="In" Type="Int32" />
-      <Parameter Name="new_diagramname" Mode="In" Type="String" />
-    </FunctionImport>
-    <FunctionImport Name="sp_upgraddiagrams" />
     <FunctionImport Name="usp_ActualizarAlumno">
       <Parameter Name="IdAlum" Mode="In" Type="String" />
       <Parameter Name="NomAlu" Mode="In" Type="String" />
@@ -827,6 +786,9 @@
     <FunctionImport Name="usp_BorrarProfesor">
       <Parameter Name="IdProfesor" Mode="In" Type="Int32" />
     </FunctionImport>
+    <FunctionImport Name="usp_BorrarSeccion">
+      <Parameter Name="IdCods" Mode="In" Type="String" />
+    </FunctionImport>
     <FunctionImport Name="usp_CarreraXGenero" ReturnType="Collection(InstituTecModel.usp_CarreraXGenero_Result)" />
     <FunctionImport Name="usp_ConsultaProfesor" ReturnType="Collection(InstituTecModel.usp_ConsultaProfesor_Result)">
       <Parameter Name="cod" Mode="In" Type="String" />
@@ -851,9 +813,6 @@
     </FunctionImport>
     <FunctionImport Name="usp_detalleMatricula" ReturnType="Collection(InstituTecModel.usp_detalleMatricula_Result)">
       <Parameter Name="dni" Mode="In" Type="String" />
-    </FunctionImport>
-    <FunctionImport Name="usp_EliminarAlumno">
-      <Parameter Name="ID" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="usp_facultadCarrera" ReturnType="Collection(InstituTecModel.usp_facultadCarrera_Result)">
       <Parameter Name="CodCar" Mode="In" Type="String" />
@@ -977,17 +936,6 @@
     <FunctionImport Name="usp_VerProfesorDetallado" />
     <FunctionImport Name="usp_VerSeccion" ReturnType="Collection(InstituTecModel.usp_VerSeccion_Result)" />
   </EntityContainer>
-  <ComplexType Name="sp_helpdiagramdefinition_Result">
-    <Property Type="Int32" Name="version" Nullable="true" />
-    <Property Type="Binary" Name="definition" Nullable="true" />
-  </ComplexType>
-  <ComplexType Name="sp_helpdiagrams_Result">
-    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
-    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
-    <Property Type="Int32" Name="ID" Nullable="false" />
-    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
-    <Property Type="Int32" Name="OwnerID" Nullable="false" />
-  </ComplexType>
   <ComplexType Name="usp_CarreraXGenero_Result">
     <Property Type="Int32" Name="Mujeres" Nullable="true" />
     <Property Type="Int32" Name="Hombres" Nullable="true" />
