@@ -79,6 +79,15 @@
     <Compile Include="ServicioCursoo.cs" />
     <Compile Include="ServicioProfesor.cs" />
     <Compile Include="ServicioSeccion.cs" />
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Institutec.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>Institutec.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>Institutec.tt</DependentUpon>
+    </Compile>
     <Compile Include="TB_Alumno.cs">
       <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
