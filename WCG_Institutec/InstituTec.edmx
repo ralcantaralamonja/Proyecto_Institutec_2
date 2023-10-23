@@ -712,6 +712,37 @@ advertencia 6002: La tabla o vista 'InstituTec.dbo.VW_verDistrito' no tiene defi
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="usp_ActualizarAlumno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="IdAlum" Type="char" Mode="In" />
           <Parameter Name="NomAlu" Type="varchar" Mode="In" />
@@ -869,6 +900,9 @@ advertencia 6002: La tabla o vista 'InstituTec.dbo.VW_verDistrito' no tiene defi
         <Function Name="usp_ListarAlumno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id" Type="char" Mode="In" />
         </Function>
+        <Function Name="usp_ListarAlumnoNRC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="nrc" Type="varchar" Mode="In" />
+        </Function>
         <Function Name="usp_ListarCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="usp_ListarCurso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="usp_ListarCursosAlumnoFechas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -879,6 +913,9 @@ advertencia 6002: La tabla o vista 'InstituTec.dbo.VW_verDistrito' no tiene defi
         <Function Name="usp_ListarFacultad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="usp_ListarProfesor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id" Type="char" Mode="In" />
+        </Function>
+        <Function Name="usp_ListarProfesorEspecialidad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_esp" Type="int" Mode="In" />
         </Function>
         <Function Name="usp_ListarVerDetMatricula" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Dni" Type="char" Mode="In" />
@@ -1953,6 +1990,36 @@ advertencia 6002: La tabla o vista 'InstituTec.dbo.VW_verDistrito' no tiene defi
             <End Role="TB_Matricula" EntitySet="TB_Matricula" />
             <End Role="Tb_Seccion" EntitySet="Tb_Seccion" />
           </AssociationSet>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(InstituTecModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(InstituTecModel.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
           <FunctionImport Name="usp_ActualizarAlumno">
             <Parameter Name="IdAlum" Mode="In" Type="String" />
             <Parameter Name="NomAlu" Mode="In" Type="String" />
@@ -2110,6 +2177,9 @@ advertencia 6002: La tabla o vista 'InstituTec.dbo.VW_verDistrito' no tiene defi
           <FunctionImport Name="usp_ListarAlumno" ReturnType="Collection(InstituTecModel.usp_ListarAlumno_Result)">
             <Parameter Name="id" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="usp_ListarAlumnoNRC" ReturnType="Collection(InstituTecModel.usp_ListarAlumnoNRC_Result)">
+            <Parameter Name="nrc" Mode="In" Type="String" />
+          </FunctionImport>
           <FunctionImport Name="usp_ListarCarrera" ReturnType="Collection(InstituTecModel.usp_ListarCarrera_Result)" />
           <FunctionImport Name="usp_ListarCurso" ReturnType="Collection(InstituTecModel.usp_ListarCurso_Result)" />
           <FunctionImport Name="usp_ListarCursosAlumnoFechas" ReturnType="Collection(InstituTecModel.usp_ListarCursosAlumnoFechas_Result)">
@@ -2120,6 +2190,9 @@ advertencia 6002: La tabla o vista 'InstituTec.dbo.VW_verDistrito' no tiene defi
           <FunctionImport Name="usp_ListarFacultad" ReturnType="Collection(InstituTecModel.usp_ListarFacultad_Result)" />
           <FunctionImport Name="usp_ListarProfesor" ReturnType="Collection(InstituTecModel.usp_ListarProfesor_Result)">
             <Parameter Name="id" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_ListarProfesorEspecialidad" ReturnType="Collection(String)">
+            <Parameter Name="id_esp" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="usp_ListarVerDetMatricula" ReturnType="Collection(InstituTecModel.usp_ListarVerDetMatricula_Result)">
             <Parameter Name="Dni" Mode="In" Type="String" />
@@ -2164,6 +2237,17 @@ advertencia 6002: La tabla o vista 'InstituTec.dbo.VW_verDistrito' no tiene defi
           <FunctionImport Name="usp_VerProfesorDetallado" />
           <FunctionImport Name="usp_VerSeccion" ReturnType="Collection(InstituTecModel.usp_VerSeccion_Result)" />
         </EntityContainer>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
         <ComplexType Name="usp_CarreraXGenero_Result">
           <Property Type="Int32" Name="Mujeres" Nullable="true" />
           <Property Type="Int32" Name="Hombres" Nullable="true" />
@@ -2276,6 +2360,15 @@ advertencia 6002: La tabla o vista 'InstituTec.dbo.VW_verDistrito' no tiene defi
           <Property Type="String" Name="TelAlu" Nullable="true" MaxLength="9" />
           <Property Type="String" Name="CorAlu1" Nullable="true" MaxLength="50" />
           <Property Type="Boolean" Name="Estado" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_ListarAlumnoNRC_Result">
+          <Property Type="String" Name="NRC" Nullable="false" MaxLength="6" />
+          <Property Type="String" Name="Curso" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Alumno" Nullable="false" MaxLength="202" />
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="4" />
+          <Property Type="String" Name="Correo" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Carrera" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Facultad" Nullable="true" MaxLength="50" />
         </ComplexType>
         <ComplexType Name="usp_ListarCarrera_Result">
           <Property Type="String" Name="CodCar" Nullable="false" MaxLength="4" />
@@ -2924,6 +3017,30 @@ advertencia 6002: La tabla o vista 'InstituTec.dbo.VW_verDistrito' no tiene defi
               <ScalarProperty Name="IdCods" ColumnName="IdCods" />
             </EndProperty>
           </AssociationSetMapping>
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="InstituTecModel.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="InstituTecModel.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="InstituTecModel.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="InstituTecModel.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstituTecModel.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="InstituTecModel.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstituTecModel.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="InstituTecModel.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="InstituTecModel.Store.sp_upgraddiagrams" />
           <FunctionImportMapping FunctionImportName="usp_ActualizarAlumno" FunctionName="InstituTecModel.Store.usp_ActualizarAlumno" />
           <FunctionImportMapping FunctionImportName="usp_ActualizarCarrera" FunctionName="InstituTecModel.Store.usp_ActualizarCarrera" />
           <FunctionImportMapping FunctionImportName="usp_ActualizarCurso" FunctionName="InstituTecModel.Store.usp_ActualizarCurso" />
@@ -3098,6 +3215,19 @@ advertencia 6002: La tabla o vista 'InstituTec.dbo.VW_verDistrito' no tiene defi
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_ListarAlumnoNRC" FunctionName="InstituTecModel.Store.usp_ListarAlumnoNRC">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InstituTecModel.usp_ListarAlumnoNRC_Result">
+                <ScalarProperty Name="NRC" ColumnName="NRC" />
+                <ScalarProperty Name="Curso" ColumnName="Curso" />
+                <ScalarProperty Name="Alumno" ColumnName="Alumno" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+                <ScalarProperty Name="Carrera" ColumnName="Carrera" />
+                <ScalarProperty Name="Facultad" ColumnName="Facultad" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="usp_ListarCarrera" FunctionName="InstituTecModel.Store.usp_ListarCarrera">
             <ResultMapping>
               <ComplexTypeMapping TypeName="InstituTecModel.usp_ListarCarrera_Result">
@@ -3164,6 +3294,7 @@ advertencia 6002: La tabla o vista 'InstituTec.dbo.VW_verDistrito' no tiene defi
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_ListarProfesorEspecialidad" FunctionName="InstituTecModel.Store.usp_ListarProfesorEspecialidad" />
           <FunctionImportMapping FunctionImportName="usp_ListarVerDetMatricula" FunctionName="InstituTecModel.Store.usp_ListarVerDetMatricula">
             <ResultMapping>
               <ComplexTypeMapping TypeName="InstituTecModel.usp_ListarVerDetMatricula_Result">
