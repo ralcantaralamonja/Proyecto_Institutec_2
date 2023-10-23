@@ -173,24 +173,33 @@ namespace WCG_Institutec
         {
             try
             {
-                if (int.TryParse(strCodigo, out int codigoProfesor))
-                {
-                    bd.usp_BorrarProfesor(codigoProfesor); // Llama al procedimiento almacenado con el valor convertido
-                    bd.SaveChanges();
-                    return true;
-                }
-                else
-                {
-                    // Si la conversión falla, puedes lanzar una excepción o tomar alguna acción específica.
-                    throw new ArgumentException("El valor de strCodigo no es un número válido.");
-                }
+                //definiendo instancia
+                InstituTecEntities instituTecEntities = new InstituTecEntities();
+
+                //llamando SP
+                instituTecEntities.usp_BorrarProfesor(strCodigo);
+
+                //actualizando el modelo
+                instituTecEntities.SaveChanges();
+                return true;
+
             }
             catch (Exception ex)
             {
 
-                throw new Exception(ex.Message);
+                // Accede a la excepción interna si existe
+                if (ex.InnerException != null)
+                {
+                    var innerException = ex.InnerException;
+                    throw new Exception("Error al eliminar profesor: " + innerException.Message);
+                }
+                else
+                {
+                    throw new Exception("Error al eliminar el profesor: " + ex.Message);
+                }
             }
         }
+<<<<<<< HEAD
 
         SqlConnection cnx = new SqlConnection(@"server=localhost;DataBase=Institutec;Integrated Security=true");
         SqlCommand cmd = new SqlCommand();
@@ -227,5 +236,7 @@ namespace WCG_Institutec
         }
 
 
+=======
+>>>>>>> 26d956eb83e70ebfadc315a7e5670a537fea81b4
     }
 }

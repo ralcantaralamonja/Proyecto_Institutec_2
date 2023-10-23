@@ -27,6 +27,7 @@ namespace WCG_Institutec
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<TB_Alumno> TB_Alumno { get; set; }
         public virtual DbSet<TB_Aula> TB_Aula { get; set; }
         public virtual DbSet<Tb_Carrera> Tb_Carrera { get; set; }
@@ -370,11 +371,11 @@ namespace WCG_Institutec
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_BorrarCurso", idCursoParameter);
         }
     
-        public virtual int usp_BorrarProfesor(Nullable<int> idProfesor)
+        public virtual int usp_BorrarProfesor(string idProfesor)
         {
-            var idProfesorParameter = idProfesor.HasValue ?
+            var idProfesorParameter = idProfesor != null ?
                 new ObjectParameter("IdProfesor", idProfesor) :
-                new ObjectParameter("IdProfesor", typeof(int));
+                new ObjectParameter("IdProfesor", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_BorrarProfesor", idProfesorParameter);
         }

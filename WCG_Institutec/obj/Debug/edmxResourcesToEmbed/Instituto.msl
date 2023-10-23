@@ -518,7 +518,6 @@
     <FunctionImportMapping FunctionImportName="usp_BorrarCarrera" FunctionName="InstituTecModel.Store.usp_BorrarCarrera" />
     <FunctionImportMapping FunctionImportName="usp_BorrarCurso" FunctionName="InstituTecModel.Store.usp_BorrarCurso" />
     <FunctionImportMapping FunctionImportName="usp_BorrarProfesor" FunctionName="InstituTecModel.Store.usp_BorrarProfesor" />
-    <FunctionImportMapping FunctionImportName="usp_BorrarSeccion" FunctionName="InstituTecModel.Store.usp_BorrarSeccion" />
     <FunctionImportMapping FunctionImportName="usp_CarreraXGenero" FunctionName="InstituTecModel.Store.usp_CarreraXGenero">
       <ResultMapping>
         <ComplexTypeMapping TypeName="InstituTecModel.usp_CarreraXGenero_Result">
@@ -635,6 +634,7 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_EliminarAlumno" FunctionName="InstituTecModel.Store.usp_EliminarAlumno" />
     <FunctionImportMapping FunctionImportName="usp_facultadCarrera" FunctionName="InstituTecModel.Store.usp_facultadCarrera">
       <ResultMapping>
         <ComplexTypeMapping TypeName="InstituTecModel.usp_facultadCarrera_Result">
@@ -680,19 +680,6 @@
           <ScalarProperty Name="TelAlu" ColumnName="TelAlu" />
           <ScalarProperty Name="CorAlu1" ColumnName="CorAlu1" />
           <ScalarProperty Name="Estado" ColumnName="Estado" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="usp_ListarAlumnoNRC" FunctionName="InstituTecModel.Store.usp_ListarAlumnoNRC">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="InstituTecModel.usp_ListarAlumnoNRC_Result">
-          <ScalarProperty Name="NRC" ColumnName="NRC" />
-          <ScalarProperty Name="Curso" ColumnName="Curso" />
-          <ScalarProperty Name="Alumno" ColumnName="Alumno" />
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="Correo" ColumnName="Correo" />
-          <ScalarProperty Name="Carrera" ColumnName="Carrera" />
-          <ScalarProperty Name="Facultad" ColumnName="Facultad" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
@@ -762,7 +749,6 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="usp_ListarProfesorEspecialidad" FunctionName="InstituTecModel.Store.usp_ListarProfesorEspecialidad" />
     <FunctionImportMapping FunctionImportName="usp_ListarVerDetMatricula" FunctionName="InstituTecModel.Store.usp_ListarVerDetMatricula">
       <ResultMapping>
         <ComplexTypeMapping TypeName="InstituTecModel.usp_ListarVerDetMatricula_Result">

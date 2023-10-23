@@ -92,6 +92,12 @@
     <Compile Include="sp_helpdiagrams_Result.cs">
       <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>Institutec.tt</DependentUpon>
+    </Compile>
+>>>>>>> 26d956eb83e70ebfadc315a7e5670a537fea81b4
     <Compile Include="TB_Alumno.cs">
       <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
