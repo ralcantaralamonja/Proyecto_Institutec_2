@@ -52,24 +52,17 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IIServiceConsultaAlumno.cs" />
     <Compile Include="Institutec.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Institutec.Context.tt</DependentUpon>
     </Compile>
     <Compile Include="Institutec.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Institutec.Designer.cs">
-      <DependentUpon>Institutec.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Institutec1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
-    <Compile Include="Institutec1.Designer.cs">
+    <Compile Include="Institutec.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Institutec.edmx</DependentUpon>
@@ -92,12 +85,9 @@
     <Compile Include="sp_helpdiagrams_Result.cs">
       <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-=======
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
->>>>>>> 26d956eb83e70ebfadc315a7e5670a537fea81b4
     <Compile Include="TB_Alumno.cs">
       <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
@@ -292,7 +282,7 @@
     <None Include="App.config" />
     <EntityDeploy Include="Institutec.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Institutec1.Designer.cs</LastGenOutput>
+      <LastGenOutput>Institutec.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <None Include="Institutec.edmx.diagram">
       <DependentUpon>Institutec.edmx</DependentUpon>
@@ -314,7 +304,7 @@
     <Content Include="Institutec.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Institutec.edmx</DependentUpon>
-      <LastGenOutput>Institutec1.cs</LastGenOutput>
+      <LastGenOutput>Institutec.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

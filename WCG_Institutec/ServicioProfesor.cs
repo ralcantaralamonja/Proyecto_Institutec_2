@@ -199,10 +199,6 @@ namespace WCG_Institutec
                 }
             }
         }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 3b21434e1da9302c7bae04dac150e555dae32ff6
 
         SqlConnection cnx = new SqlConnection(@"server=localhost;DataBase=Institutec;Integrated Security=true");
         SqlCommand cmd = new SqlCommand();
@@ -237,12 +233,5 @@ namespace WCG_Institutec
                 throw new Exception(ex.Message);
             }
         }
-<<<<<<< HEAD
-=======
-
-
-=======
->>>>>>> 26d956eb83e70ebfadc315a7e5670a537fea81b4
->>>>>>> 3b21434e1da9302c7bae04dac150e555dae32ff6
     }
 }
