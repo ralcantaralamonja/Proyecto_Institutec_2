@@ -4,8 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
+<<<<<<< HEAD
       <Diagram DiagramId="8b24a85301844bb08d96a332450e557c" Name="Diagram1">
+=======
+<<<<<<< HEAD
+      <Diagram DiagramId="c0c7ce5e6b0c472ab1d5f9b9b17bc3d7" Name="Diagram1">
+=======
+      <Diagram DiagramId="c1b37c15a7be473fa9288863acf2a770" Name="Diagram1">
+>>>>>>> 3b21434e1da9302c7bae04dac150e555dae32ff6
         <EntityTypeShape EntityType="InstituTecModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="1.125" IsExpanded="true" />
+>>>>>>> 26d956eb83e70ebfadc315a7e5670a537fea81b4
         <EntityTypeShape EntityType="InstituTecModel.TB_Alumno" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
         <EntityTypeShape EntityType="InstituTecModel.TB_Aula" Width="1.5" PointX="7.5" PointY="15.125" IsExpanded="true" />
         <EntityTypeShape EntityType="InstituTecModel.Tb_Carrera" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />

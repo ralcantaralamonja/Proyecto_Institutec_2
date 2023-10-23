@@ -95,7 +95,11 @@ namespace WCG_Institutec
 
         [DataMember]
         public String NomCur { get; set; }
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 3b21434e1da9302c7bae04dac150e555dae32ff6
         [DataMember]
         public DateTime Fec_Registro { get; set; }
 

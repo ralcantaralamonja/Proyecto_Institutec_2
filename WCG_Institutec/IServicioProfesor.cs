@@ -31,6 +31,8 @@ namespace WCG_Institutec
         List<ProfesorDC> ListarProfesorEspecialidad(int num_esp);
 
 
+        [OperationContract]
+        List<ProfesorDC> ListarProfesorEspecialidad(int num_esp);
 
         //Adicionales....
 
@@ -102,6 +104,11 @@ namespace WCG_Institutec
         public string Id_Ubi { get; set; }
         [DataMember]
 
+<<<<<<< HEAD
         public String Fullname { get; set; }
+=======
+        public String Fullname{ get; set; }
+
+>>>>>>> 3b21434e1da9302c7bae04dac150e555dae32ff6
     }
 }

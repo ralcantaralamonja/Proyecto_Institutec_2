@@ -269,7 +269,11 @@ namespace WCG_Institutec
                 throw new Exception(ex.Message);
             }
         }
+<<<<<<< HEAD
 
+=======
+   
+>>>>>>> 3b21434e1da9302c7bae04dac150e555dae32ff6
 
 
 
