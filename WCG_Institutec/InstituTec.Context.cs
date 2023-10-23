@@ -711,6 +711,15 @@ namespace WCG_Institutec
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_ListarAlumno_Result>("usp_ListarAlumno", idParameter);
         }
     
+        public virtual ObjectResult<usp_ListarAlumnoNRC_Result> usp_ListarAlumnoNRC(string nrc)
+        {
+            var nrcParameter = nrc != null ?
+                new ObjectParameter("nrc", nrc) :
+                new ObjectParameter("nrc", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_ListarAlumnoNRC_Result>("usp_ListarAlumnoNRC", nrcParameter);
+        }
+    
         public virtual ObjectResult<usp_ListarCarrera_Result> usp_ListarCarrera()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_ListarCarrera_Result>("usp_ListarCarrera");
@@ -750,6 +759,15 @@ namespace WCG_Institutec
                 new ObjectParameter("id", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_ListarProfesor_Result>("usp_ListarProfesor", idParameter);
+        }
+    
+        public virtual ObjectResult<string> usp_ListarProfesorEspecialidad(Nullable<int> id_esp)
+        {
+            var id_espParameter = id_esp.HasValue ?
+                new ObjectParameter("id_esp", id_esp) :
+                new ObjectParameter("id_esp", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("usp_ListarProfesorEspecialidad", id_espParameter);
         }
     
         public virtual ObjectResult<usp_ListarVerDetMatricula_Result> usp_ListarVerDetMatricula(string dni)

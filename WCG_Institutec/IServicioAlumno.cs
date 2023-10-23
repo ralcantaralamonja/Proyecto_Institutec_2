@@ -23,11 +23,11 @@ namespace WCG_Institutec
 
         [OperationContract]
         AlumnoDC ConsultarAlumno(String strCodigo);
-        
+
         [OperationContract]
         List<AlumnoDC> ListarAlumno();
-
-
+        [OperationContract]
+        List<AlumnoDC> ListarAlumnoNRC(String Nrc);
 
         //Adicionales...
 
@@ -36,7 +36,7 @@ namespace WCG_Institutec
 
     [DataContract]
     [Serializable]
-    public class AlumnoDC 
+    public class AlumnoDC
     {
         [DataMember]
         public String IdAlum { get; set; }
@@ -83,17 +83,19 @@ namespace WCG_Institutec
         [DataMember]
         public String direccion { get; set; }
 
+        [DataMember]
+        public String Nrc { get; set; }
 
+        [DataMember]
+        public String DesCar { get; set; }
+        [DataMember]
+        public String FullName { get; set; }
+        [DataMember]
+        public String DesFac { get; set; }
 
+        [DataMember]
+        public String NomCur { get; set; }
 
-
-
-
-
-
-        //[DataMember]
-        //public String DescCar { get; set; }
-        
         [DataMember]
         public DateTime Fec_Registro { get; set; }
 

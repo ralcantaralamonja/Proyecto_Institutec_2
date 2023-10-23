@@ -923,6 +923,9 @@
     <FunctionImport Name="usp_ListarAlumno" ReturnType="Collection(InstituTecModel.usp_ListarAlumno_Result)">
       <Parameter Name="id" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="usp_ListarAlumnoNRC" ReturnType="Collection(InstituTecModel.usp_ListarAlumnoNRC_Result)">
+      <Parameter Name="nrc" Mode="In" Type="String" />
+    </FunctionImport>
     <FunctionImport Name="usp_ListarCarrera" ReturnType="Collection(InstituTecModel.usp_ListarCarrera_Result)" />
     <FunctionImport Name="usp_ListarCurso" ReturnType="Collection(InstituTecModel.usp_ListarCurso_Result)" />
     <FunctionImport Name="usp_ListarCursosAlumnoFechas" ReturnType="Collection(InstituTecModel.usp_ListarCursosAlumnoFechas_Result)">
@@ -933,6 +936,9 @@
     <FunctionImport Name="usp_ListarFacultad" ReturnType="Collection(InstituTecModel.usp_ListarFacultad_Result)" />
     <FunctionImport Name="usp_ListarProfesor" ReturnType="Collection(InstituTecModel.usp_ListarProfesor_Result)">
       <Parameter Name="id" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ListarProfesorEspecialidad" ReturnType="Collection(String)">
+      <Parameter Name="id_esp" Mode="In" Type="Int32" />
     </FunctionImport>
     <FunctionImport Name="usp_ListarVerDetMatricula" ReturnType="Collection(InstituTecModel.usp_ListarVerDetMatricula_Result)">
       <Parameter Name="Dni" Mode="In" Type="String" />
@@ -1100,6 +1106,15 @@
     <Property Type="String" Name="TelAlu" Nullable="true" MaxLength="9" />
     <Property Type="String" Name="CorAlu1" Nullable="true" MaxLength="50" />
     <Property Type="Boolean" Name="Estado" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="usp_ListarAlumnoNRC_Result">
+    <Property Type="String" Name="NRC" Nullable="false" MaxLength="6" />
+    <Property Type="String" Name="Curso" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Alumno" Nullable="false" MaxLength="202" />
+    <Property Type="String" Name="ID" Nullable="false" MaxLength="4" />
+    <Property Type="String" Name="Correo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Carrera" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Facultad" Nullable="true" MaxLength="50" />
   </ComplexType>
   <ComplexType Name="usp_ListarCarrera_Result">
     <Property Type="String" Name="CodCar" Nullable="false" MaxLength="4" />

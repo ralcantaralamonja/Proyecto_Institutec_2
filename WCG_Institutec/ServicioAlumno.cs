@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Entity.Core;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -80,13 +82,13 @@ namespace WCG_Institutec
                         objAlumnoDC.Usu_Registro = objAlumno.Usu_Registro;
                         objAlumnoDC.Fec_Ult_Mod = Convert.ToDateTime(objAlumno.Fec_Ult_Mod);
                         objAlumnoDC.direccion = objAlumno.direccion;
-                        
+
                         // Obtén los datos binarios de la columna "Foto"
                         byte[] fotoData = objAlumno.foto;
 
                         // Asigna los datos binarios a la propiedad "Foto" de AlumnoDC
                         objAlumnoDC.Foto = fotoData;
-                        
+
                     }
                     else
                     {
@@ -117,7 +119,7 @@ namespace WCG_Institutec
                 //consulta en LINQ
                 var query = (from Alumno in instituTecEntities.TB_Alumno select Alumno);
 
-                foreach(var resultado in query)
+                foreach (var resultado in query)
                 {
                     AlumnoDC objAlumnoDC = new AlumnoDC();
 
@@ -138,9 +140,9 @@ namespace WCG_Institutec
                     objAlumnoDC.Usu_Registro = resultado.Usu_Registro;
                     objAlumnoDC.Fec_Ult_Mod = Convert.ToDateTime(resultado.Fec_Ult_Mod);
                     objAlumnoDC.direccion = resultado.direccion;
-                    
+
                     // Obtén los datos binarios de la columna "Foto"
-                     byte[] fotoData = resultado.foto;
+                    byte[] fotoData = resultado.foto;
 
                     // Asigna los datos binarios a la propiedad "Foto" de AlumnoDC
                     objAlumnoDC.Foto = fotoData;
@@ -158,6 +160,49 @@ namespace WCG_Institutec
             }
         }
 
+
+        SqlConnection cnx = new SqlConnection(@"server=localhost;DataBase=Institutec;Integrated Security=true");
+        SqlCommand cmd = new SqlCommand();
+        DataSet dts = new DataSet();
+        SqlDataAdapter ada;
+        public List<AlumnoDC> ListarAlumnoNRC(String Nrc)
+        {
+            try
+            {
+                cmd.Connection = cnx;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "usp_ListarAlumnoNRC";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@nrc", Nrc);
+
+                ada = new SqlDataAdapter(cmd);
+                ada.Fill(dts, "AlumnoNrc");
+
+                //convertir el dataTable en una coleccion
+                List<AlumnoDC> objLista = new List<AlumnoDC>();
+                foreach (DataRow drFila in dts.Tables[0].Rows)
+                {
+                    AlumnoDC alumno = new AlumnoDC();
+                    alumno.NomCur = drFila["Curso"].ToString();
+                    alumno.FullName = drFila["Alumno"].ToString();
+                    alumno.IdAlum = drFila["ID"].ToString();
+                    alumno.CorAlu = drFila["Correo"].ToString();
+                    alumno.DesCar = drFila["Carrera"].ToString();
+                    alumno.DesFac = drFila["Facultad"].ToString();
+
+
+
+
+                    objLista.Add(alumno);
+                }
+                return objLista;
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+        }
         public Boolean EliminarAlumno(String strCodigo)
         {
             try
@@ -169,7 +214,7 @@ namespace WCG_Institutec
                 instituTecEntities.usp_BorrarAlumno(strCodigo);
 
                 //actualizando el modelo
-                instituTecEntities.SaveChanges(); 
+                instituTecEntities.SaveChanges();
                 return true;
 
             }
@@ -224,5 +269,9 @@ namespace WCG_Institutec
                 throw new Exception(ex.Message);
             }
         }
+
+
+
+
     }
 }

@@ -905,6 +905,9 @@ advertencia 6002: La tabla o vista 'InstituTec.dbo.VW_verDistrito' no tiene defi
   <Function Name="usp_ListarAlumno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="id" Type="char" Mode="In" />
   </Function>
+  <Function Name="usp_ListarAlumnoNRC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nrc" Type="varchar" Mode="In" />
+  </Function>
   <Function Name="usp_ListarCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="usp_ListarCurso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="usp_ListarCursosAlumnoFechas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -915,6 +918,9 @@ advertencia 6002: La tabla o vista 'InstituTec.dbo.VW_verDistrito' no tiene defi
   <Function Name="usp_ListarFacultad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="usp_ListarProfesor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="id" Type="char" Mode="In" />
+  </Function>
+  <Function Name="usp_ListarProfesorEspecialidad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_esp" Type="int" Mode="In" />
   </Function>
   <Function Name="usp_ListarVerDetMatricula" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Dni" Type="char" Mode="In" />

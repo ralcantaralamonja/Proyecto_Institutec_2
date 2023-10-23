@@ -27,6 +27,9 @@ namespace WCG_Institutec
         [OperationContract]
         List<ProfesorDC> ListarProfesor();
 
+        [OperationContract]
+        List<ProfesorDC> ListarProfesorEspecialidad(int num_esp);
+
 
 
         //Adicionales....
@@ -35,14 +38,14 @@ namespace WCG_Institutec
 
     [DataContract]
     [Serializable]
-    public class ProfesorDC 
+    public class ProfesorDC
     {
         [DataMember]
         public string IdProf { get; set; }
 
         [DataMember]
         public string Ndocum { get; set; }
-        
+
         [DataMember]
         public string NomPro { get; set; }
 
@@ -83,7 +86,7 @@ namespace WCG_Institutec
         [DataMember]
         public string Usu_Registro { get; set; }
 
-        [DataMember] 
+        [DataMember]
         public DateTime Fec_Ult_Mod { get; set; }
 
         [DataMember]
@@ -97,5 +100,8 @@ namespace WCG_Institutec
 
         [DataMember]
         public string Id_Ubi { get; set; }
+        [DataMember]
+
+        public String Fullname { get; set; }
     }
 }
