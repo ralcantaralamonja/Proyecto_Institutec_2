@@ -11,18 +11,18 @@ namespace WCG_Institutec
     [ServiceContract]
     public interface IServicioCarrera
     {
-        [OperationContract]
-        Boolean InsertarCarrera(CarreraDC objCarreraDC);
+        //[OperationContract]
+        //Boolean InsertarCarrera(CarreraDC objCarreraDC);
 
-        [OperationContract]
-        Boolean ActualizarCarrera(CarreraDC objCarreraDC);
+        //[OperationContract]
+        //Boolean ActualizarCarrera(CarreraDC objCarreraDC);
 
-        [OperationContract]
-        Boolean EliminarCarrera(String strCodigo);
+        //[OperationContract]
+        //Boolean EliminarCarrera(String strCodigo);
 
 
-        [OperationContract]
-        CarreraDC ConsultarCarrera(String strCodigo);
+        //[OperationContract]
+        //CarreraDC ConsultarCarrera(String strCodigo);
 
         [OperationContract]
         List<CarreraDC> ListarCarrera();
@@ -31,8 +31,8 @@ namespace WCG_Institutec
 
         //Adicionales
 
-        [OperationContract]
-        List<CarreraDC> ListarFacultad();
+        //[OperationContract]
+        //List<CarreraDC> ListarFacultad();
     }
 
     [DataContract]

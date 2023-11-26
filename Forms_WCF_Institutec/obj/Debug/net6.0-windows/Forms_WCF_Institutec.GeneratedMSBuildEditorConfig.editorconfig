@@ -14,8 +14,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Forms_WCF_Institutec
-<<<<<<< HEAD
 build_property.ProjectDir = E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Forms_WCF_Institutec\
-=======
-build_property.ProjectDir = C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\
->>>>>>> 058871430b329d21437daede78e94ea6f4adb501
