@@ -73,12 +73,14 @@
     <Compile Include="IServicioCursoo.cs" />
     <Compile Include="IServicioProfesor.cs" />
     <Compile Include="IServicioSeccion.cs" />
+    <Compile Include="IServicioUbigeo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service1.cs" />
     <Compile Include="ServicioAlumno.cs" />
     <Compile Include="ServicioCursoo.cs" />
     <Compile Include="ServicioProfesor.cs" />
     <Compile Include="ServicioSeccion.cs" />
+    <Compile Include="ServicioUbigeo.cs" />
     <Compile Include="sp_helpdiagramdefinition_Result.cs">
       <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>

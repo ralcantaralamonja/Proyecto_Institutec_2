@@ -37,7 +37,7 @@ namespace WCG_Institutec
                     objProfesorDC.NomPro = objProfesor.NomPro;
                     objProfesorDC.ApePat = objProfesor.ApePat;
                     objProfesorDC.ApeMat = objProfesor.ApeMat;
-                    objProfesorDC.ApellPat_Mat = objProfesor.ApePat + " " + objProfesor.ApeMat + " " + objProfesor.NomPro;
+                    objProfesorDC.ApellPat_Mat = objProfesor.ApePat + " " + objProfesor.ApeMat;
                     objProfesorDC.Ndocum = objProfesor.Ndocum;
                     objProfesorDC.TelPro = objProfesor.TelPro;
                     objProfesorDC.FecNac = Convert.ToDateTime(objProfesor.FecNac);
@@ -80,7 +80,7 @@ namespace WCG_Institutec
                     objProfesorDC.NomPro = objProfesor.NomPro;
                     objProfesorDC.ApePat = objProfesor.ApePat;
                     objProfesorDC.ApeMat = objProfesor.ApeMat;
-                    objProfesorDC.ApellPat_Mat = objProfesor.ApePat + " " + objProfesor.ApeMat + " " + objProfesor.NomPro;
+                    objProfesorDC.ApellPat_Mat = objProfesor.ApePat + " " + objProfesor.ApeMat;
                     objProfesorDC.Ndocum = objProfesor.Ndocum;
                     objProfesorDC.TelPro = objProfesor.TelPro;
                     objProfesorDC.FecNac = Convert.ToDateTime(objProfesor.FecNac);
@@ -113,7 +113,7 @@ namespace WCG_Institutec
             {
 
                 bd.usp_InsertarProfesor(
-            objProfesorDC.Ndocum,
+            objProfesorDC.IdProf,
             objProfesorDC.NomPro,
             objProfesorDC.ApePat,
             objProfesorDC.ApeMat,
@@ -122,7 +122,7 @@ namespace WCG_Institutec
             (byte[])objProfesorDC.Foto,
             objProfesorDC.Usu_Registro,
             objProfesorDC.Estado,
-            objProfesorDC.CorIns,
+            objProfesorDC.Ndocum,
             objProfesorDC.TelPro,
             Convert.ToDateTime(objProfesorDC.FecNac),
             Convert.ToDateTime(objProfesorDC.FecIng)
@@ -142,7 +142,7 @@ namespace WCG_Institutec
             
             try
             {
-        
+
 
                 bd.usp_ActulizarProfesor(
             objProfesorDC.IdProf,
@@ -157,8 +157,8 @@ namespace WCG_Institutec
             objProfesorDC.Id_Ubi,
             objProfesorDC.Usu_Ult_Mod,
             objProfesorDC.Foto
-            
-                    );
+
+                    ); ;
 
                 bd.SaveChanges();
                 return true;
