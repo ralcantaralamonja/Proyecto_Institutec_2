@@ -24,6 +24,8 @@ namespace WCG_Institutec
 
         [OperationContract]
         Boolean ActualizarCurso(CursoDC objCursoDC);
+        [OperationContract]
+        List<CursoDC> ObtenerCarreraXGenero();
     }
 
     [DataContract]
@@ -67,6 +69,17 @@ namespace WCG_Institutec
 
         [DataMember]
         public String facultadNombre { get; set; }
+
+        [DataMember]
+        public Single NumHombres { get; set; }
+
+        [DataMember]
+        public Single NumMujeres { get; set; }
+        [DataMember]
+        public String Curso { get; set; }
+
+        [DataMember]
+        public Single Total { get; set; }
     }
 
 

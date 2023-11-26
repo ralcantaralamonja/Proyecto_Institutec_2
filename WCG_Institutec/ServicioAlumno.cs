@@ -10,7 +10,7 @@ using System.Text;
 
 namespace WCG_Institutec
 {
-    // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de clase "ServicioAlumno" en el código y en el archivo de configuración a la vez.
+     NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de clase "ServicioAlumno" en el código y en el archivo de configuración a la vez.
     public class ServicioAlumno : IServicioAlumno
     {
         public Boolean InsertarAlumno(AlumnoDC objAlumnoDC)
@@ -19,7 +19,7 @@ namespace WCG_Institutec
             {
                 using (InstituTecEntities Alumnos = new InstituTecEntities())
                 {
-                    // Llama al procedimiento almacenado usp_InsertarAlumnos
+                    Llama al procedimiento almacenado usp_InsertarAlumnos
                     Alumnos.usp_InsertarAlumnos(
                         objAlumnoDC.NomAlu,
                         objAlumnoDC.ApePat,
@@ -37,7 +37,7 @@ namespace WCG_Institutec
                         objAlumnoDC.direccion
                     );
 
-                    // Guarda los cambios en el contexto de Entity Framework
+                    Guarda los cambios en el contexto de Entity Framework
                     Alumnos.SaveChanges();
 
                     return true;
@@ -55,15 +55,15 @@ namespace WCG_Institutec
             {
                 using (var context = new InstituTecEntities())
                 {
-                    // Obtenemos la instancia del alumno consultado
+                    Obtenemos la instancia del alumno consultado
                     TB_Alumno objAlumno = context.TB_Alumno
                         .Where(alumnoConsultado => alumnoConsultado.IdAlum == strCodigo)
                         .FirstOrDefault(); // Asegura que se devuelva solo una instancia (FirstOrDefault).
 
-                    // Creamos una instancia de la entidad de datos contractual AlumnoDC (aquí devolvemos la información del alumno).
+                    Creamos una instancia de la entidad de datos contractual AlumnoDC(aquí devolvemos la información del alumno).
                     AlumnoDC objAlumnoDC = new AlumnoDC();
 
-                    // Verificamos si el alumno existe
+                    Verificamos si el alumno existe
                     if (objAlumno != null)
                     {
                         objAlumnoDC.IdAlum = objAlumno.IdAlum;
@@ -83,18 +83,18 @@ namespace WCG_Institutec
                         objAlumnoDC.Fec_Ult_Mod = Convert.ToDateTime(objAlumno.Fec_Ult_Mod);
                         objAlumnoDC.direccion = objAlumno.direccion;
 
-                        // Obtén los datos binarios de la columna "Foto"
+                        Obtén los datos binarios de la columna "Foto"
                         byte[] fotoData = objAlumno.foto;
 
-                        // Asigna los datos binarios a la propiedad "Foto" de AlumnoDC
+                        Asigna los datos binarios a la propiedad "Foto" de AlumnoDC
                         objAlumnoDC.Foto = fotoData;
 
                     }
                     else
                     {
-                        // Si el alumno no existe, puedes devolver una instancia con valores predeterminados o nulos
+                        Si el alumno no existe, puedes devolver una instancia con valores predeterminados o nulos
                         objAlumnoDC.IdAlum = string.Empty;
-                        // Aquí puedes establecer otras propiedades a valores predeterminados.
+                        Aquí puedes establecer otras propiedades a valores predeterminados.
                     }
 
                     return objAlumnoDC;
@@ -110,13 +110,13 @@ namespace WCG_Institutec
         {
             try
             {
-                //definiendo instancia
+                definiendo instancia
                 InstituTecEntities instituTecEntities = new InstituTecEntities();
 
-                //creamos lsita de AlumnoDC
+                creamos lsita de AlumnoDC
                 List<AlumnoDC> objListAlumnoDC = new List<AlumnoDC>();
 
-                //consulta en LINQ
+                consulta en LINQ
                 var query = (from Alumno in instituTecEntities.TB_Alumno select Alumno);
 
                 foreach (var resultado in query)
@@ -141,13 +141,13 @@ namespace WCG_Institutec
                     objAlumnoDC.Fec_Ult_Mod = Convert.ToDateTime(resultado.Fec_Ult_Mod);
                     objAlumnoDC.direccion = resultado.direccion;
 
-                    // Obtén los datos binarios de la columna "Foto"
+                    Obtén los datos binarios de la columna "Foto"
                     byte[] fotoData = resultado.foto;
 
-                    // Asigna los datos binarios a la propiedad "Foto" de AlumnoDC
+                    Asigna los datos binarios a la propiedad "Foto" de AlumnoDC
                     objAlumnoDC.Foto = fotoData;
 
-                    // Agrega el objeto AlumnoDC a la lista
+                    Agrega el objeto AlumnoDC a la lista
                     objListAlumnoDC.Add(objAlumnoDC);
                 }
 
@@ -178,7 +178,7 @@ namespace WCG_Institutec
                 ada = new SqlDataAdapter(cmd);
                 ada.Fill(dts, "AlumnoNrc");
 
-                //convertir el dataTable en una coleccion
+                convertir el dataTable en una coleccion
                 List<AlumnoDC> objLista = new List<AlumnoDC>();
                 foreach (DataRow drFila in dts.Tables[0].Rows)
                 {
@@ -207,13 +207,13 @@ namespace WCG_Institutec
         {
             try
             {
-                //definiendo instancia
+                definiendo instancia
                 InstituTecEntities instituTecEntities = new InstituTecEntities();
 
-                //llamando SP
+                llamando SP
                 instituTecEntities.usp_BorrarAlumno(strCodigo);
 
-                //actualizando el modelo
+                actualizando el modelo
                 instituTecEntities.SaveChanges();
                 return true;
 
@@ -221,7 +221,7 @@ namespace WCG_Institutec
             catch (Exception ex)
             {
 
-                // Accede a la excepción interna si existe
+                Accede a la excepción interna si existe
                 if (ex.InnerException != null)
                 {
                     var innerException = ex.InnerException;
@@ -238,10 +238,10 @@ namespace WCG_Institutec
         {
             try
             {
-                //definiendo instancia
+                definiendo instancia
                 InstituTecEntities instituTecEntities = new InstituTecEntities();
 
-                //store
+                store
                 instituTecEntities.usp_ActualizarAlumno(
                         objAlumnoDC.IdAlum,
                         objAlumnoDC.NomAlu,
