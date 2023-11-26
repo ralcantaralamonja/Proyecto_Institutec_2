@@ -76,6 +76,7 @@ namespace WCG_Institutec
 
         [DataMember]
         public Boolean Estado { get; set; }
+
         [DataMember]
         public string EstadoTexto { get; set; }
 
