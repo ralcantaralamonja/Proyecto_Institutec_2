@@ -63,7 +63,7 @@
             label1.Location = new Point(12, 15);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(224, 23);
+            label1.Size = new Size(185, 21);
             label1.TabIndex = 0;
             label1.Text = "FILTRO DNI PROFESOR:";
             // 
@@ -74,8 +74,9 @@
             mskDNIProfesor.Margin = new Padding(3, 2, 3, 2);
             mskDNIProfesor.MaxLength = 8;
             mskDNIProfesor.Name = "mskDNIProfesor";
-            mskDNIProfesor.Size = new Size(335, 32);
+            mskDNIProfesor.Size = new Size(335, 27);
             mskDNIProfesor.TabIndex = 1;
+            mskDNIProfesor.TextChanged += mskDNIProfesor_TextChanged;
             // 
             // dtgProfesor
             // 
@@ -260,7 +261,7 @@
             label2.Location = new Point(1094, 569);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(117, 23);
+            label2.Size = new Size(100, 21);
             label2.TabIndex = 2;
             label2.Text = "REGISTROS:";
             // 
@@ -286,7 +287,7 @@
             // 
             // FrmProfesor
             // 
-            AutoScaleDimensions = new SizeF(8F, 16F);
+            AutoScaleDimensions = new SizeF(6F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1320, 661);
             Controls.Add(LblRegistros);

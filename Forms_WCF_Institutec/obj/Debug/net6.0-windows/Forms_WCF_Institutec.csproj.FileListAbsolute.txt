@@ -126,3 +126,8 @@ C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\obj\Debug\net6.0-windows\re
 C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\obj\Debug\net6.0-windows\Forms_WCF_Institutec.pdb
 C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\obj\Debug\net6.0-windows\Forms_WCF_Institutec.genruntimeconfig.cache
 C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\obj\Debug\net6.0-windows\ref\Forms_WCF_Institutec.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\obj\Debug\net6.0-windows\ProyInstitutec_GUI.FrmActualizarAlumno.resources
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\obj\Debug\net6.0-windows\ProyInstitutec_GUI.FrmInsertarAlumno.resources
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\obj\Debug\net6.0-windows\ProyInstitutec_GUI.FrmVerAlumno.resources
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\obj\Debug\net6.0-windows\Forms_WCF_Institutec.FrmActualizarAlumno.resources
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\obj\Debug\net6.0-windows\Forms_WCF_Institutec.FrmInsertarAlumno.resources

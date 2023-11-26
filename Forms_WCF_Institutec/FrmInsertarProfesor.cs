@@ -217,5 +217,10 @@ namespace ProyInstitutec_GUI
         {
 
         }
+
+        private void txtNomPro_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

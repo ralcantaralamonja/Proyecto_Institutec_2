@@ -99,6 +99,11 @@ namespace ProyInstitutec_GUI
         {
             this.Close();
         }
+
+        private void mskDNIProfesor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

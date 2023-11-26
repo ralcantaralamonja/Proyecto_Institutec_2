@@ -25,6 +25,7 @@ public partial class FrmActualizarProfesor : Form
     public byte[] FotoOriginal { get; private set; }
 
     public bool blnCambio { get; set; }
+
     private void FrmActualizarProfesor_Load(object sender, EventArgs e)
     {
         try
@@ -251,5 +252,10 @@ public partial class FrmActualizarProfesor : Form
 
             MessageBox.Show("Error:" + ex.Message);
         }
+    }
+
+    private void txtNompro_TextChanged(object sender, EventArgs e)
+    {
+
     }
 }

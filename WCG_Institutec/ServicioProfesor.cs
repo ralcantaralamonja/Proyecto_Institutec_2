@@ -15,7 +15,7 @@ namespace WCG_Institutec
     // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de clase "ServicioProfesor" en el código y en el archivo de configuración a la vez.
     public class ServicioProfesor : IServicioProfesor
 
-    
+
 
     {
         InstituTecEntities bd = new InstituTecEntities();
@@ -28,7 +28,7 @@ namespace WCG_Institutec
 
                 var query = (from Profesor in bd.TB_Profesor
                              orderby Profesor.IdProf
-                             select Profesor ).ToList();
+                             select Profesor).ToList();
                 foreach (var objProfesor in query)
                 {
                     //creamos instancias de vendedorDC
@@ -66,7 +66,7 @@ namespace WCG_Institutec
             try
             {
                 TB_Profesor objProfesor = (from ProfesorDC in bd.TB_Profesor
-                                           where ProfesorDC.IdProf== strCodigo
+                                           where ProfesorDC.IdProf == strCodigo
                                            select ProfesorDC).FirstOrDefault();
 
                 ProfesorDC objProfesorDC = new ProfesorDC();
@@ -95,7 +95,7 @@ namespace WCG_Institutec
                     objProfesorDC.Direccion = objProfesor.direccion;
                     objProfesorDC.Id_Ubi = objProfesor.Id_Ubi;
                     objProfesorDC.Estado = Convert.ToBoolean(objProfesor.Estado);
-                    
+
 
                 }
                 return objProfesorDC;
@@ -139,7 +139,7 @@ namespace WCG_Institutec
         }
         public Boolean ActualizarProfesor(ProfesorDC objProfesorDC)
         {
-            
+
             try
             {
 
