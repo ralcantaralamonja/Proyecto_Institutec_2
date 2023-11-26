@@ -62,6 +62,7 @@ D:\Software-development\ISIL\Proyecto_Institutec_2\Forms_WCF_Institutec\bin\Debu
 D:\Software-development\ISIL\Proyecto_Institutec_2\Forms_WCF_Institutec\bin\Debug\net6.0-windows\zh-Hant\System.ServiceModel.Federation.resources.dll
 D:\Software-development\ISIL\Proyecto_Institutec_2\Forms_WCF_Institutec\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
 D:\Software-development\ISIL\Proyecto_Institutec_2\Forms_WCF_Institutec\obj\Debug\net6.0-windows\Forms_WCF_Institutec.csproj.CopyComplete
+<<<<<<< HEAD
 E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Forms_WCF_Institutec\bin\Debug\net6.0-windows\Forms_WCF_Institutec.exe
 E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Forms_WCF_Institutec\bin\Debug\net6.0-windows\Forms_WCF_Institutec.deps.json
 E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Forms_WCF_Institutec\bin\Debug\net6.0-windows\Forms_WCF_Institutec.runtimeconfig.json
@@ -126,3 +127,69 @@ E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\
 E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Forms_WCF_Institutec\obj\Debug\net6.0-windows\Forms_WCF_Institutec.pdb
 E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Forms_WCF_Institutec\obj\Debug\net6.0-windows\Forms_WCF_Institutec.genruntimeconfig.cache
 E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Forms_WCF_Institutec\obj\Debug\net6.0-windows\ref\Forms_WCF_Institutec.dll
+=======
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\Forms_WCF_Institutec.exe
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\Forms_WCF_Institutec.deps.json
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\Forms_WCF_Institutec.runtimeconfig.json
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\Forms_WCF_Institutec.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\Forms_WCF_Institutec.pdb
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\Microsoft.Extensions.ObjectPool.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.WsTrust.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.Saml.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Xml.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\System.Private.ServiceModel.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\System.Security.Cryptography.Pkcs.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\System.Security.Cryptography.Xml.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\System.ServiceModel.Duplex.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\System.ServiceModel.Federation.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\System.ServiceModel.Http.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\System.ServiceModel.NetTcp.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\System.ServiceModel.Primitives.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\System.ServiceModel.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\System.ServiceModel.Security.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\cs\System.Private.ServiceModel.resources.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\de\System.Private.ServiceModel.resources.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\es\System.Private.ServiceModel.resources.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\fr\System.Private.ServiceModel.resources.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\it\System.Private.ServiceModel.resources.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\ja\System.Private.ServiceModel.resources.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\ko\System.Private.ServiceModel.resources.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\pl\System.Private.ServiceModel.resources.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\pt-BR\System.Private.ServiceModel.resources.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\ru\System.Private.ServiceModel.resources.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\tr\System.Private.ServiceModel.resources.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\zh-Hans\System.Private.ServiceModel.resources.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\zh-Hant\System.Private.ServiceModel.resources.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\cs\System.ServiceModel.Federation.resources.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\de\System.ServiceModel.Federation.resources.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\es\System.ServiceModel.Federation.resources.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\fr\System.ServiceModel.Federation.resources.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\it\System.ServiceModel.Federation.resources.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\ja\System.ServiceModel.Federation.resources.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\ko\System.ServiceModel.Federation.resources.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\pl\System.ServiceModel.Federation.resources.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\pt-BR\System.ServiceModel.Federation.resources.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\ru\System.ServiceModel.Federation.resources.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\tr\System.ServiceModel.Federation.resources.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\zh-Hans\System.ServiceModel.Federation.resources.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\zh-Hant\System.ServiceModel.Federation.resources.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\obj\Debug\net6.0-windows\Forms_WCF_Institutec.csproj.AssemblyReference.cache
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\obj\Debug\net6.0-windows\ProyInstitutec_GUI.FrmActualizarProfesor.resources
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\obj\Debug\net6.0-windows\ProyInstitutec_GUI.FrmInsertarProfesor.resources
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\obj\Debug\net6.0-windows\ProyInstitutec_GUI.FrmProfesor.resources
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\obj\Debug\net6.0-windows\Forms_WCF_Institutec.csproj.GenerateResource.cache
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\obj\Debug\net6.0-windows\Forms_WCF_Institutec.GeneratedMSBuildEditorConfig.editorconfig
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\obj\Debug\net6.0-windows\Forms_WCF_Institutec.AssemblyInfoInputs.cache
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\obj\Debug\net6.0-windows\Forms_WCF_Institutec.AssemblyInfo.cs
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\obj\Debug\net6.0-windows\Forms_WCF_Institutec.csproj.CoreCompileInputs.cache
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\obj\Debug\net6.0-windows\Forms_WCF_Institutec.csproj.CopyComplete
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\obj\Debug\net6.0-windows\Forms_WCF_Institutec.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\obj\Debug\net6.0-windows\refint\Forms_WCF_Institutec.dll
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\obj\Debug\net6.0-windows\Forms_WCF_Institutec.pdb
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\obj\Debug\net6.0-windows\Forms_WCF_Institutec.genruntimeconfig.cache
+C:\desarrolloDeAplicaciones2\S5\Forms_WCF_Institutec\obj\Debug\net6.0-windows\ref\Forms_WCF_Institutec.dll
+>>>>>>> 058871430b329d21437daede78e94ea6f4adb501
