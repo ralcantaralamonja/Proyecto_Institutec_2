@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="ServicioSeccion" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/WCG_Institutec" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServicioSeccion_EliminarSeccion_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarSeccion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioSeccion_EliminarSeccion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarSeccionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioSeccion_ConsultarSeccion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarSeccion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioSeccion_ConsultarSeccion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarSeccionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioSeccion_ListarSeccion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarSeccion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioSeccion_ListarSeccion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarSeccionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioSeccion_ActualizarSeccion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarSeccion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioSeccion_ActualizarSeccion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarSeccionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioSeccion_InsertarSeccion_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarSeccion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioSeccion_InsertarSeccion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarSeccionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioSeccion_ListarCursos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarCursos" />
+  </wsdl:message>
+  <wsdl:message name="IServicioSeccion_ListarCursos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarCursosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioSeccion_ListarProfesores_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarProfesores" />
+  </wsdl:message>
+  <wsdl:message name="IServicioSeccion_ListarProfesores_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarProfesoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioSeccion_ListarLocales_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarLocales" />
+  </wsdl:message>
+  <wsdl:message name="IServicioSeccion_ListarLocales_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarLocalesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServicioSeccion">
+    <wsdl:operation name="EliminarSeccion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioSeccion/EliminarSeccion" message="tns:IServicioSeccion_EliminarSeccion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioSeccion/EliminarSeccionResponse" message="tns:IServicioSeccion_EliminarSeccion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSeccion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioSeccion/ConsultarSeccion" message="tns:IServicioSeccion_ConsultarSeccion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioSeccion/ConsultarSeccionResponse" message="tns:IServicioSeccion_ConsultarSeccion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarSeccion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioSeccion/ListarSeccion" message="tns:IServicioSeccion_ListarSeccion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioSeccion/ListarSeccionResponse" message="tns:IServicioSeccion_ListarSeccion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarSeccion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioSeccion/ActualizarSeccion" message="tns:IServicioSeccion_ActualizarSeccion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioSeccion/ActualizarSeccionResponse" message="tns:IServicioSeccion_ActualizarSeccion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarSeccion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioSeccion/InsertarSeccion" message="tns:IServicioSeccion_InsertarSeccion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioSeccion/InsertarSeccionResponse" message="tns:IServicioSeccion_InsertarSeccion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarCursos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioSeccion/ListarCursos" message="tns:IServicioSeccion_ListarCursos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioSeccion/ListarCursosResponse" message="tns:IServicioSeccion_ListarCursos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarProfesores">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioSeccion/ListarProfesores" message="tns:IServicioSeccion_ListarProfesores_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioSeccion/ListarProfesoresResponse" message="tns:IServicioSeccion_ListarProfesores_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarLocales">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioSeccion/ListarLocales" message="tns:IServicioSeccion_ListarLocales_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioSeccion/ListarLocalesResponse" message="tns:IServicioSeccion_ListarLocales_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServicioSeccion" type="tns:IServicioSeccion">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EliminarSeccion">
+      <soap:operation soapAction="http://tempuri.org/IServicioSeccion/EliminarSeccion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSeccion">
+      <soap:operation soapAction="http://tempuri.org/IServicioSeccion/ConsultarSeccion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarSeccion">
+      <soap:operation soapAction="http://tempuri.org/IServicioSeccion/ListarSeccion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarSeccion">
+      <soap:operation soapAction="http://tempuri.org/IServicioSeccion/ActualizarSeccion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarSeccion">
+      <soap:operation soapAction="http://tempuri.org/IServicioSeccion/InsertarSeccion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarCursos">
+      <soap:operation soapAction="http://tempuri.org/IServicioSeccion/ListarCursos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarProfesores">
+      <soap:operation soapAction="http://tempuri.org/IServicioSeccion/ListarProfesores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarLocales">
+      <soap:operation soapAction="http://tempuri.org/IServicioSeccion/ListarLocales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicioSeccion">
+    <wsdl:port name="BasicHttpBinding_IServicioSeccion" binding="tns:BasicHttpBinding_IServicioSeccion">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/WCG_Institutec/ServicioSeccion/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

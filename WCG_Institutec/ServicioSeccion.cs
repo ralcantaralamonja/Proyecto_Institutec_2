@@ -306,5 +306,124 @@ namespace WCG_Institutec
 
         }
 
+        public List<SeccionDC> ListarCursos()
+        {
+            //vendedores definidos como supervisores
+            try
+            {
+                //es mejor instanciar dentro, ecuerda definir en cada metodo!
+                InstituTecEntities MiInstituto = new InstituTecEntities();
+
+                List<SeccionDC> objListaSeccionDC = new List<SeccionDC>();
+
+
+                //con LINQ
+                var query = (from micursos in MiInstituto.Tb_Curso
+                             where micursos.Activo.HasValue && micursos.Activo.Value
+                             orderby micursos.NomCur
+                             select micursos).ToList();
+
+                foreach (var objcursos in query)
+                {
+                    SeccionDC objSeccionDC = new SeccionDC();
+
+                    //solo se necesita el codigo dsel vendedor asiu como su apellido y nombre concatenado
+                    objSeccionDC.IdCurs = objcursos.IdCurs;
+                    objSeccionDC.NomCur = objcursos.NomCur;
+
+                    objListaSeccionDC.Add(objSeccionDC);
+
+                }
+
+                return objListaSeccionDC;
+
+            }
+            catch (EntityException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+        }
+
+
+        public List<SeccionDC> ListarLocales()
+        {
+            //vendedores definidos como supervisores
+            try
+            {
+                //es mejor instanciar dentro, ecuerda definir en cada metodo!
+                InstituTecEntities MiInstituto = new InstituTecEntities();
+
+                List<SeccionDC> objListaSeccionDC = new List<SeccionDC>();
+
+
+                //con LINQ
+                var query = (from milocal in MiInstituto.TB_local
+                             orderby milocal.Desloc
+                             select milocal).ToList();
+
+                foreach (var objlocal in query)
+                {
+                    SeccionDC objSeccionDC = new SeccionDC();
+
+                    //solo se necesita el codigo dsel vendedor asiu como su apellido y nombre concatenado
+                    objSeccionDC.IdCent = objlocal.IdCent;
+                    objSeccionDC.nomLocal = objlocal.Desloc;
+
+                    objListaSeccionDC.Add(objSeccionDC);
+
+                }
+
+                return objListaSeccionDC;
+
+            }
+            catch (EntityException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+        }
+
+
+        public List<SeccionDC> ListarProfesores()
+        {
+            //vendedores definidos como supervisores
+            try
+            {
+                //es mejor instanciar dentro, ecuerda definir en cada metodo!
+                InstituTecEntities MiInstituto = new InstituTecEntities();
+
+                List<SeccionDC> objListaSeccionDC = new List<SeccionDC>();
+
+
+                //con LINQ
+                var query = (from miprofesor in MiInstituto.TB_Profesor
+                             where miprofesor.Estado.HasValue && miprofesor.Estado.Value
+                             orderby miprofesor.ApePat
+                             select miprofesor).ToList();
+
+                foreach (var objprofesor in query)
+                {
+                    SeccionDC objSeccionDC = new SeccionDC();
+
+                    //solo se necesita el codigo dsel vendedor asiu como su apellido y nombre concatenado
+                    objSeccionDC.IdProf = objprofesor.IdProf;
+                    objSeccionDC.nomProfesor = objprofesor.ApePat + " " + objprofesor.ApeMat
+                                            + " " + objprofesor.NomPro;
+
+                    objListaSeccionDC.Add(objSeccionDC);
+
+                }
+
+                return objListaSeccionDC;
+
+            }
+            catch (EntityException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+        }
+
     }
 }
