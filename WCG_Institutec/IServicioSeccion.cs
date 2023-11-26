@@ -27,6 +27,15 @@ namespace WCG_Institutec
 
         [OperationContract]
         Boolean InsertarSeccion(SeccionDC objSeccionDC);
+
+        [OperationContract]
+        List<SeccionDC> ListarCursos();
+
+        [OperationContract]
+        List<SeccionDC> ListarProfesores();
+
+        [OperationContract]
+        List<SeccionDC> ListarLocales();
     }
 
 
@@ -87,6 +96,8 @@ namespace WCG_Institutec
 
         [DataMember]
         public String nomLocal { get; set; }
+
+
 
     }
 
