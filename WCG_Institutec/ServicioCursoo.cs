@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Entity.Core;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -11,7 +13,10 @@ namespace WCG_Institutec
     // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de clase "ServicioCursoo" en el código y en el archivo de configuración a la vez.
     public class ServicioCursoo : IServicioCursoo
     {
-
+        SqlConnection cnx = new SqlConnection(@"server=localhost;DataBase=Institutec;Integrated Security=true");
+        SqlCommand cmd = new SqlCommand();
+        DataSet dts = new DataSet();
+        SqlDataAdapter ada;
 
         public Boolean EliminarCurso(String strCodigo)
         {
@@ -213,7 +218,40 @@ namespace WCG_Institutec
             }
         }
 
+        public List<CursoDC> ObtenerCarreraXGenero()
+        {
+            try
+            {
+                DataTable dts = new DataTable(); // Inicializa un nuevo DataTable
 
+                cmd.Connection = cnx;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "usp_CarreraXGenero";
+                cmd.Parameters.Clear();
+
+                using (SqlDataAdapter ada = new SqlDataAdapter(cmd))
+                {
+                    ada.Fill(dts); // Llena el DataTable con los resultados de la consulta
+                }
+
+                // Convertir el DataTable en una colección de objetos
+                List<CursoDC> listaCarreras = new List<CursoDC>();
+                foreach (DataRow drFila in dts.Rows)
+                {
+                    CursoDC carrera = new CursoDC();
+                    carrera.NumHombres = Convert.ToSingle(drFila["Hombres"]);
+                    carrera.NumMujeres = Convert.ToSingle(drFila["Mujeres"]);
+                    carrera.Curso = drFila["Carrera"].ToString();
+                    carrera.Total = Convert.ToSingle(drFila["Total"]);
+                    listaCarreras.Add(carrera);
+                }
+                return listaCarreras;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
 
 
     }
