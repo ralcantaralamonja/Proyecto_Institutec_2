@@ -29,6 +29,13 @@ namespace WCG_Institutec
         [OperationContract]
         List<AlumnoDC> ListarAlumnoNRC(String Nrc);
 
+        [OperationContract]
+        String ObtenerFacultadAlumno(String strIdAlum);
+
+        [OperationContract]
+        String ObtenerCarreraAlumno(String strIdAlum);
+
+
         //Adicionales...
 
 

@@ -284,8 +284,48 @@ namespace WCG_Institutec
             }
         }
 
+        public String ObtenerFacultadAlumno(String strIdAlum)
+        {
+            try
+            {
+                using (InstituTecEntities MiInstituto = new InstituTecEntities())
+                {
+                    // Implementa la lógica para obtener la facultad de un alumno.
+                    // Puedes utilizar el Entity Framework o tus consultas SQL según sea necesario.
 
+                    var idFacultad = (from alumno in MiInstituto.TB_Alumno
+                                      join carrera in MiInstituto.Tb_Carrera on alumno.CodCar equals carrera.CodCar
+                                      join facultad in MiInstituto.TB_Facultad on carrera.IdFacu equals facultad.IdFacu
+                                      where alumno.IdAlum == strIdAlum
+                                      select facultad.IdFacu).FirstOrDefault();
 
+                    return idFacultad;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public String ObtenerCarreraAlumno(String strIdAlum)
+        {
+            try
+            {
+                using (InstituTecEntities MiInstituto = new InstituTecEntities())
+                {
+                    var idCarrera = (from alumno in MiInstituto.TB_Alumno
+                                     where alumno.IdAlum == strIdAlum
+                                     select alumno.CodCar).FirstOrDefault();
+
+                    return idCarrera;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
 
     }
 }

@@ -240,7 +240,6 @@
             cboCarrera.Name = "cboCarrera";
             cboCarrera.Size = new Size(323, 29);
             cboCarrera.TabIndex = 11;
-            //cboCarrera.SelectedIndexChanged += cboCarrera_SelectedIndexChanged;
             // 
             // label11
             // 
@@ -353,6 +352,7 @@
             lblCodigo.Name = "lblCodigo";
             lblCodigo.Size = new Size(95, 23);
             lblCodigo.TabIndex = 1;
+            lblCodigo.Click += lblCodigo_Click;
             // 
             // label8
             // 
@@ -522,7 +522,6 @@
         private Label label1;
         private TextBox textBox4;
         private Label label6;
-        private ComboBox comboBox2;
         private Label label9;
         private Button btnGrabar;
         private Button btnCancelar;

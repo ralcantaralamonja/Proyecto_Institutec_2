@@ -15,6 +15,8 @@ namespace ProyInstitutec_GUI
     {
         ProxyAlumno.ServicioAlumnoClient objServiceAlumno = new ProxyAlumno.ServicioAlumnoClient();
         ProxyAlumno.AlumnoDC objAlumnoDC = new ProxyAlumno.AlumnoDC();
+        ProxyCarrera.CarreraDC objCarreraDC = new ProxyCarrera.CarreraDC();
+        ProxyFacultad.FacultadDC objFacultadDC = new ProxyFacultad.FacultadDC();
         ProxyUbigeo.ServicioUbigeoClient objServiceUbigeo = new ProxyUbigeo.ServicioUbigeoClient();
 
         public FrmActualizarAlumno()
@@ -101,8 +103,6 @@ namespace ProyInstitutec_GUI
                     objAlumnoDC.Foto = FotoOriginal;
                 }
 
-
-
                 //Pasamos valores alas propiedades de la instancia...
                 objAlumnoDC.IdAlum = lblCodigo.Text.Trim();
                 objAlumnoDC.Ndocum = mskDNIAlu.Text.Trim();
@@ -115,19 +115,11 @@ namespace ProyInstitutec_GUI
                 objAlumnoDC.FecNac = fechaNac;
                 objAlumnoDC.TelAlu = mskTelAlu.Text.Trim();
                 objAlumnoDC.direccion = textDireccionAlum.Text.Trim();
+                objAlumnoDC.IdFacu = cboFacultad.SelectedValue.ToString();
+                objAlumnoDC.CodCar = cboCarrera.SelectedValue.ToString();
 
 
-
-
-
-                //objAlumnoDC.IdFacu = cboFacultad.SelectedValue.ToString();
-                //objAlumnoDC.CodCar = cboCarrera.SelectedValue.ToString();
-
-
-
-
-
-                //objAlumnoDC.Id_Ubi = cboDep.SelectedValue.ToString() + cboProvincia.SelectedValue.ToString() +
+                objAlumnoDC.Id_Ubi = cboDep.SelectedValue.ToString() + cboProvincia.SelectedValue.ToString() +
                     cboDistrito.SelectedValue.ToString();
 
 
@@ -176,8 +168,6 @@ namespace ProyInstitutec_GUI
                     FotoOriginal = objAlumnoDC.Foto;
                 }
 
-
-
                 lblCodigo.Text = objAlumnoDC.IdAlum;
                 txtNombre.Text = objAlumnoDC.NomAlu;
                 txtApeMat.Text = objAlumnoDC.ApeMat;
@@ -192,12 +182,12 @@ namespace ProyInstitutec_GUI
 
                 //String Id_Ubigeo = objAlumnoDC.Id_Ubi;
                 //CargarUbigeo(Id_Ubigeo.Substring(0, 2), Id_Ubigeo.Substring(2, 2),
-                    //Id_Ubigeo.Substring(4, 2));
+                //    Id_Ubigeo.Substring(4, 2));
 
-                //string idCarreraAlumno = objServiceAlumno.ObtenerCarreraAlumno(objAlumnoDC.IdAlum);
+                string idCarreraAlumno = objServiceAlumno.ObtenerCarreraAlumno(objAlumnoDC.IdAlum);
 
 
-                //DataTable dt2 = objCarreraBL.ListarCarrera();
+                //DataTable dt2 = objCarreraDC.ListarCarrera();
                 ////instancia de datarow , instancia de fila
                 //DataRow dtr;
                 //dtr = dt2.NewRow(); // fila vacia
@@ -212,29 +202,29 @@ namespace ProyInstitutec_GUI
                 //}
 
 
-                //combos 
+                ////combos 
                 //objAlumnoDC.CodCar = cboCarrera.SelectedValue.ToString();
 
-                //string idFacultadAlumno = objServiceAlumno.ObtenerFacultadAlumno(objAlumnoDC.IdAlum);
-                //// Reemplaza idAlumno con el valor correspondiente
+                string idFacultadAlumno = objServiceAlumno.ObtenerFacultadAlumno(objAlumnoDC.IdAlum);
+                //Reemplaza idAlumno con el valor correspondiente
 
 
                 //// Cargar los datos en el combobox cboFacultad
-                //DataTable dt = objFacultadBL.ListarFacultad();
+                //DataTable dt = objFacultadDC.ListarFacultad();
                 ////instancia de datarow , instancia de fila
                 //DataRow dtrr;
-                ////dtrr = dt.NewRow(); // fila vacia
-                ////cboFacultad.DataSource = dt;
-                ////cboFacultad.DisplayMember = "DesFac";
+                //dtrr = dt.NewRow(); // fila vacia
+                //cboFacultad.DataSource = dt;
+                //cboFacultad.DisplayMember = "DesFac";
                 //cboFacultad.ValueMember = "IdFacu";
 
 
 
-                //// Establecer la facultad seleccionada en el combobox cboFacultad
-                //if (!string.IsNullOrEmpty(idFacultadAlumno))
-                //{
-                //    cboFacultad.SelectedValue = idFacultadAlumno;
-                //}
+                // Establecer la facultad seleccionada en el combobox cboFacultad
+                if (!string.IsNullOrEmpty(idFacultadAlumno))
+                {
+                    cboFacultad.SelectedValue = idFacultadAlumno;
+                }
 
 
 
@@ -268,38 +258,51 @@ namespace ProyInstitutec_GUI
         //private void CargarUbigeo(String IdDepa, String IdProv, String IdDist)
         //{
 
-        //    UbigeoBL objUbigeoBL = new UbigeoBL();
-        //    cboDep.DataSource = objUbigeoBL.Ubigeo_Departamentos();
-        //    cboDep.ValueMember = "IdDepa";
-        //    cboDep.DisplayMember = "Departamento";
-        //    cboDep.SelectedValue = IdDepa;
+        //    EnlazarDepartamento(IdDepartamento);
+        //    EnlazarProvincia(IdDepartamento, IdProvincia);
+        //    EnlazarDistrito(IdDepartamento, IdProvincia, IdDistrito);
 
-        //    cboProvincia.DataSource = objUbigeoBL.Ubigeo_ProvinciasDepartamento(IdDepa);
-        //    cboProvincia.ValueMember = "IdProv";
-        //    cboProvincia.DisplayMember = "Provincia";
-        //    cboProvincia.SelectedValue = IdProv;
+        //}
+        //private void EnlazarDepartamento(String IdDepartamento)
+        //{
+        //    cboDep.DataSource = objServiceUbigeo.GetDepartamentos();
+        //    cboDep.ValueMember = "IdDepartamento";
+        //    cboDep.DisplayMember = "NomDepartamento";
+        //    cboDep.SelectedValue = IdDepartamento;
+        //}
 
-        //    cboDistrito.DataSource = objUbigeoBL.Ubigeo_DistritosProvinciaDepartamento(IdDepa, IdProv);
-        //    cboDistrito.ValueMember = "IdDist";
-        //    cboDistrito.DisplayMember = "Distrito";
-        //    cboDistrito.SelectedValue = IdDist;
-
+        //private void EnlazarProvincia(String IdDepartamento, String IdProvincia)
+        //{
+        //    cboProvincia.DataSource = objServiceUbigeo.GetProvincias(IdDepartamento);
+        //    cboProvincia.ValueMember = "IdProvincia";
+        //    cboProvincia.DisplayMember = "NomProvincia";
+        //    cboProvincia.SelectedValue = IdProvincia;
+        //}
+        //private void EnlazarDistrito(String IdDepartamento, String IdProvincia, String IdDistrito)
+        //{
+        //    cboDistrito.DataSource = objServiceUbigeo.GetDistritos(IdDepartamento, IdProvincia);
+        //    cboDistrito.ValueMember = "IdDistrito";  //este nombre viene de la data contractual
+        //    cboDistrito.DisplayMember = "NomDistrito";
+        //    cboDistrito.SelectedValue = IdDistrito;
         //}
 
         //private void cboProvincia_SelectionChangeCommitted(object sender, EventArgs e)
         //{
-        //    CargarUbigeo(cboDep.SelectedValue.ToString(), cboProvincia.SelectedValue.ToString(), "01");
+        //    EnlazarDistrito(cboDep.SelectedValue.ToString(),
+        //                 cboProvincia.SelectedValue.ToString(), "01");
         //}
 
         //private void cboDep_SelectionChangeCommitted(object sender, EventArgs e)
         //{
-        //    CargarUbigeo(cboDep.SelectedValue.ToString(), "01", "01");
+        //    EnlazarProvincia(cboDep.SelectedValue.ToString(), "01");
+        //    EnlazarDistrito(cboDep.SelectedValue.ToString(),
+        //        cboProvincia.SelectedValue.ToString(), "01");
         //}
 
 
         //private void CargarFacultades(string codCar)
         //{
-        //    DataTable dtFacultades = objFacultadBL.facultadCarrera(codCar);
+        //    DataTable dtFacultades = objFacultadDC.facultadCarrera(codCar);
         //    DataRow drFacultad;
         //    drFacultad = dtFacultades.NewRow();
         //    drFacultad["IdFacu"] = 0;
@@ -363,8 +366,8 @@ namespace ProyInstitutec_GUI
         //        CargarFacultades(codCar);
 
         //        string idFacultadSeleccionada = cboFacultad.SelectedValue.ToString();
-        //        FacultadBL facultadBL = new FacultadBL();
-        //        DataTable carreras = facultadBL.facultadCarrera(idFacultadSeleccionada);
+        //        FacultadDC facultadDC = new FacultadDC();
+        //        DataTable carreras = facultadDC.facultadCarrera(idFacultadSeleccionada);
 
         //        cboCarrera.DisplayMember = "DesCar";
         //        cboCarrera.ValueMember = "CodCar";
@@ -378,7 +381,7 @@ namespace ProyInstitutec_GUI
         //        {
         //            cboCarrera.SelectedValue = idCarreraAlumno;
 
-        //            DataTable dt2 = objCarreraBL.ListarCarrera();
+        //            DataTable dt2 = objCarreraDC.ListarCarrera();
         //            //instancia de datarow , instancia de fila
         //            DataRow dtr;
         //            dtr = dt2.NewRow(); // fila vacia
@@ -444,6 +447,11 @@ namespace ProyInstitutec_GUI
         }
 
         private void mskDNIAlu_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void lblCodigo_Click(object sender, EventArgs e)
         {
 
         }

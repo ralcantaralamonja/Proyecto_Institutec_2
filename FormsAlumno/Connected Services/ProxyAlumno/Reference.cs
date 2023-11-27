@@ -40,9 +40,9 @@ namespace ProxyAlumno
         
         private byte[] FotoField;
         
-        private string FullNameField;
-        
         private string IdAlumField;
+        
+        private string IdFacuField;
         
         private string Id_UbiField;
         
@@ -61,6 +61,8 @@ namespace ProxyAlumno
         private string Usu_RegistroField;
         
         private string direccionField;
+        
+        private string fullNameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string ApeMat
@@ -206,19 +208,6 @@ namespace ProxyAlumno
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string FullName
-        {
-            get
-            {
-                return this.FullNameField;
-            }
-            set
-            {
-                this.FullNameField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public string IdAlum
         {
             get
@@ -228,6 +217,19 @@ namespace ProxyAlumno
             set
             {
                 this.IdAlumField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string IdFacu
+        {
+            get
+            {
+                return this.IdFacuField;
+            }
+            set
+            {
+                this.IdFacuField = value;
             }
         }
         
@@ -347,6 +349,19 @@ namespace ProxyAlumno
                 this.direccionField = value;
             }
         }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string fullName
+        {
+            get
+            {
+                return this.fullNameField;
+            }
+            set
+            {
+                this.fullNameField = value;
+            }
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
@@ -389,6 +404,18 @@ namespace ProxyAlumno
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioAlumno/ListarAlumnoNRC", ReplyAction="http://tempuri.org/IServicioAlumno/ListarAlumnoNRCResponse")]
         System.Threading.Tasks.Task<System.Collections.Generic.List<ProxyAlumno.AlumnoDC>> ListarAlumnoNRCAsync(string Nrc);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioAlumno/ObtenerFacultadAlumno", ReplyAction="http://tempuri.org/IServicioAlumno/ObtenerFacultadAlumnoResponse")]
+        string ObtenerFacultadAlumno(string strIdAlum);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioAlumno/ObtenerFacultadAlumno", ReplyAction="http://tempuri.org/IServicioAlumno/ObtenerFacultadAlumnoResponse")]
+        System.Threading.Tasks.Task<string> ObtenerFacultadAlumnoAsync(string strIdAlum);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioAlumno/ObtenerCarreraAlumno", ReplyAction="http://tempuri.org/IServicioAlumno/ObtenerCarreraAlumnoResponse")]
+        string ObtenerCarreraAlumno(string strIdAlum);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioAlumno/ObtenerCarreraAlumno", ReplyAction="http://tempuri.org/IServicioAlumno/ObtenerCarreraAlumnoResponse")]
+        System.Threading.Tasks.Task<string> ObtenerCarreraAlumnoAsync(string strIdAlum);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
@@ -499,6 +526,26 @@ namespace ProxyAlumno
         public System.Threading.Tasks.Task<System.Collections.Generic.List<ProxyAlumno.AlumnoDC>> ListarAlumnoNRCAsync(string Nrc)
         {
             return base.Channel.ListarAlumnoNRCAsync(Nrc);
+        }
+        
+        public string ObtenerFacultadAlumno(string strIdAlum)
+        {
+            return base.Channel.ObtenerFacultadAlumno(strIdAlum);
+        }
+        
+        public System.Threading.Tasks.Task<string> ObtenerFacultadAlumnoAsync(string strIdAlum)
+        {
+            return base.Channel.ObtenerFacultadAlumnoAsync(strIdAlum);
+        }
+        
+        public string ObtenerCarreraAlumno(string strIdAlum)
+        {
+            return base.Channel.ObtenerCarreraAlumno(strIdAlum);
+        }
+        
+        public System.Threading.Tasks.Task<string> ObtenerCarreraAlumnoAsync(string strIdAlum)
+        {
+            return base.Channel.ObtenerCarreraAlumnoAsync(strIdAlum);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()
