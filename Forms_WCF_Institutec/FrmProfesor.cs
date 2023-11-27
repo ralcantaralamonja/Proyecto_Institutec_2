@@ -104,6 +104,11 @@ namespace ProyInstitutec_GUI
         {
 
         }
+
+        private void dtgProfesor_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
 

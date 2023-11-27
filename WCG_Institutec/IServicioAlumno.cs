@@ -54,6 +54,9 @@ namespace WCG_Institutec
         public String ApeMat { get; set; }
 
         [DataMember]
+        public String fullName { get; set; }
+
+        [DataMember]
         public String Id_Ubi { get; set; }
 
         [DataMember]
@@ -88,8 +91,7 @@ namespace WCG_Institutec
 
         [DataMember]
         public String DesCar { get; set; }
-        [DataMember]
-        public String FullName { get; set; }
+
         [DataMember]
         public String DesFac { get; set; }
 
@@ -111,10 +113,7 @@ namespace WCG_Institutec
         //[DataMember]
         //public String distrito { get; set; }
 
-        //[DataMember]
-        //public String IdFacu { get; set; }
-
-        //[DataMember]
-        //public String DescFacu { get; set; }
+        [DataMember]
+        public String IdFacu { get; set; }
     }
 }

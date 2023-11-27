@@ -1,17 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.Text;
+﻿//using System;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Runtime.Serialization;
+//using System.ServiceModel;
+//using System.Text;
 
-namespace WCG_Institutec
-{
-    // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de clase "ServicioCarrera" en el código y en el archivo de configuración a la vez.
-    public class ServicioCarrera : IServicioCarrera
-    {
-        public void DoWork()
-        {
-        }
-    }
-}
+//namespace WCG_Institutec
+//{
+//    // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de clase "ServicioCarrera" en el código y en el archivo de configuración a la vez.
+//    public class ServicioCarrera : IServicioCarrera
+//    {
+//        public void DoWork()
+//        {
+//        }
+//    }
+//}

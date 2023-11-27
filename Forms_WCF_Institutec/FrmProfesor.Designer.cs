@@ -131,6 +131,7 @@
             dtgProfesor.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dtgProfesor.Size = new Size(1293, 503);
             dtgProfesor.TabIndex = 2;
+            dtgProfesor.CellContentClick += dtgProfesor_CellContentClick;
             // 
             // IdProf
             // 
