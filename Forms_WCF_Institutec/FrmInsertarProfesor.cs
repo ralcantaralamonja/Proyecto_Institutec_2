@@ -111,7 +111,7 @@ namespace ProyInstitutec_GUI
                 {
                     throw new Exception("Debe registrar la foto.");
                 }
-                objProfesorDC.Foto = File.ReadAllBytes(openFileDialog1.FileName);
+
 
                 String Genero = "";
                 if (optM.Checked == true)
@@ -136,8 +136,6 @@ namespace ProyInstitutec_GUI
 
                 objProfesorDC.Foto = File.ReadAllBytes(openFileDialog1.FileName);
                 objProfesorDC.Usu_Registro = "Kimmy";
-
-
                 DateTime fechaIng = dtpFecIng.Value;
                 //Pasamos valores alas propiedades de la instancia...
                 objProfesorDC.NomPro = txtNomPro.Text.Trim();
@@ -161,8 +159,8 @@ namespace ProyInstitutec_GUI
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Error: " + ex.ToString());
 
-                MessageBox.Show("Error : " + ex.Message);
 
             }
 
@@ -213,9 +211,6 @@ namespace ProyInstitutec_GUI
             }
         }
 
-        private void pcbFoto_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

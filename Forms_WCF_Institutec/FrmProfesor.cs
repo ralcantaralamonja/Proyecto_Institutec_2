@@ -19,27 +19,27 @@ namespace ProyInstitutec_GUI
         public FrmProfesor()
         {
             InitializeComponent();
+            //dtgProfesor.CellFormatting += dtgProfesor_CellFormatting;
         }
 
         public void CargarDatos()
         {
-
             dtgProfesor.DataSource = objServiceProfesor.ListarProfesor();
             LblRegistros.Text = dtgProfesor.Rows.Count.ToString();
             foreach (DataGridViewColumn column in dtgProfesor.Columns)
             {
                 column.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             }
-
-
-
         }
+
 
         private void FrmProfesor_Load(object sender, EventArgs e)
         {
             try
             {
                 dtgProfesor.AutoGenerateColumns = false;
+
+                dtgProfesor.DataError += dtgProfesor_DataError;
 
 
                 CargarDatos();
@@ -48,6 +48,40 @@ namespace ProyInstitutec_GUI
             {
                 MessageBox.Show("Error : " + ex.Message);
             }
+        }
+
+        private void dtgProfesor_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == dtgProfesor.Columns["Foto"].Index && e.Value != null)
+            {
+                byte[] bytes = (byte[])e.Value;
+                Image imagen = ByteArrayToImage(bytes);
+                e.Value = imagen;
+            }
+            if (e.ColumnIndex == dtgProfesor.Columns["Estado"].Index && e.Value != null)
+            {
+                bool estado = (bool)e.Value;
+                e.Value = estado ? "activo" : "inactivo";
+                e.FormattingApplied = true;
+            }
+        }
+
+        // Método para convertir un array de bytes a una imagen
+        private Image ByteArrayToImage(byte[] byteArray)
+        {
+            using (MemoryStream ms = new MemoryStream(byteArray))
+            {
+                return Image.FromStream(ms);
+            }
+        }
+
+        private void dtgProfesor_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            // Manejar el error y evitar que se muestre el cuadro de diálogo predeterminado
+            e.ThrowException = false;
+
+            // Mostrar un mensaje de error (puedes personalizarlo según tus necesidades)
+            Console.WriteLine("Error al cargar datos de la imagen: " + e.Exception.ToString());
         }
 
 

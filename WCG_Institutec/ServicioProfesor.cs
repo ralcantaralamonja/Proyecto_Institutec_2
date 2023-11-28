@@ -8,6 +8,8 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.Diagnostics;
+
 
 
 namespace WCG_Institutec
@@ -51,6 +53,8 @@ namespace WCG_Institutec
                     objProfesorDC.Direccion = objProfesor.direccion;
                     objProfesorDC.Id_Ubi = objProfesor.Id_Ubi;
                     objProfesorDC.Estado = Convert.ToBoolean(objProfesor.Estado);
+                    objProfesorDC.EstadoTexto = (objProfesor.Estado ?? false) ? "activo" : "inactivo";
+                    objProfesorDC.Foto = (byte[])objProfesor.Foto;
                     objListaProfesor.Add(objProfesorDC);
                 }
                 return objListaProfesor;
@@ -113,7 +117,7 @@ namespace WCG_Institutec
             {
 
                 bd.usp_InsertarProfesor(
-            objProfesorDC.IdProf,
+            objProfesorDC.Ndocum,
             objProfesorDC.NomPro,
             objProfesorDC.ApePat,
             objProfesorDC.ApeMat,
@@ -122,7 +126,7 @@ namespace WCG_Institutec
             (byte[])objProfesorDC.Foto,
             objProfesorDC.Usu_Registro,
             objProfesorDC.Estado,
-            objProfesorDC.Ndocum,
+            objProfesorDC.CorIns,
             objProfesorDC.TelPro,
             Convert.ToDateTime(objProfesorDC.FecNac),
             Convert.ToDateTime(objProfesorDC.FecIng)
@@ -134,7 +138,8 @@ namespace WCG_Institutec
             catch (Exception ex)
             {
 
-                throw new Exception(ex.Message);
+                Debug.WriteLine("Error en InsertarProfesor: " + ex.ToString());
+                throw;
             }
         }
         public Boolean ActualizarProfesor(ProfesorDC objProfesorDC)

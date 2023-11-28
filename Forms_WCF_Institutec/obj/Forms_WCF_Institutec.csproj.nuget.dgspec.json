@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\ISIL DESARROLLO DE SOTFWARE\\DESARROLLO DE APLICACIONES\\Proyecto_Institutec_2\\Forms_WCF_Institutec\\Forms_WCF_Institutec.csproj": {}
+    "D:\\Software-development\\5 ciclo\\Proyecto_Institutec_2\\Forms_WCF_Institutec\\Forms_WCF_Institutec.csproj": {}
   },
   "projects": {
-    "E:\\ISIL DESARROLLO DE SOTFWARE\\DESARROLLO DE APLICACIONES\\Proyecto_Institutec_2\\Forms_WCF_Institutec\\Forms_WCF_Institutec.csproj": {
+    "D:\\Software-development\\5 ciclo\\Proyecto_Institutec_2\\Forms_WCF_Institutec\\Forms_WCF_Institutec.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ISIL DESARROLLO DE SOTFWARE\\DESARROLLO DE APLICACIONES\\Proyecto_Institutec_2\\Forms_WCF_Institutec\\Forms_WCF_Institutec.csproj",
+        "projectUniqueName": "D:\\Software-development\\5 ciclo\\Proyecto_Institutec_2\\Forms_WCF_Institutec\\Forms_WCF_Institutec.csproj",
         "projectName": "Forms_WCF_Institutec",
-        "projectPath": "E:\\ISIL DESARROLLO DE SOTFWARE\\DESARROLLO DE APLICACIONES\\Proyecto_Institutec_2\\Forms_WCF_Institutec\\Forms_WCF_Institutec.csproj",
-        "packagesPath": "C:\\Users\\Ricardo\\.nuget\\packages\\",
-        "outputPath": "E:\\ISIL DESARROLLO DE SOTFWARE\\DESARROLLO DE APLICACIONES\\Proyecto_Institutec_2\\Forms_WCF_Institutec\\obj\\",
+        "projectPath": "D:\\Software-development\\5 ciclo\\Proyecto_Institutec_2\\Forms_WCF_Institutec\\Forms_WCF_Institutec.csproj",
+        "packagesPath": "C:\\Users\\kim\\.nuget\\packages\\",
+        "outputPath": "D:\\Software-development\\5 ciclo\\Proyecto_Institutec_2\\Forms_WCF_Institutec\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Ricardo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kim\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -85,7 +85,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
