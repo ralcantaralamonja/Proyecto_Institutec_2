@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity.Core;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -234,8 +235,8 @@ namespace WCG_Institutec
                 objSeccion.Vacant = Convert.ToByte(objSeccionDC.Vacante);
                 objSeccion.DIA = objSeccionDC.dia;
                 objSeccion.IdCent = objSeccionDC.IdCent;
-                objSeccion.Fec_Ult_Mod = Convert.ToDateTime(objSeccionDC.Fec_Ult_Mod);
-                objSeccion.Usu_Ult_Mod = objSeccionDC.Usu_Ult_Mod;
+               // objSeccion.Fec_Ult_Mod = Convert.ToDateTime(objSeccionDC.Fec_Ult_Mod);
+              //  objSeccion.Usu_Ult_Mod = objSeccionDC.Usu_Ult_Mod;
 
                 objSeccion.Activo = Convert.ToBoolean(objSeccionDC.Activo);
 
@@ -248,9 +249,18 @@ namespace WCG_Institutec
 
                 return true;
             }
-            catch (EntityException ex)
+            catch (DbUpdateException ex)
             {
-                throw new Exception(ex.Message);
+                // Muestra la información detallada de la excepción interna
+                if (ex.InnerException != null)
+                {
+                    var innerException = ex.InnerException;
+                    throw new Exception("Error al actualizar la sección: " + innerException.Message, innerException);
+                }
+                else
+                {
+                    throw new Exception("Error al actualizar la sección: " + ex.Message, ex);
+                }
             }
         }
 

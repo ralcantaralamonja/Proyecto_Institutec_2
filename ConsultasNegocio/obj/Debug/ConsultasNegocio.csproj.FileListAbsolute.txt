@@ -84,6 +84,7 @@ E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\
 E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\ConsultasNegocio\obj\Debug\ConsultasNegocio.csproj.CopyComplete
 E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\ConsultasNegocio\obj\Debug\ConsultasNegocio.dll
 E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\ConsultasNegocio\obj\Debug\ConsultasNegocio.pdb
+<<<<<<< HEAD
 D:\Software-development\5 ciclo\Proyecto_Institutec_2\ConsultasNegocio\bin\ConsultasNegocio.dll.config
 D:\Software-development\5 ciclo\Proyecto_Institutec_2\ConsultasNegocio\bin\ConsultasNegocio.dll
 D:\Software-development\5 ciclo\Proyecto_Institutec_2\ConsultasNegocio\bin\ConsultasNegocio.pdb
@@ -170,3 +171,91 @@ D:\Software-development\5 ciclo\Proyecto_Institutec_2\ConsultasNegocio\obj\Debug
 D:\Software-development\5 ciclo\Proyecto_Institutec_2\ConsultasNegocio\obj\Debug\ConsultasNegocio.csproj.CopyComplete
 D:\Software-development\5 ciclo\Proyecto_Institutec_2\ConsultasNegocio\obj\Debug\ConsultasNegocio.dll
 D:\Software-development\5 ciclo\Proyecto_Institutec_2\ConsultasNegocio\obj\Debug\ConsultasNegocio.pdb
+=======
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\ConsultasNegocio.dll.config
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\ConsultasNegocio.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\ConsultasNegocio.pdb
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\csc.exe
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\csc.exe.config
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\csc.rsp
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\csi.exe
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\csi.exe.config
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\csi.rsp
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\Microsoft.Managed.Core.targets
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\Microsoft.Win32.Primitives.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\System.AppContext.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\System.Collections.Immutable.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\System.Console.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\System.Globalization.Calendars.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\System.IO.Compression.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\System.IO.Compression.ZipFile.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\System.IO.FileSystem.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\System.Net.Http.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\System.Net.Sockets.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\System.Reflection.Metadata.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\System.Threading.Tasks.Extensions.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\System.ValueTuple.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\System.Xml.XmlDocument.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\System.Xml.XPath.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\vbc.exe
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\vbc.exe.config
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\vbc.rsp
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\VBCSCompiler.exe
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\roslyn\VBCSCompiler.exe.config
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\Antlr3.Runtime.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\Microsoft.Web.Infrastructure.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\Newtonsoft.Json.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\System.Web.Helpers.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\System.Web.Mvc.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\System.Web.Optimization.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\System.Web.Razor.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\System.Web.WebPages.Deployment.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\System.Web.WebPages.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\System.Web.WebPages.Razor.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\WebGrease.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\System.Web.Helpers.xml
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\System.Web.Mvc.xml
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\System.Web.Optimization.xml
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\System.Web.Razor.xml
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\System.Web.WebPages.xml
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\System.Web.WebPages.Deployment.xml
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\System.Web.WebPages.Razor.xml
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\Newtonsoft.Json.xml
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\Antlr3.Runtime.pdb
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\es\System.Web.Helpers.resources.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\es\System.Web.Mvc.resources.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\es\System.Web.Optimization.resources.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\es\System.Web.Razor.resources.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\es\System.Web.WebPages.resources.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\es\System.Web.WebPages.Deployment.resources.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\bin\es\System.Web.WebPages.Razor.resources.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\obj\Debug\ConsultasNegocio.csproj.AssemblyReference.cache
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\obj\Debug\ConsultasNegocio.csproj.CoreCompileInputs.cache
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\obj\Debug\ConsultasNegocio.csproj.CopyComplete
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\obj\Debug\ConsultasNegocio.dll
+F:\ambar\isil 2023 02\Proyecto_Institutec_2\ConsultasNegocio\obj\Debug\ConsultasNegocio.pdb
+>>>>>>> ea3ef69b3732cf199cb716e0f47c6ad202c1bd72
