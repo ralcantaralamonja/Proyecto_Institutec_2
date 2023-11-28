@@ -3019,23 +3019,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ricardo\\.nuget\\packages\\": {},
+    "C:\\Users\\Users\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\ISIL DESARROLLO DE SOTFWARE\\DESARROLLO DE APLICACIONES\\Proyecto_Institutec_2\\Test_Institutec2\\Test_Institutec2.csproj",
+      "projectUniqueName": "F:\\ambar\\isil 2023 02\\Proyecto_Institutec_2\\Test_Institutec2\\Test_Institutec2.csproj",
       "projectName": "Test_Institutec2",
-      "projectPath": "E:\\ISIL DESARROLLO DE SOTFWARE\\DESARROLLO DE APLICACIONES\\Proyecto_Institutec_2\\Test_Institutec2\\Test_Institutec2.csproj",
-      "packagesPath": "C:\\Users\\Ricardo\\.nuget\\packages\\",
-      "outputPath": "E:\\ISIL DESARROLLO DE SOTFWARE\\DESARROLLO DE APLICACIONES\\Proyecto_Institutec_2\\Test_Institutec2\\obj\\",
+      "projectPath": "F:\\ambar\\isil 2023 02\\Proyecto_Institutec_2\\Test_Institutec2\\Test_Institutec2.csproj",
+      "packagesPath": "C:\\Users\\Users\\.nuget\\packages\\",
+      "outputPath": "F:\\ambar\\isil 2023 02\\Proyecto_Institutec_2\\Test_Institutec2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Ricardo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Users\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3106,13 +3106,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema al leer el archivo de caché E:\\ISIL DESARROLLO DE SOTFWARE\\DESARROLLO DE APLICACIONES\\Proyecto_Institutec_2\\Test_Institutec2\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

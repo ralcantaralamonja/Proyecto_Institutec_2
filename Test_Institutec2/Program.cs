@@ -1,3 +1,4 @@
+using ProyInstitutec_GUI;
 using Test_Institutec;
 
 namespace Test_Institutec2
@@ -13,7 +14,7 @@ namespace Test_Institutec2
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new FrmSeccion());
+            Application.Run(new frmLogin());
         }
     }
 }
