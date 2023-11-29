@@ -135,8 +135,8 @@ namespace Test_Institutec
                     objSeccionDC.Activo = 0;
                 }
 
-                objSeccionDC.Usu_Ult_Mod = "afernandez";
-                objSeccionDC.Activo = Convert.ToInt16(chkActivo.Checked);
+                //objSeccionDC.Usu_Ult_Mod = clsCredenciales.Login_Usuario;
+                // objSeccionDC.Activo = Convert.ToInt16(chkActivo.Checked);
 
                 //se invoca a la operacion de insercion
                 if (objServiceSeccion.ActualizarSeccion(objSeccionDC) == true)

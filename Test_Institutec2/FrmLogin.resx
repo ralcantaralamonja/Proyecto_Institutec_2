@@ -117,72 +117,30 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="dtgProfesor.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="IdProf.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Ndocum.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ApellPat_Mat.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="NomPro.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="TelPro.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="CorIns.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Sexopr.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="EstadoTexto.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Foto.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="FecNac.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="FecIng.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Fec_Registro.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Usu_Registro.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="btnInsertar.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="btnSalir.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="label2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="LblRegistros.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAAwMDAAICAgAAAAP8AAP8AAAD//wD/AAAA/wD/AP//
-        AAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwAAAAAPAAAPAAAAAA8AAAAAAAAAAAAAAPAAAA8A
-        AAAA8AAADwAAAADwAAAPAAAAAAAAAAAAAAAADwAADwAAAAAAAAAAAAAAAAAAAAAAAAAAAPAAAPAAAAAA
-        AAAAAAAAAAAAAAAAAAD//wAA//8AAAfBAAAHwQAAB8EAAAEBAAAAAQAAAgEAAAIBAACAAwAAwQcAAMEH
-        AADjjwAA448AAOOPAAD//wAA
+        AAABAAIAICAQAAAAAADoAgAAJgAAABAQEAAAAAAAKAEAAA4DAAAoAAAAIAAAAEAAAAABAAQAAAAAAIAC
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAgAAAAICAAIAAAACAAIAAgIAAAICAgADAwMAAAAD/AAD/
+        AAAA//8A/wAAAP8A/wD//wAA////AAcAAAAAAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAAAAAAdwAAAAAA
+        AAAAAAAAAAAAAHcAAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAAAAAAHAA
+        AAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAAAA
+        AAAAAABwAAAAAAAAAAAAAAAAAAAABwAAAAAAAHAAAAAAAAcAAABwAAAAAAB3AAAAAAAAAAAAB3AAAAAA
+        cHAAAAAAAAAAAAB3cAAAAHAHAAAAAAAAAAAAAHd3cABwAHAAAAAAAAAAAAAAd3d3cAAHAAAAAAAAAAAA
+        AAAAd3AAAHAAAAAAAAAAAAAAAAAAAAAHAAAAAADwAAAAAAAAAAAAAHAAAAAADwAAAAAAAAAAAAAHAAAA
+        AADwAAAAAAAAAAAAAAAAAAAAD/AAAAAAAAAAAA8AAAAAAAAP8AAAAAAAAADwAAAAAAAAAA//8AAAAAAP
+        AAAAAAAAAAAAAA//8AAA8AAAAAAAAAAAAAAAAAAADwAAAAAAAAAAAAAAAABwAPAAAAAAAAAAAAAAAAAA
+        cA8AAAAAAAAAAAAAAAAAAHDwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAv////7//
+        //8f////H////w////8P////D////wf///8H////A////4H///+A//f/gH/z/8Af8f/AB/D/4ABwf+AA
+        AD/wAAAf8AAAD/gAAAf8AAAD/gAAA/8AAAH/gAAD/+AAB//4AA///4Af///wP///8H////D////5////
+        +/8oAAAAEAAAACAAAAABAAQAAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAgAAAAICAAIAA
+        AACAAIAAgIAAAICAgADAwMAAAAD/AAD/AAAA//8A/wAAAP8A/wD//wAA////AHAAAAAAAAAAcAAAAAAA
+        AABwAAAAAAAAAHAAAAAAAAAAcAAAAAAAAABwAHAAAAAAAHAABwAAAAAAAAAAB3AAAAAAAAAABwAAAAAP
+        AAAAAAAAAAD/AAAAAPAAAAD/AAAPAAAAAAD/APAAAAAAAAAPAAAAAAAAAAAAAAAAAAAAAAAAf/8AAD//
+        AAA//wAAH/8AAB//AAAH3wAAA88AAIBHAADAAwAAwAEAAOAAAADwAQAA/AMAAP8HAAD/zwAA/98AAA==
 </value>
   </data>
 </root>

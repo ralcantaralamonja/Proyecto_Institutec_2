@@ -82,7 +82,7 @@
             dgtSeccion.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgtSeccion.Columns.AddRange(new DataGridViewColumn[] { idCodsDataGridViewTextBoxColumn, nomCurDataGridViewTextBoxColumn, nomProfesorDataGridViewTextBoxColumn, nomLocalDataGridViewTextBoxColumn, diaDataGridViewTextBoxColumn, horaIniDataGridViewTextBoxColumn, horaFinDataGridViewTextBoxColumn, vacanteDataGridViewTextBoxColumn, estadoDataGridViewTextBoxColumn });
             dgtSeccion.DataSource = seccionDCBindingSource;
-            dgtSeccion.Location = new Point(34, 106);
+            dgtSeccion.Location = new Point(30, 61);
             dgtSeccion.Margin = new Padding(4, 3, 4, 3);
             dgtSeccion.Name = "dgtSeccion";
             dgtSeccion.ReadOnly = true;
@@ -90,7 +90,7 @@
             dgtSeccion.RowHeadersVisible = false;
             dgtSeccion.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dgtSeccion.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgtSeccion.Size = new Size(1098, 535);
+            dgtSeccion.Size = new Size(1097, 476);
             dgtSeccion.TabIndex = 2;
             dgtSeccion.TabStop = false;
             // 
@@ -163,7 +163,7 @@
             // 
             // btnActualizar
             // 
-            btnActualizar.Location = new Point(751, 766);
+            btnActualizar.Location = new Point(748, 716);
             btnActualizar.Margin = new Padding(4, 3, 4, 3);
             btnActualizar.Name = "btnActualizar";
             btnActualizar.Size = new Size(134, 42);
@@ -174,7 +174,7 @@
             // 
             // btnInsertar
             // 
-            btnInsertar.Location = new Point(588, 766);
+            btnInsertar.Location = new Point(585, 716);
             btnInsertar.Margin = new Padding(4, 3, 4, 3);
             btnInsertar.Name = "btnInsertar";
             btnInsertar.Size = new Size(134, 42);
@@ -185,7 +185,7 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(996, 766);
+            btnCancelar.Location = new Point(993, 716);
             btnCancelar.Margin = new Padding(4, 3, 4, 3);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(134, 42);
@@ -197,7 +197,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(932, 680);
+            label2.Location = new Point(929, 630);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(68, 15);
@@ -208,7 +208,7 @@
             // 
             lblRegistros.BackColor = SystemColors.Window;
             lblRegistros.BorderStyle = BorderStyle.FixedSingle;
-            lblRegistros.Location = new Point(1024, 670);
+            lblRegistros.Location = new Point(1021, 620);
             lblRegistros.Margin = new Padding(4, 0, 4, 0);
             lblRegistros.Name = "lblRegistros";
             lblRegistros.Size = new Size(107, 33);
@@ -219,7 +219,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1191, 833);
+            ClientSize = new Size(1156, 774);
             Controls.Add(btnCancelar);
             Controls.Add(btnActualizar);
             Controls.Add(btnInsertar);

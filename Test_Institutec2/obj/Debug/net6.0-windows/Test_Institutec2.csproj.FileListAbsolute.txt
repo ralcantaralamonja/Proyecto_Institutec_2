@@ -51,7 +51,9 @@ C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\Test_I
 C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec2.Form1.resources
 C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec.FrmActualizarSeccion.resources
 C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec.FrmInsertarSeccion.resources
+C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\ProyInstitutec_GUI.frmLogin.resources
 C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec.FrmSeccion.resources
+C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\ProyInstitutec_GUI.MDIPrincipal.resources
 C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec2.csproj.GenerateResource.cache
 C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec2.GeneratedMSBuildEditorConfig.editorconfig
 C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec2.AssemblyInfoInputs.cache

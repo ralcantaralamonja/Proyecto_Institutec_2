@@ -34,50 +34,54 @@
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProfesor));
-            label1 = new Label();
-            mskDNIProfesor = new TextBox();
             dtgProfesor = new DataGridView();
-            IdProf = new DataGridViewTextBoxColumn();
-            Ndocum = new DataGridViewTextBoxColumn();
-            ApellPat_Mat = new DataGridViewTextBoxColumn();
-            NomPro = new DataGridViewTextBoxColumn();
-            TelPro = new DataGridViewTextBoxColumn();
-            Sexopr = new DataGridViewTextBoxColumn();
-            Estado = new DataGridViewTextBoxColumn();
-            Foto = new DataGridViewTextBoxColumn();
-            direccion = new DataGridViewTextBoxColumn();
-            FecIng = new DataGridViewTextBoxColumn();
             btnInsertar = new Button();
             btnActualizar = new Button();
             btnSalir = new Button();
             label2 = new Label();
             LblRegistros = new Label();
             Id = new DataGridViewTextBoxColumn();
+            IdProf = new DataGridViewTextBoxColumn();
+            Ndocum = new DataGridViewTextBoxColumn();
+            ApellPat_Mat = new DataGridViewTextBoxColumn();
+            NomPro = new DataGridViewTextBoxColumn();
+            TelPro = new DataGridViewTextBoxColumn();
+            CorIns = new DataGridViewTextBoxColumn();
+            Sexopr = new DataGridViewTextBoxColumn();
+            EstadoTexto = new DataGridViewTextBoxColumn();
+            Foto = new DataGridViewImageColumn();
+            FecNac = new DataGridViewTextBoxColumn();
+            FecIng = new DataGridViewTextBoxColumn();
+            Fec_Registro = new DataGridViewTextBoxColumn();
+            Usu_Registro = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dtgProfesor).BeginInit();
             SuspendLayout();
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(12, 15);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(185, 21);
-            label1.TabIndex = 0;
-            label1.Text = "FILTRO DNI PROFESOR:";
-            // 
-            // mskDNIProfesor
-            // 
-            mskDNIProfesor.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            mskDNIProfesor.Location = new Point(243, 12);
-            mskDNIProfesor.Margin = new Padding(3, 2, 3, 2);
-            mskDNIProfesor.MaxLength = 8;
-            mskDNIProfesor.Name = "mskDNIProfesor";
-            mskDNIProfesor.Size = new Size(335, 27);
-            mskDNIProfesor.TabIndex = 1;
-            mskDNIProfesor.TextChanged += mskDNIProfesor_TextChanged;
-            // 
+//<<<<<<< HEAD
+//            // label1
+//            // 
+//            label1.AutoSize = true;
+//            label1.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+//            label1.Location = new Point(12, 15);
+//            label1.Margin = new Padding(4, 0, 4, 0);
+//            label1.Name = "label1";
+//            label1.Size = new Size(185, 21);
+//            label1.TabIndex = 0;
+//            label1.Text = "FILTRO DNI PROFESOR:";
+//            // 
+//            // mskDNIProfesor
+//            // 
+//            mskDNIProfesor.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+//            mskDNIProfesor.Location = new Point(243, 12);
+//            mskDNIProfesor.Margin = new Padding(3, 2, 3, 2);
+//            mskDNIProfesor.MaxLength = 8;
+//            mskDNIProfesor.Name = "mskDNIProfesor";
+//            mskDNIProfesor.Size = new Size(335, 27);
+//            mskDNIProfesor.TabIndex = 1;
+//            mskDNIProfesor.TextChanged += mskDNIProfesor_TextChanged;
+//            // 
+//=======
+//>>>>>>> 0c532a217a6e8a7ee26025817a2fb5f4eb97abf0
             // dtgProfesor
             // 
             dtgProfesor.AllowUserToAddRows = false;
@@ -99,7 +103,7 @@
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dtgProfesor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dtgProfesor.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgProfesor.Columns.AddRange(new DataGridViewColumn[] { IdProf, Ndocum, ApellPat_Mat, NomPro, TelPro, Sexopr, Estado, Foto, direccion, FecIng });
+            dtgProfesor.Columns.AddRange(new DataGridViewColumn[] { IdProf, Ndocum, ApellPat_Mat, NomPro, TelPro, CorIns, Sexopr, EstadoTexto, Foto, FecNac, FecIng, Fec_Registro, Usu_Registro });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = SystemColors.Window;
             dataGridViewCellStyle3.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -132,86 +136,6 @@
             dtgProfesor.Size = new Size(1293, 503);
             dtgProfesor.TabIndex = 2;
             dtgProfesor.CellContentClick += dtgProfesor_CellContentClick;
-            // 
-            // IdProf
-            // 
-            IdProf.DataPropertyName = "IdProf";
-            IdProf.HeaderText = "ID";
-            IdProf.MinimumWidth = 6;
-            IdProf.Name = "IdProf";
-            IdProf.ReadOnly = true;
-            // 
-            // Ndocum
-            // 
-            Ndocum.DataPropertyName = "Ndocum";
-            Ndocum.HeaderText = "DNI";
-            Ndocum.MinimumWidth = 6;
-            Ndocum.Name = "Ndocum";
-            Ndocum.ReadOnly = true;
-            // 
-            // ApellPat_Mat
-            // 
-            ApellPat_Mat.DataPropertyName = "ApellPat_Mat";
-            ApellPat_Mat.HeaderText = "Apellidos";
-            ApellPat_Mat.MinimumWidth = 6;
-            ApellPat_Mat.Name = "ApellPat_Mat";
-            ApellPat_Mat.ReadOnly = true;
-            // 
-            // NomPro
-            // 
-            NomPro.DataPropertyName = "NomPro";
-            NomPro.HeaderText = "Nombres";
-            NomPro.MinimumWidth = 6;
-            NomPro.Name = "NomPro";
-            NomPro.ReadOnly = true;
-            // 
-            // TelPro
-            // 
-            TelPro.DataPropertyName = "TelPro";
-            TelPro.HeaderText = "Teléfono";
-            TelPro.MinimumWidth = 6;
-            TelPro.Name = "TelPro";
-            TelPro.ReadOnly = true;
-            // 
-            // Sexopr
-            // 
-            Sexopr.DataPropertyName = "Sexopr";
-            Sexopr.HeaderText = "Sexo";
-            Sexopr.MinimumWidth = 6;
-            Sexopr.Name = "Sexopr";
-            Sexopr.ReadOnly = true;
-            // 
-            // Estado
-            // 
-            Estado.DataPropertyName = "Estado";
-            Estado.HeaderText = "Estado";
-            Estado.MinimumWidth = 6;
-            Estado.Name = "Estado";
-            Estado.ReadOnly = true;
-            // 
-            // Foto
-            // 
-            Foto.DataPropertyName = "Foto";
-            Foto.HeaderText = "Foto";
-            Foto.MinimumWidth = 6;
-            Foto.Name = "Foto";
-            Foto.ReadOnly = true;
-            // 
-            // direccion
-            // 
-            direccion.DataPropertyName = "direccion";
-            direccion.HeaderText = "Dirección";
-            direccion.MinimumWidth = 6;
-            direccion.Name = "direccion";
-            direccion.ReadOnly = true;
-            // 
-            // FecIng
-            // 
-            FecIng.DataPropertyName = "FecIng";
-            FecIng.HeaderText = "Fecha Ingreso";
-            FecIng.MinimumWidth = 6;
-            FecIng.Name = "FecIng";
-            FecIng.ReadOnly = true;
             // 
             // btnInsertar
             // 
@@ -286,6 +210,110 @@
             Id.Name = "Id";
             Id.Width = 125;
             // 
+            // IdProf
+            // 
+            IdProf.DataPropertyName = "IdProf";
+            IdProf.HeaderText = "ID";
+            IdProf.MinimumWidth = 6;
+            IdProf.Name = "IdProf";
+            IdProf.ReadOnly = true;
+            // 
+            // Ndocum
+            // 
+            Ndocum.DataPropertyName = "Ndocum";
+            Ndocum.HeaderText = "DNI";
+            Ndocum.MinimumWidth = 6;
+            Ndocum.Name = "Ndocum";
+            Ndocum.ReadOnly = true;
+            // 
+            // ApellPat_Mat
+            // 
+            ApellPat_Mat.DataPropertyName = "ApellPat_Mat";
+            ApellPat_Mat.HeaderText = "Apellidos";
+            ApellPat_Mat.MinimumWidth = 6;
+            ApellPat_Mat.Name = "ApellPat_Mat";
+            ApellPat_Mat.ReadOnly = true;
+            // 
+            // NomPro
+            // 
+            NomPro.DataPropertyName = "NomPro";
+            NomPro.HeaderText = "Nombres";
+            NomPro.MinimumWidth = 6;
+            NomPro.Name = "NomPro";
+            NomPro.ReadOnly = true;
+            // 
+            // TelPro
+            // 
+            TelPro.DataPropertyName = "TelPro";
+            TelPro.HeaderText = "Teléfono";
+            TelPro.MinimumWidth = 6;
+            TelPro.Name = "TelPro";
+            TelPro.ReadOnly = true;
+            // 
+            // CorIns
+            // 
+            CorIns.DataPropertyName = "CorIns";
+            CorIns.HeaderText = "E-mail";
+            CorIns.MinimumWidth = 6;
+            CorIns.Name = "CorIns";
+            CorIns.ReadOnly = true;
+            // 
+            // Sexopr
+            // 
+            Sexopr.DataPropertyName = "Sexopr";
+            Sexopr.HeaderText = "Sexo";
+            Sexopr.MinimumWidth = 6;
+            Sexopr.Name = "Sexopr";
+            Sexopr.ReadOnly = true;
+            // 
+            // EstadoTexto
+            // 
+            EstadoTexto.DataPropertyName = "EstadoTexto";
+            EstadoTexto.HeaderText = "Estado";
+            EstadoTexto.MinimumWidth = 6;
+            EstadoTexto.Name = "EstadoTexto";
+            EstadoTexto.ReadOnly = true;
+            // 
+            // Foto
+            // 
+            Foto.DataPropertyName = "Foto";
+            Foto.HeaderText = "Foto";
+            Foto.MinimumWidth = 6;
+            Foto.Name = "Foto";
+            Foto.ReadOnly = true;
+            // 
+            // FecNac
+            // 
+            FecNac.DataPropertyName = "FecNac";
+            FecNac.HeaderText = "Fecha Nacimiento";
+            FecNac.MinimumWidth = 6;
+            FecNac.Name = "FecNac";
+            FecNac.ReadOnly = true;
+            // 
+            // FecIng
+            // 
+            FecIng.DataPropertyName = "FecIng";
+            FecIng.HeaderText = "Fecha de Ingreso";
+            FecIng.MinimumWidth = 6;
+            FecIng.Name = "FecIng";
+            FecIng.ReadOnly = true;
+            // 
+            // Fec_Registro
+            // 
+            Fec_Registro.DataPropertyName = "Fec_Registro";
+            Fec_Registro.HeaderText = "Fecha de Registro";
+            Fec_Registro.MinimumWidth = 6;
+            Fec_Registro.Name = "Fec_Registro";
+            Fec_Registro.ReadOnly = true;
+            // 
+            // Usu_Registro
+            // 
+            Usu_Registro.DataPropertyName = "Usu_Registro";
+            Usu_Registro.HeaderText = "Usuario Registro";
+            Usu_Registro.MinimumWidth = 6;
+            Usu_Registro.Name = "Usu_Registro";
+            Usu_Registro.ReadOnly = true;
+            // 
             // FrmProfesor
             // 
             AutoScaleDimensions = new SizeF(6F, 13F);
@@ -296,8 +324,6 @@
             Controls.Add(btnSalir);
             Controls.Add(btnActualizar);
             Controls.Add(btnInsertar);
-            Controls.Add(mskDNIProfesor);
-            Controls.Add(label1);
             Controls.Add(dtgProfesor);
             Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Regular, GraphicsUnit.Point);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -315,9 +341,6 @@
         }
 
         #endregion
-
-        private Label label1;
-        private TextBox mskDNIProfesor;
         private DataGridView dtgProfesor;
         private Button btnInsertar;
         private Button btnActualizar;
@@ -330,10 +353,13 @@
         private DataGridViewTextBoxColumn ApellPat_Mat;
         private DataGridViewTextBoxColumn NomPro;
         private DataGridViewTextBoxColumn TelPro;
+        private DataGridViewTextBoxColumn CorIns;
         private DataGridViewTextBoxColumn Sexopr;
-        private DataGridViewTextBoxColumn Estado;
-        private DataGridViewTextBoxColumn Foto;
-        private DataGridViewTextBoxColumn direccion;
+        private DataGridViewTextBoxColumn EstadoTexto;
+        private DataGridViewImageColumn Foto;
+        private DataGridViewTextBoxColumn FecNac;
         private DataGridViewTextBoxColumn FecIng;
+        private DataGridViewTextBoxColumn Fec_Registro;
+        private DataGridViewTextBoxColumn Usu_Registro;
     }
 }
