@@ -51,7 +51,7 @@
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(8, 3, 0, 3);
-            menuStrip1.Size = new Size(1101, 33);
+            menuStrip1.Size = new Size(1101, 31);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             menuStrip1.ItemClicked += menuStrip1_ItemClicked;
@@ -61,7 +61,7 @@
             mantenimientoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { profesorToolStripMenuItem, estudianteToolStripMenuItem, salirToolStripMenuItem, carreraToolStripMenuItem, salirToolStripMenuItem1 });
             mantenimientoToolStripMenuItem.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
             mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
-            mantenimientoToolStripMenuItem.Size = new Size(183, 27);
+            mantenimientoToolStripMenuItem.Size = new Size(159, 25);
             mantenimientoToolStripMenuItem.Text = "MANTENIMIENTO";
             // 
             // profesorToolStripMenuItem
@@ -69,7 +69,7 @@
             profesorToolStripMenuItem.BackgroundImage = (Image)resources.GetObject("profesorToolStripMenuItem.BackgroundImage");
             profesorToolStripMenuItem.BackgroundImageLayout = ImageLayout.None;
             profesorToolStripMenuItem.Name = "profesorToolStripMenuItem";
-            profesorToolStripMenuItem.Size = new Size(224, 28);
+            profesorToolStripMenuItem.Size = new Size(180, 26);
             profesorToolStripMenuItem.Text = "PROFESOR";
             profesorToolStripMenuItem.Click += profesorToolStripMenuItem_Click;
             // 
@@ -78,15 +78,16 @@
             estudianteToolStripMenuItem.BackgroundImage = (Image)resources.GetObject("estudianteToolStripMenuItem.BackgroundImage");
             estudianteToolStripMenuItem.BackgroundImageLayout = ImageLayout.None;
             estudianteToolStripMenuItem.Name = "estudianteToolStripMenuItem";
-            estudianteToolStripMenuItem.Size = new Size(224, 28);
+            estudianteToolStripMenuItem.Size = new Size(180, 26);
             estudianteToolStripMenuItem.Text = "ESTUDIANTE";
+            estudianteToolStripMenuItem.Click += estudianteToolStripMenuItem_Click;
             // 
             // salirToolStripMenuItem
             // 
             salirToolStripMenuItem.BackgroundImage = (Image)resources.GetObject("salirToolStripMenuItem.BackgroundImage");
             salirToolStripMenuItem.BackgroundImageLayout = ImageLayout.None;
             salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            salirToolStripMenuItem.Size = new Size(224, 28);
+            salirToolStripMenuItem.Size = new Size(180, 26);
             salirToolStripMenuItem.Text = "CURSO";
             // 
             // carreraToolStripMenuItem
@@ -94,7 +95,7 @@
             carreraToolStripMenuItem.BackgroundImage = (Image)resources.GetObject("carreraToolStripMenuItem.BackgroundImage");
             carreraToolStripMenuItem.BackgroundImageLayout = ImageLayout.None;
             carreraToolStripMenuItem.Name = "carreraToolStripMenuItem";
-            carreraToolStripMenuItem.Size = new Size(224, 28);
+            carreraToolStripMenuItem.Size = new Size(180, 26);
             carreraToolStripMenuItem.Text = "SECCION";
             carreraToolStripMenuItem.Click += carreraToolStripMenuItem_Click;
             // 
@@ -103,7 +104,7 @@
             salirToolStripMenuItem1.BackgroundImage = (Image)resources.GetObject("salirToolStripMenuItem1.BackgroundImage");
             salirToolStripMenuItem1.BackgroundImageLayout = ImageLayout.None;
             salirToolStripMenuItem1.Name = "salirToolStripMenuItem1";
-            salirToolStripMenuItem1.Size = new Size(224, 28);
+            salirToolStripMenuItem1.Size = new Size(180, 26);
             salirToolStripMenuItem1.Text = "SALIR";
             salirToolStripMenuItem1.Click += salirToolStripMenuItem1_Click;
             // 
@@ -111,7 +112,7 @@
             // 
             sALIRToolStripMenuItem2.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
             sALIRToolStripMenuItem2.Name = "sALIRToolStripMenuItem2";
-            sALIRToolStripMenuItem2.Size = new Size(75, 27);
+            sALIRToolStripMenuItem2.Size = new Size(65, 25);
             sALIRToolStripMenuItem2.Text = "SALIR";
             sALIRToolStripMenuItem2.Click += sALIRToolStripMenuItem2_Click;
             // 
@@ -119,10 +120,10 @@
             // 
             statusStrip1.ImageScalingSize = new Size(24, 24);
             statusStrip1.Items.AddRange(new ToolStripItem[] { lbl1, lblUsuario });
-            statusStrip1.Location = new Point(0, 986);
+            statusStrip1.Location = new Point(0, 990);
             statusStrip1.Name = "statusStrip1";
             statusStrip1.Padding = new Padding(1, 0, 21, 0);
-            statusStrip1.Size = new Size(1101, 26);
+            statusStrip1.Size = new Size(1101, 22);
             statusStrip1.TabIndex = 4;
             statusStrip1.Text = "statusStrip1";
             // 
@@ -131,7 +132,7 @@
             lbl1.BackColor = SystemColors.ActiveCaptionText;
             lbl1.ForeColor = SystemColors.ButtonHighlight;
             lbl1.Name = "lbl1";
-            lbl1.Size = new Size(62, 20);
+            lbl1.Size = new Size(50, 17);
             lbl1.Text = "Usuario:";
             // 
             // lblUsuario
@@ -139,12 +140,12 @@
             lblUsuario.BackColor = Color.Black;
             lblUsuario.ForeColor = SystemColors.ButtonHighlight;
             lblUsuario.Name = "lblUsuario";
-            lblUsuario.Size = new Size(151, 20);
+            lblUsuario.Size = new Size(118, 17);
             lblUsuario.Text = "toolStripStatusLabel2";
             // 
             // MDIPrincipal
             // 
-            AutoScaleDimensions = new SizeF(10F, 21F);
+            AutoScaleDimensions = new SizeF(8F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = Color.DarkGray;

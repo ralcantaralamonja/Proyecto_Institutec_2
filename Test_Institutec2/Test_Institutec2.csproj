@@ -17,13 +17,31 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="FrmActualizarAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmActualizarProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmActualizarSeccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmInsertarAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmInsertarProfesor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FrmInsertarSeccion.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmSeccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmVerAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

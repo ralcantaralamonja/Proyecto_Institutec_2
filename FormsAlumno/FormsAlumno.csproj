@@ -16,14 +16,4 @@
     <PackageReference Include="System.ServiceModel.Security" Version="4.10.*" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Update="FrmActualizarAlumno.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="FrmInsertarAlumno.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="FrmVerAlumno.cs" />
-  </ItemGroup>
-
 </Project>

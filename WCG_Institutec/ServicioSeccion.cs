@@ -235,8 +235,8 @@ namespace WCG_Institutec
                 objSeccion.Vacant = Convert.ToByte(objSeccionDC.Vacante);
                 objSeccion.DIA = objSeccionDC.dia;
                 objSeccion.IdCent = objSeccionDC.IdCent;
-               // objSeccion.Fec_Ult_Mod = Convert.ToDateTime(objSeccionDC.Fec_Ult_Mod);
-              //  objSeccion.Usu_Ult_Mod = objSeccionDC.Usu_Ult_Mod;
+                // objSeccion.Fec_Ult_Mod = Convert.ToDateTime(objSeccionDC.Fec_Ult_Mod);
+                //  objSeccion.Usu_Ult_Mod = objSeccionDC.Usu_Ult_Mod;
 
                 objSeccion.Activo = Convert.ToBoolean(objSeccionDC.Activo);
 
