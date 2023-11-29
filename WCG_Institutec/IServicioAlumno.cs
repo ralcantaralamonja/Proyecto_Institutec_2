@@ -35,6 +35,12 @@ namespace WCG_Institutec
         [OperationContract]
         String ObtenerCarreraAlumno(String strIdAlum);
 
+        [OperationContract]
+        List<AlumnoDC> ListarCarrera();
+
+        [OperationContract]
+        List<AlumnoDC> ListarFacultad();
+
 
         //Adicionales...
 
@@ -111,14 +117,17 @@ namespace WCG_Institutec
         [DataMember]
         public DateTime Fec_Ult_Mod { get; set; }
 
-        //[DataMember]
-        //public String Usu_Ult_Mod { get; set; }
+        [DataMember]
+        public String Usu_Ult_Mod { get; set; }
 
-        //[DataMember]
-        //public String departamento { get; set; }
+        [DataMember]
+        public String departamento { get; set; }
 
-        //[DataMember]
-        //public String distrito { get; set; }
+        [DataMember]
+        public String provincia { get; set; }
+
+        [DataMember]
+        public String distrito { get; set; }
 
         [DataMember]
         public String IdFacu { get; set; }

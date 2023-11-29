@@ -137,6 +137,7 @@
             gpbSexoAlu.TabIndex = 8;
             gpbSexoAlu.TabStop = false;
             gpbSexoAlu.Text = "GÉNERO";
+            gpbSexoAlu.Enter += gpbSexoAlu_Enter;
             // 
             // optF
             // 

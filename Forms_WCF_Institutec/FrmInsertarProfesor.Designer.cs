@@ -178,11 +178,12 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "DATOS PERSONALES";
+            groupBox1.Enter += groupBox1_Enter_1;
             // 
             // btnImagen
             // 
             btnImagen.Location = new Point(391, 387);
-            btnImagen.Margin = new Padding(2, 2, 2, 2);
+            btnImagen.Margin = new Padding(2);
             btnImagen.Name = "btnImagen";
             btnImagen.Size = new Size(148, 32);
             btnImagen.TabIndex = 24;
@@ -194,7 +195,7 @@
             // 
             pcbFoto.BorderStyle = BorderStyle.FixedSingle;
             pcbFoto.Location = new Point(367, 431);
-            pcbFoto.Margin = new Padding(2, 2, 2, 2);
+            pcbFoto.Margin = new Padding(2);
             pcbFoto.Name = "pcbFoto";
             pcbFoto.Size = new Size(193, 111);
             pcbFoto.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -373,7 +374,7 @@
             BackColor = SystemColors.Control;
             ClientSize = new Size(614, 630);
             Controls.Add(groupBox1);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FrmInsertarProfesor";

@@ -46,24 +46,13 @@ namespace ProyInstitutec_GUI
             {
                 CargarUbigeo("14", "01", "01");
 
-                //CargarFacultades("0");
-
-
-                //cargamos los combos
-
-
-                //DataTable dt2 = objCarreraBL.ListarCarrera();
-
-                //instancia de datarow , instancia de fila
-                DataRow dtr;
-                //dtr = dt2.NewRow(); // fila vacia
-                //dtr["CodCar"] = 0;
-                //dtr["DesCar"] = "--Seleccione--";
-                //primera fila que se visualice:
-                //dt2.Rows.InsertAt(dtr, 0);
-               // cboCarrera.DataSource = dt2;
+                cboCarrera.DataSource = objServiceAlumno.ListarCarrera();
                 cboCarrera.DisplayMember = "DesCar";
                 cboCarrera.ValueMember = "CodCar";
+
+                cboFacultad.DataSource = objServiceAlumno.ListarFacultad(); ;
+                cboFacultad.DisplayMember = "DesFac";
+                cboFacultad.ValueMember = "IdFacu";
 
             }
             catch (Exception ex)
@@ -78,32 +67,46 @@ namespace ProyInstitutec_GUI
         private void CargarUbigeo(String IdDepa, String IdProv, String IdDist)
         {
 
-            //UbigeoBL objUbigeoBL = new UbigeoBL();
-            //cboDep.DataSource = objUbigeoBL.Ubigeo_Departamentos();
-            cboDep.ValueMember = "IdDepa";
-            cboDep.DisplayMember = "Departamento";
-            cboDep.SelectedValue = IdDepa;
+            EnlazarDepartamento(IdDepa);
+            EnlazarProvincia(IdDepa, IdProv);
+            EnlazarDistrito(IdDepa, IdProv, IdDist);
 
-            //cboProvincia.DataSource = objUbigeoBL.Ubigeo_ProvinciasDepartamento(IdDepa);
-            cboProvincia.ValueMember = "IdProv";
-            cboProvincia.DisplayMember = "Provincia";
-            cboProvincia.SelectedValue = IdProv;
+        }
 
-            //cboDistrito.DataSource = objUbigeoBL.Ubigeo_DistritosProvinciaDepartamento(IdDepa, IdProv);
-            cboDistrito.ValueMember = "IdDist";
-            cboDistrito.DisplayMember = "Distrito";
-            cboDistrito.SelectedValue = IdDist;
+        private void EnlazarDepartamento(String IdDepartamento)
+        {
+            cboDep.DataSource = objServiceUbigeo.GetDepartamentos();
+            cboDep.ValueMember = "IdDepartamento";
+            cboDep.DisplayMember = "NomDepartamento";
+            cboDep.SelectedValue = IdDepartamento;
+        }
 
+        private void EnlazarProvincia(String IdDepartamento, String IdProvincia)
+        {
+            cboProvincia.DataSource = objServiceUbigeo.GetProvincias(IdDepartamento);
+            cboProvincia.ValueMember = "IdProvincia";
+            cboProvincia.DisplayMember = "NomProvincia";
+            cboProvincia.SelectedValue = IdProvincia;
+        }
+        private void EnlazarDistrito(String IdDepartamento, String IdProvincia, String IdDistrito)
+        {
+            cboDistrito.DataSource = objServiceUbigeo.GetDistritos(IdDepartamento, IdProvincia);
+            cboDistrito.ValueMember = "IdDistrito";  //este nombre viene de la data contractual
+            cboDistrito.DisplayMember = "NomDistrito";
+            cboDistrito.SelectedValue = IdDistrito;
         }
 
         private void cboProvincia_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            CargarUbigeo(cboDep.SelectedValue.ToString(), cboProvincia.SelectedValue.ToString(), "01");
+            EnlazarDistrito(cboDep.SelectedValue.ToString(),
+                             cboProvincia.SelectedValue.ToString(), "01");
         }
 
         private void cboDep_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            CargarUbigeo(cboDep.SelectedValue.ToString(), "01", "01");
+            EnlazarProvincia(cboDep.SelectedValue.ToString(), "01");
+            EnlazarDistrito(cboDep.SelectedValue.ToString(),
+                cboProvincia.SelectedValue.ToString(), "01");
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -166,12 +169,9 @@ namespace ProyInstitutec_GUI
                     activo = false;
                 }
 
-
-
                 // Convertimos la foto en un arreglo de Bytes y lo almacenamos en su respectiva propiedad
                 objAlumnoDC.Foto = File.ReadAllBytes(openFileDialog1.FileName);
-
-
+                objAlumnoDC.Usu_Registro = "Orlando";
 
                 //Pasamos valores alas propiedades de la instancia...
                 objAlumnoDC.Ndocum = mskDNIAlu.Text.Trim();
@@ -185,25 +185,13 @@ namespace ProyInstitutec_GUI
                 objAlumnoDC.TelAlu = mskTelAlu.Text.Trim();
                 objAlumnoDC.direccion = txtDireccionAlum.Text.Trim();
 
-
-
-
-
-                //objAlumnoDC.Idfacu = cboFacultad.SelectedValue.ToString();
+                objAlumnoDC.IdFacu = cboFacultad.SelectedValue.ToString();
                 objAlumnoDC.CodCar = cboCarrera.SelectedValue.ToString();
-
-
-
-
 
                 objAlumnoDC.Id_Ubi = cboDep.SelectedValue.ToString() + cboProvincia.SelectedValue.ToString() +
                     cboDistrito.SelectedValue.ToString();
-
-
-
                 //formulario de logeo 
                 //objAlumnoDC.Usu_Registro = clsCredenciales.Login_Usuario;
-
 
                 if (objServiceAlumno.InsertarAlumno(objAlumnoDC) == true)
                 {
@@ -261,23 +249,6 @@ namespace ProyInstitutec_GUI
         }
 
 
-        //private void CargarFacultades(string codCar)
-        //{
-        //    //DataTable dtFacultades = objFacultadBL.facultadCarrera(codCar);
-        //    DataRow drFacultad;
-        //    //drFacultad = dtFacultades.NewRow();
-        //    drFacultad["IdFacu"] = 0;
-        //    drFacultad["DesFac"] = "--Seleccione--";
-        //    dtFacultades.Rows.InsertAt(drFacultad, 0);
-
-        //    cboFacultad.DataSource = dtFacultades;
-        //    cboFacultad.DisplayMember = "DesFac";
-        //    cboFacultad.ValueMember = "IdFacu";
-        //}
-
-
-
-
 
         private void cboCarrera_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -291,6 +262,11 @@ namespace ProyInstitutec_GUI
         }
 
         private void mskDNIAlu_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void gpbSexoAlu_Enter(object sender, EventArgs e)
         {
 
         }

@@ -42,36 +42,28 @@ namespace ProyInstitutec_GUI
             try
             {
                 dtgAlumno.AutoGenerateColumns = false;
-
+                dtgAlumno.DataError += dtgAlumno_DataError;
+                dtgAlumno.CellFormatting += dtgAlumno_CellFormatting; // Agregamos el evento CellFormatting
                 CargarDatos();
             }
             catch (Exception ex)
             {
-
-                MessageBox.Show("Error : " + ex.Message);
+                MessageBox.Show("Error: " + ex.Message);
             }
-
         }
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
             try
             {
-                // instancia
-
                 FrmInsertarAlumno objInsertarAlumno = new FrmInsertarAlumno();
                 objInsertarAlumno.ShowDialog();
-
-
-                //refrescamos el datagrid - para que se vea apenas se haga el cambio
                 CargarDatos();
-
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error:" + ex.Message);
+                MessageBox.Show("Error: " + ex.Message);
             }
-
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -81,35 +73,57 @@ namespace ProyInstitutec_GUI
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-
-
             try
             {
-                FrmActualizarAlumno objActualizarAlumno = new FrmActualizarAlumno();
-
-                objActualizarAlumno.Codigo = dtgAlumno.CurrentRow.Cells[0].Value.ToString();
-                objActualizarAlumno.ShowDialog();
-
-                CargarDatos();
+                if (dtgAlumno.SelectedRows.Count > 0)
+                {
+                    FrmActualizarAlumno objActualizarAlumno = new FrmActualizarAlumno();
+                    objActualizarAlumno.Codigo = dtgAlumno.CurrentRow.Cells[0].Value.ToString();
+                    objActualizarAlumno.ShowDialog();
+                    CargarDatos();
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, selecciona una fila antes de actualizar.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error:" + ex.Message);
+                MessageBox.Show("Error: " + ex.Message);
             }
-
-
         }
-
-
 
         private void dtgAlumno_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            // Puedes agregar lógica aquí si es necesario
         }
 
         private void mskDNIAlumno_TextChanged(object sender, EventArgs e)
         {
+            // Puedes agregar lógica aquí si es necesario
+        }
 
+        private void dtgAlumno_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            MessageBox.Show($"Error en el DataGridView: {e.Exception.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void dtgAlumno_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            try
+            {
+                // Manejar la representación de imágenes nulas
+                if (e.Value != null && e.Value is Image)
+                {
+                    // Puedes realizar más validaciones si es necesario
+                    e.Value = null; // O realiza alguna acción para evitar que se muestre la imagen
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejar la excepción, puedes registrarla, mostrar un mensaje, etc.
+                Console.WriteLine($"Error en CellFormatting: {ex.Message}");
+            }
         }
     }
 }

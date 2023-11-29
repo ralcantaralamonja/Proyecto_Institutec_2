@@ -416,6 +416,18 @@ namespace ProxyAlumno
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioAlumno/ObtenerCarreraAlumno", ReplyAction="http://tempuri.org/IServicioAlumno/ObtenerCarreraAlumnoResponse")]
         System.Threading.Tasks.Task<string> ObtenerCarreraAlumnoAsync(string strIdAlum);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioAlumno/ListarCarrera", ReplyAction="http://tempuri.org/IServicioAlumno/ListarCarreraResponse")]
+        System.Collections.Generic.List<ProxyAlumno.AlumnoDC> ListarCarrera();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioAlumno/ListarCarrera", ReplyAction="http://tempuri.org/IServicioAlumno/ListarCarreraResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<ProxyAlumno.AlumnoDC>> ListarCarreraAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioAlumno/ListarFacultad", ReplyAction="http://tempuri.org/IServicioAlumno/ListarFacultadResponse")]
+        System.Collections.Generic.List<ProxyAlumno.AlumnoDC> ListarFacultad();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioAlumno/ListarFacultad", ReplyAction="http://tempuri.org/IServicioAlumno/ListarFacultadResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<ProxyAlumno.AlumnoDC>> ListarFacultadAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
@@ -546,6 +558,26 @@ namespace ProxyAlumno
         public System.Threading.Tasks.Task<string> ObtenerCarreraAlumnoAsync(string strIdAlum)
         {
             return base.Channel.ObtenerCarreraAlumnoAsync(strIdAlum);
+        }
+        
+        public System.Collections.Generic.List<ProxyAlumno.AlumnoDC> ListarCarrera()
+        {
+            return base.Channel.ListarCarrera();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<ProxyAlumno.AlumnoDC>> ListarCarreraAsync()
+        {
+            return base.Channel.ListarCarreraAsync();
+        }
+        
+        public System.Collections.Generic.List<ProxyAlumno.AlumnoDC> ListarFacultad()
+        {
+            return base.Channel.ListarFacultad();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<ProxyAlumno.AlumnoDC>> ListarFacultadAsync()
+        {
+            return base.Channel.ListarFacultadAsync();
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()

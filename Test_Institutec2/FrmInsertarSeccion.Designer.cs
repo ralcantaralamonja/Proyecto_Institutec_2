@@ -205,6 +205,7 @@
             cboNomCurso.Name = "cboNomCurso";
             cboNomCurso.Size = new Size(398, 23);
             cboNomCurso.TabIndex = 1;
+            cboNomCurso.SelectedIndexChanged += cboNomCurso_SelectedIndexChanged;
             // 
             // label1
             // 

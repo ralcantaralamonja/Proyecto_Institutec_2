@@ -71,7 +71,6 @@
     <Compile Include="IServicioAlumno.cs" />
     <Compile Include="IServicioCarrera.cs" />
     <Compile Include="IServicioCursoo.cs" />
-    <Compile Include="IServicioFacultad.cs" />
     <Compile Include="IServicioProfesor.cs" />
     <Compile Include="IServicioSeccion.cs" />
     <Compile Include="IServicioUbigeo.cs" />
@@ -80,7 +79,6 @@
     <Compile Include="ServicioAlumno.cs" />
     <Compile Include="ServicioCarrera.cs" />
     <Compile Include="ServicioCursoo.cs" />
-    <Compile Include="ServicioFacultad.cs" />
     <Compile Include="ServicioProfesor.cs" />
     <Compile Include="ServicioSeccion.cs" />
     <Compile Include="ServicioUbigeo.cs" />

@@ -327,5 +327,72 @@ namespace WCG_Institutec
             }
         }
 
+        public List<AlumnoDC> ListarCarrera()
+        {
+            try
+            {
+                DataTable dts = new DataTable(); // Inicializa un nuevo DataTable
+
+                cmd.Connection = cnx;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "usp_ListarCarrera";
+                cmd.Parameters.Clear();
+
+                using (SqlDataAdapter ada = new SqlDataAdapter(cmd))
+                {
+                    ada.Fill(dts); // Llena el DataTable con los resultados de la consulta
+                }
+
+                // Convertir el DataTable en una colección de objetos
+                List<AlumnoDC> listaCarreras = new List<AlumnoDC>();
+                foreach (DataRow drFila in dts.Rows)
+                {
+                    AlumnoDC carrera = new AlumnoDC();
+                    carrera.CodCar = drFila["CodCar"].ToString();
+                    carrera.DesCar = drFila["DesCar"].ToString();
+                    carrera.DesFac = drFila["DesFac"].ToString();
+                    listaCarreras.Add(carrera);
+                }
+                return listaCarreras;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public List<AlumnoDC> ListarFacultad()
+        {
+            try
+            {
+                DataTable dts = new DataTable(); // Inicializa un nuevo DataTable
+
+                cmd.Connection = cnx;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "usp_ListarFacultad";
+                cmd.Parameters.Clear();
+
+                using (SqlDataAdapter ada = new SqlDataAdapter(cmd))
+                {
+                    ada.Fill(dts); // Llena el DataTable con los resultados de la consulta
+                }
+
+                // Convierte el DataTable en una colección de objetos
+                List<AlumnoDC> listaFacultades = new List<AlumnoDC>();
+                foreach (DataRow drFila in dts.Rows)
+                {
+                    AlumnoDC facultad = new AlumnoDC();
+                    facultad.IdFacu = drFila["IdFacu"].ToString();
+                    facultad.DesFac = drFila["DesFac"].ToString();
+                    listaFacultades.Add(facultad);
+                }
+                return listaFacultades;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
     }
 }

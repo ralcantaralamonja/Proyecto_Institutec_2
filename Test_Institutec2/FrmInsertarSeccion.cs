@@ -135,5 +135,10 @@ namespace Test_Institutec
 
 
         }
+
+        private void cboNomCurso_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
