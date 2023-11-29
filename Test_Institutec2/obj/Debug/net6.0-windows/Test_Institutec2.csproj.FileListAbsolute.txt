@@ -202,3 +202,6 @@ D:\Software-development\5 ciclo\Proyecto_Institutec_2\Test_Institutec2\obj\Debug
 D:\Software-development\5 ciclo\Proyecto_Institutec_2\Test_Institutec2\obj\Debug\net6.0-windows\ProyInstitutec_GUI.MDIPrincipal.resources
 D:\Software-development\5 ciclo\Proyecto_Institutec_2\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec2.FrmLogin.resources
 D:\Software-development\5 ciclo\Proyecto_Institutec_2\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec2.MDIPrincipal.resources
+D:\Software-development\5 ciclo\Proyecto_Institutec_2\Test_Institutec2\obj\Debug\net6.0-windows\ProyInstitutec_GUI.FrmActualizarProfesor.resources
+D:\Software-development\5 ciclo\Proyecto_Institutec_2\Test_Institutec2\obj\Debug\net6.0-windows\ProyInstitutec_GUI.FrmInsertarProfesor.resources
+D:\Software-development\5 ciclo\Proyecto_Institutec_2\Test_Institutec2\obj\Debug\net6.0-windows\ProyInstitutec_GUI.FrmProfesor.resources

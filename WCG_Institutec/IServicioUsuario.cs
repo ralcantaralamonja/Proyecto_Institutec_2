@@ -37,5 +37,5 @@ namespace WCG_Institutec
         [DataMember]
         public String Usu_Registro { get; set; }
     }
-   
+
 }

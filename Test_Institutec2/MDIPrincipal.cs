@@ -100,9 +100,9 @@ namespace ProyInstitutec_GUI
 
         private void profesorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //FrmSeccion objFormSeccion = new FrmSeccion();
-            //objFormSeccion.MdiParent = this;
-            //objFormSeccion.Show();
+            FrmProfesor objFormProfe = new FrmProfesor();
+            objFormProfe.MdiParent = this;
+            objFormProfe.Show();
         }
     }
 }

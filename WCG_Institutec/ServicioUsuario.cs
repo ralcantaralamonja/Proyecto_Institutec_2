@@ -28,9 +28,9 @@ namespace WCG_Institutec
                     {
                         Login_Usuario = resultado.Login_Usuario,
                         Pass_Usuario = resultado.Pass_Usuario,
-                        Niv_Usuario = Convert.ToInt16( resultado.Niv_Usuario),
-                        Est_Usuario = Convert.ToInt16( resultado.Est_usuario),
-                        Fec_Registro = Convert.ToDateTime( resultado.Fec_Registro),
+                        Niv_Usuario = Convert.ToInt16(resultado.Niv_Usuario),
+                        Est_Usuario = Convert.ToInt16(resultado.Est_usuario),
+                        Fec_Registro = Convert.ToDateTime(resultado.Fec_Registro),
                         Usu_Registro = resultado.Usu_Registro
                     };
 
