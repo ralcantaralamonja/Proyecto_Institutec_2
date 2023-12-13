@@ -49,13 +49,18 @@ C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\bin\Debug\net6.0-windows\zh-Han
 C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
 C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec2.csproj.AssemblyReference.cache
 C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec2.Form1.resources
+C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\ProyInstitutec_GUI.FrmActualizarAlumno.resources
 C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\ProyInstitutec_GUI.FrmActualizarProfesor.resources
 C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec.FrmActualizarSeccion.resources
+C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec2.FrmConsulta1.resources
+C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec2.FrmConsulta2.resources
+C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\ProyInstitutec_GUI.FrmInsertarAlumno.resources
 C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\ProyInstitutec_GUI.FrmInsertarProfesor.resources
 C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec.FrmInsertarSeccion.resources
 C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\ProyInstitutec_GUI.frmLogin.resources
 C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\ProyInstitutec_GUI.FrmProfesor.resources
 C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec.FrmSeccion.resources
+C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\ProyInstitutec_GUI.FrmVerAlumno.resources
 C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\ProyInstitutec_GUI.MDIPrincipal.resources
 C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec2.csproj.GenerateResource.cache
 C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec2.GeneratedMSBuildEditorConfig.editorconfig
@@ -68,81 +73,3 @@ C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\refint
 C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec2.pdb
 C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec2.genruntimeconfig.cache
 C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\ref\Test_Institutec2.dll
-C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\ProyInstitutec_GUI.FrmActualizarAlumno.resources
-C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\ProyInstitutec_GUI.FrmInsertarAlumno.resources
-C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\ProyInstitutec_GUI.FrmVerAlumno.resources
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\Test_Institutec2.exe
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\Test_Institutec2.deps.json
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\Test_Institutec2.runtimeconfig.json
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\Test_Institutec2.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\Test_Institutec2.pdb
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\Microsoft.Extensions.ObjectPool.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Logging.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.WsTrust.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.Saml.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Xml.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\System.Private.ServiceModel.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\System.Security.Cryptography.Pkcs.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\System.Security.Cryptography.Xml.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\System.ServiceModel.Duplex.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\System.ServiceModel.Federation.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\System.ServiceModel.Http.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\System.ServiceModel.NetTcp.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\System.ServiceModel.Primitives.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\System.ServiceModel.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\System.ServiceModel.Security.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\cs\System.Private.ServiceModel.resources.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\de\System.Private.ServiceModel.resources.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\es\System.Private.ServiceModel.resources.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\fr\System.Private.ServiceModel.resources.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\it\System.Private.ServiceModel.resources.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\ja\System.Private.ServiceModel.resources.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\ko\System.Private.ServiceModel.resources.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\pl\System.Private.ServiceModel.resources.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\pt-BR\System.Private.ServiceModel.resources.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\ru\System.Private.ServiceModel.resources.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\tr\System.Private.ServiceModel.resources.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\zh-Hans\System.Private.ServiceModel.resources.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\zh-Hant\System.Private.ServiceModel.resources.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\cs\System.ServiceModel.Federation.resources.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\de\System.ServiceModel.Federation.resources.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\es\System.ServiceModel.Federation.resources.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\fr\System.ServiceModel.Federation.resources.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\it\System.ServiceModel.Federation.resources.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\ja\System.ServiceModel.Federation.resources.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\ko\System.ServiceModel.Federation.resources.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\pl\System.ServiceModel.Federation.resources.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\pt-BR\System.ServiceModel.Federation.resources.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\ru\System.ServiceModel.Federation.resources.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\tr\System.ServiceModel.Federation.resources.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\zh-Hans\System.ServiceModel.Federation.resources.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\zh-Hant\System.ServiceModel.Federation.resources.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec2.csproj.AssemblyReference.cache
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec2.Form1.resources
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\obj\Debug\net6.0-windows\ProyInstitutec_GUI.FrmActualizarAlumno.resources
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\obj\Debug\net6.0-windows\ProyInstitutec_GUI.FrmActualizarProfesor.resources
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec.FrmActualizarSeccion.resources
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\obj\Debug\net6.0-windows\ProyInstitutec_GUI.FrmInsertarAlumno.resources
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\obj\Debug\net6.0-windows\ProyInstitutec_GUI.FrmInsertarProfesor.resources
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec.FrmInsertarSeccion.resources
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\obj\Debug\net6.0-windows\ProyInstitutec_GUI.frmLogin.resources
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\obj\Debug\net6.0-windows\ProyInstitutec_GUI.FrmProfesor.resources
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec.FrmSeccion.resources
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\obj\Debug\net6.0-windows\ProyInstitutec_GUI.FrmVerAlumno.resources
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\obj\Debug\net6.0-windows\ProyInstitutec_GUI.MDIPrincipal.resources
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec2.csproj.GenerateResource.cache
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec2.GeneratedMSBuildEditorConfig.editorconfig
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec2.AssemblyInfoInputs.cache
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec2.AssemblyInfo.cs
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec2.csproj.CoreCompileInputs.cache
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec2.csproj.CopyComplete
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec2.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\obj\Debug\net6.0-windows\refint\Test_Institutec2.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec2.pdb
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec2.genruntimeconfig.cache
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\obj\Debug\net6.0-windows\ref\Test_Institutec2.dll
-E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec2.FrmConsulta1.resources
-C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec2.FrmConsulta1.resources

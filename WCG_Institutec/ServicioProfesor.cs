@@ -21,7 +21,9 @@ namespace WCG_Institutec
 
     {
         InstituTecEntities bd = new InstituTecEntities();
-
+        public String prueba() {
+            return "Prueba";
+        }
         public List<ProfesorDC> ListarProfesor()
         {
             try
@@ -209,6 +211,36 @@ namespace WCG_Institutec
         SqlCommand cmd = new SqlCommand();
         DataSet dts = new DataSet();
         SqlDataAdapter ada;
+        public List<ProfesorDC> ListarEspecialidad()
+        {
+            try
+            {
+                cmd.Connection = cnx;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "usp_ListarEspecialidad";
+                cmd.Parameters.Clear();
+
+
+                ada = new SqlDataAdapter(cmd);
+                ada.Fill(dts, "ProfesorEspecialidad");
+
+                //convertir el dataTable en una coleccion
+                List<ProfesorDC> objLista = new List<ProfesorDC>();
+                foreach (DataRow drFila in dts.Tables[0].Rows)
+                {
+                    ProfesorDC profesor = new ProfesorDC();
+                    profesor.Especialidad = drFila["Especialidad"].ToString();
+                    profesor.IdEspecialidad = Convert.ToByte(drFila["ID"]);
+                    objLista.Add(profesor);
+                }
+                return objLista;
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+        }
         public List<ProfesorDC> ListarProfesorEspecialidad(int num_esp)
         {
             try
@@ -220,7 +252,7 @@ namespace WCG_Institutec
                 cmd.Parameters.AddWithValue("@id_esp", num_esp);
 
                 ada = new SqlDataAdapter(cmd);
-                ada.Fill(dts, "ProfesorEspecialidad");
+                ada.Fill(dts, "Especialidad");
 
                 //convertir el dataTable en una coleccion
                 List<ProfesorDC> objLista = new List<ProfesorDC>();
@@ -238,5 +270,9 @@ namespace WCG_Institutec
                 throw new Exception(ex.Message);
             }
         }
+
+ 
     }
+
+
 }

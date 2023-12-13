@@ -28,12 +28,12 @@ namespace WCG_Institutec
         List<ProfesorDC> ListarProfesor();
 
         [OperationContract]
+        List<ProfesorDC> ListarEspecialidad();
+
+        [OperationContract]
         List<ProfesorDC> ListarProfesorEspecialidad(int num_esp);
-
-
-
-        //Adicionales....
-
+        [OperationContract]
+        String prueba();
     }
 
     [DataContract]
@@ -104,5 +104,11 @@ namespace WCG_Institutec
         [DataMember]
 
         public String Fullname { get; set; }
+        [DataMember]
+
+        public String Especialidad { get; set; }
+        [DataMember]
+
+        public byte IdEspecialidad { get; set; }
     }
 }

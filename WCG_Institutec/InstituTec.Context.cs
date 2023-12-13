@@ -27,7 +27,6 @@ namespace WCG_Institutec
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<TB_Alumno> TB_Alumno { get; set; }
         public virtual DbSet<TB_Aula> TB_Aula { get; set; }
         public virtual DbSet<Tb_Carrera> Tb_Carrera { get; set; }
@@ -745,6 +744,11 @@ namespace WCG_Institutec
                 new ObjectParameter("FecFin", typeof(System.DateTime));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_ListarCursosAlumnoFechas_Result>("usp_ListarCursosAlumnoFechas", idAlumParameter, fecIncParameter, fecFinParameter);
+        }
+    
+        public virtual ObjectResult<usp_ListarEspecialidad_Result> usp_ListarEspecialidad()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_ListarEspecialidad_Result>("usp_ListarEspecialidad");
         }
     
         public virtual ObjectResult<usp_ListarFacultad_Result> usp_ListarFacultad()
