@@ -204,9 +204,13 @@ namespace ProyInstitutec_GUI
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                MessageBox.Show("Error : " + ex.Message);
-
+                // Muestra detalles de la excepción interna
+                if (ex.InnerException != null)
+                {
+                    MessageBox.Show("Inner Exception: " + ex.InnerException.ToString(), "Inner Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
 
 
