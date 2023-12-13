@@ -1,15 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="InstituTecModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-  </EntityType>
   <EntityType Name="TB_Alumno">
     <Key>
       <PropertyRef Name="IdAlum" />
@@ -652,7 +642,6 @@
     <End Role="Tb_Seccion" Type="Self.Tb_Seccion" Multiplicity="*" />
   </Association>
   <EntityContainer Name="InstituTecEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="TB_Alumno" EntityType="Self.TB_Alumno" />
     <EntitySet Name="TB_Aula" EntityType="Self.TB_Aula" />
     <EntitySet Name="Tb_Carrera" EntityType="Self.Tb_Carrera" />
@@ -933,6 +922,7 @@
       <Parameter Name="FecInc" Mode="In" Type="DateTime" />
       <Parameter Name="FecFin" Mode="In" Type="DateTime" />
     </FunctionImport>
+    <FunctionImport Name="usp_ListarEspecialidad" ReturnType="Collection(InstituTecModel.usp_ListarEspecialidad_Result)" />
     <FunctionImport Name="usp_ListarFacultad" ReturnType="Collection(InstituTecModel.usp_ListarFacultad_Result)" />
     <FunctionImport Name="usp_ListarProfesor" ReturnType="Collection(InstituTecModel.usp_ListarProfesor_Result)">
       <Parameter Name="id" Mode="In" Type="String" />
@@ -1143,6 +1133,10 @@
     <Property Type="Time" Name="HorFin" Nullable="true" />
     <Property Type="String" Name="Desloc" Nullable="true" MaxLength="50" />
     <Property Type="String" Name="IdAula" Nullable="false" MaxLength="4" />
+  </ComplexType>
+  <ComplexType Name="usp_ListarEspecialidad_Result">
+    <Property Type="Byte" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Especialidad" Nullable="true" MaxLength="60" />
   </ComplexType>
   <ComplexType Name="usp_ListarFacultad_Result">
     <Property Type="String" Name="IdFacu" Nullable="false" MaxLength="6" />

@@ -28,11 +28,13 @@ namespace WCG_Institutec
         List<ProfesorDC> ListarProfesor();
 
         [OperationContract]
-        List<ProfesorDC> ListarProfesorEspecialidad(int num_esp);
+        List<ProfesorDC> ListarEspecialidad();
 
         [OperationContract]
-        List<ProfesorDC> ListarEspecialidad();
-     }
+        List<ProfesorDC> ListarProfesorEspecialidad(int num_esp);
+        [OperationContract]
+        String prueba();
+    }
 
     [DataContract]
     [Serializable]

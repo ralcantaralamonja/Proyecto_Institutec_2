@@ -1,4 +1,4 @@
-﻿using ProxyProfesor;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,8 +23,9 @@ namespace Test_Institutec2
 
         private void FrmConsulta2_Load(object sender, EventArgs e)
         {
-
-           // objServiceProfesor.Listar
+      
+            
+            // objServiceProfesor.Listar
             // objServiceProfesor.ListarProfesor
             //List<ProxyProfesor.ProfesorDC> listaEspecialidades = objServiceProfesor
 

@@ -90,9 +90,6 @@
     <Compile Include="sp_helpdiagrams_Result.cs">
       <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagrams.cs">
-      <DependentUpon>Institutec.tt</DependentUpon>
-    </Compile>
     <Compile Include="TB_Alumno.cs">
       <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
@@ -175,6 +172,9 @@
       <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="usp_ListarCurso_Result.cs">
+      <DependentUpon>Institutec.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ListarEspecialidad_Result.cs">
       <DependentUpon>Institutec.tt</DependentUpon>
     </Compile>
     <Compile Include="usp_ListarFacultad_Result.cs">
