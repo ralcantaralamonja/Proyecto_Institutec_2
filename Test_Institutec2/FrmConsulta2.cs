@@ -23,15 +23,43 @@ namespace Test_Institutec2
 
         private void FrmConsulta2_Load(object sender, EventArgs e)
         {
-
+           // objServiceProfesor.Listar
 
             // objServiceProfesor.Listar
             // objServiceProfesor.ListarProfesor
             //List<ProxyProfesor.ProfesorDC> listaEspecialidades = objServiceProfesor
 
         }
-       
 
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            //Single especialidad = Convert.ToByte(txtNumero.Text);
 
+            //objServiceProfesor.ListarProfesorEspecialidad(especialidad);
+            try
+            { 
+                CargarDatos();
+              //  lblRegistros.Text = dtgAlumnoNrc.Rows.Count.ToString();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+      
+
+        }
+
+        public void CargarDatos()
+        {
+            //Codifique
+            Byte especialidad = Convert.ToByte(txtNumero.Text);
+            dtgEspecialistas.DataSource = objServiceProfesor.ListarProfesorEspecialidad(especialidad);
+            // contador de registros 
+            //dtgAlumnoNrc.DataSource = objServiceAlumno.ListarAlumnoNRC(texLblNrc.Text);
+
+        }
     }
 }

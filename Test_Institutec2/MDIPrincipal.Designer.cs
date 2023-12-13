@@ -36,12 +36,13 @@
             salirToolStripMenuItem = new ToolStripMenuItem();
             carreraToolStripMenuItem = new ToolStripMenuItem();
             salirToolStripMenuItem1 = new ToolStripMenuItem();
-            sALIRToolStripMenuItem2 = new ToolStripMenuItem();
             cONSULTASToolStripMenuItem = new ToolStripMenuItem();
             aLUMNOPORNRCToolStripMenuItem = new ToolStripMenuItem();
+            sALIRToolStripMenuItem2 = new ToolStripMenuItem();
             statusStrip1 = new StatusStrip();
             lbl1 = new ToolStripStatusLabel();
             lblUsuario = new ToolStripStatusLabel();
+            lISTARESPECIALISTASToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
             SuspendLayout();
@@ -110,17 +111,9 @@
             salirToolStripMenuItem1.Text = "SALIR";
             salirToolStripMenuItem1.Click += salirToolStripMenuItem1_Click;
             // 
-            // sALIRToolStripMenuItem2
-            // 
-            sALIRToolStripMenuItem2.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            sALIRToolStripMenuItem2.Name = "sALIRToolStripMenuItem2";
-            sALIRToolStripMenuItem2.Size = new Size(65, 25);
-            sALIRToolStripMenuItem2.Text = "SALIR";
-            sALIRToolStripMenuItem2.Click += sALIRToolStripMenuItem2_Click;
-            // 
             // cONSULTASToolStripMenuItem
             // 
-            cONSULTASToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aLUMNOPORNRCToolStripMenuItem });
+            cONSULTASToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aLUMNOPORNRCToolStripMenuItem, lISTARESPECIALISTASToolStripMenuItem });
             cONSULTASToolStripMenuItem.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cONSULTASToolStripMenuItem.Name = "cONSULTASToolStripMenuItem";
             cONSULTASToolStripMenuItem.Size = new Size(116, 25);
@@ -129,9 +122,17 @@
             // aLUMNOPORNRCToolStripMenuItem
             // 
             aLUMNOPORNRCToolStripMenuItem.Name = "aLUMNOPORNRCToolStripMenuItem";
-            aLUMNOPORNRCToolStripMenuItem.Size = new Size(228, 26);
+            aLUMNOPORNRCToolStripMenuItem.Size = new Size(250, 26);
             aLUMNOPORNRCToolStripMenuItem.Text = "ALUMNO POR NRC";
             aLUMNOPORNRCToolStripMenuItem.Click += aLUMNOPORNRCToolStripMenuItem_Click;
+            // 
+            // sALIRToolStripMenuItem2
+            // 
+            sALIRToolStripMenuItem2.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            sALIRToolStripMenuItem2.Name = "sALIRToolStripMenuItem2";
+            sALIRToolStripMenuItem2.Size = new Size(65, 25);
+            sALIRToolStripMenuItem2.Text = "SALIR";
+            sALIRToolStripMenuItem2.Click += sALIRToolStripMenuItem2_Click;
             // 
             // statusStrip1
             // 
@@ -159,6 +160,13 @@
             lblUsuario.Name = "lblUsuario";
             lblUsuario.Size = new Size(118, 17);
             lblUsuario.Text = "toolStripStatusLabel2";
+            // 
+            // lISTARESPECIALISTASToolStripMenuItem
+            // 
+            lISTARESPECIALISTASToolStripMenuItem.Name = "lISTARESPECIALISTASToolStripMenuItem";
+            lISTARESPECIALISTASToolStripMenuItem.Size = new Size(250, 26);
+            lISTARESPECIALISTASToolStripMenuItem.Text = "LISTAR ESPECIALISTAS";
+            lISTARESPECIALISTASToolStripMenuItem.Click += lISTARESPECIALISTASToolStripMenuItem_Click;
             // 
             // MDIPrincipal
             // 
@@ -208,5 +216,6 @@
         private ToolStripMenuItem sALIRToolStripMenuItem2;
         private ToolStripMenuItem cONSULTASToolStripMenuItem;
         private ToolStripMenuItem aLUMNOPORNRCToolStripMenuItem;
+        private ToolStripMenuItem lISTARESPECIALISTASToolStripMenuItem;
     }
 }

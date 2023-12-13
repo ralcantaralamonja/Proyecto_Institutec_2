@@ -32,13 +32,14 @@
             btnBuscar = new Button();
             label1 = new Label();
             dtgEspecialistas = new DataGridView();
+            txtNumero = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dtgEspecialistas).BeginInit();
             SuspendLayout();
             // 
             // cboEspecialidad
             // 
             cboEspecialidad.FormattingEnabled = true;
-            cboEspecialidad.Location = new Point(205, 35);
+            cboEspecialidad.Location = new Point(244, 347);
             cboEspecialidad.Name = "cboEspecialidad";
             cboEspecialidad.Size = new Size(121, 23);
             cboEspecialidad.TabIndex = 0;
@@ -51,6 +52,7 @@
             btnBuscar.TabIndex = 1;
             btnBuscar.Text = "Buscar";
             btnBuscar.UseVisualStyleBackColor = true;
+            btnBuscar.Click += btnBuscar_Click;
             // 
             // label1
             // 
@@ -70,11 +72,19 @@
             dtgEspecialistas.Size = new Size(387, 209);
             dtgEspecialistas.TabIndex = 3;
             // 
+            // txtNumero
+            // 
+            txtNumero.Location = new Point(197, 35);
+            txtNumero.Name = "txtNumero";
+            txtNumero.Size = new Size(100, 23);
+            txtNumero.TabIndex = 4;
+            // 
             // FrmConsulta2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(519, 394);
+            Controls.Add(txtNumero);
             Controls.Add(dtgEspecialistas);
             Controls.Add(label1);
             Controls.Add(btnBuscar);
@@ -94,5 +104,6 @@
         private Button btnBuscar;
         private Label label1;
         private DataGridView dtgEspecialistas;
+        private TextBox txtNumero;
     }
 }

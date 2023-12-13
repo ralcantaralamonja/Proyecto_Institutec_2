@@ -119,5 +119,12 @@ namespace ProyInstitutec_GUI
             objFrmConsulta1.MdiParent = this;
             objFrmConsulta1.Show();
         }
+
+        private void lISTARESPECIALISTASToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsulta2 objFrmConsulta1 = new FrmConsulta2();
+            objFrmConsulta1.MdiParent = this;
+            objFrmConsulta1.Show();
+        }
     }
 }
