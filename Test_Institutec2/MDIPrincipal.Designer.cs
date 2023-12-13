@@ -37,6 +37,8 @@
             carreraToolStripMenuItem = new ToolStripMenuItem();
             salirToolStripMenuItem1 = new ToolStripMenuItem();
             sALIRToolStripMenuItem2 = new ToolStripMenuItem();
+            cONSULTASToolStripMenuItem = new ToolStripMenuItem();
+            aLUMNOPORNRCToolStripMenuItem = new ToolStripMenuItem();
             statusStrip1 = new StatusStrip();
             lbl1 = new ToolStripStatusLabel();
             lblUsuario = new ToolStripStatusLabel();
@@ -47,7 +49,7 @@
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(24, 24);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { mantenimientoToolStripMenuItem, sALIRToolStripMenuItem2 });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { mantenimientoToolStripMenuItem, cONSULTASToolStripMenuItem, sALIRToolStripMenuItem2 });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(8, 3, 0, 3);
@@ -69,7 +71,7 @@
             profesorToolStripMenuItem.BackgroundImage = (Image)resources.GetObject("profesorToolStripMenuItem.BackgroundImage");
             profesorToolStripMenuItem.BackgroundImageLayout = ImageLayout.None;
             profesorToolStripMenuItem.Name = "profesorToolStripMenuItem";
-            profesorToolStripMenuItem.Size = new Size(180, 26);
+            profesorToolStripMenuItem.Size = new Size(175, 26);
             profesorToolStripMenuItem.Text = "PROFESOR";
             profesorToolStripMenuItem.Click += profesorToolStripMenuItem_Click;
             // 
@@ -78,7 +80,7 @@
             estudianteToolStripMenuItem.BackgroundImage = (Image)resources.GetObject("estudianteToolStripMenuItem.BackgroundImage");
             estudianteToolStripMenuItem.BackgroundImageLayout = ImageLayout.None;
             estudianteToolStripMenuItem.Name = "estudianteToolStripMenuItem";
-            estudianteToolStripMenuItem.Size = new Size(180, 26);
+            estudianteToolStripMenuItem.Size = new Size(175, 26);
             estudianteToolStripMenuItem.Text = "ESTUDIANTE";
             estudianteToolStripMenuItem.Click += estudianteToolStripMenuItem_Click;
             // 
@@ -87,7 +89,7 @@
             salirToolStripMenuItem.BackgroundImage = (Image)resources.GetObject("salirToolStripMenuItem.BackgroundImage");
             salirToolStripMenuItem.BackgroundImageLayout = ImageLayout.None;
             salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            salirToolStripMenuItem.Size = new Size(180, 26);
+            salirToolStripMenuItem.Size = new Size(175, 26);
             salirToolStripMenuItem.Text = "CURSO";
             // 
             // carreraToolStripMenuItem
@@ -95,7 +97,7 @@
             carreraToolStripMenuItem.BackgroundImage = (Image)resources.GetObject("carreraToolStripMenuItem.BackgroundImage");
             carreraToolStripMenuItem.BackgroundImageLayout = ImageLayout.None;
             carreraToolStripMenuItem.Name = "carreraToolStripMenuItem";
-            carreraToolStripMenuItem.Size = new Size(180, 26);
+            carreraToolStripMenuItem.Size = new Size(175, 26);
             carreraToolStripMenuItem.Text = "SECCION";
             carreraToolStripMenuItem.Click += carreraToolStripMenuItem_Click;
             // 
@@ -104,7 +106,7 @@
             salirToolStripMenuItem1.BackgroundImage = (Image)resources.GetObject("salirToolStripMenuItem1.BackgroundImage");
             salirToolStripMenuItem1.BackgroundImageLayout = ImageLayout.None;
             salirToolStripMenuItem1.Name = "salirToolStripMenuItem1";
-            salirToolStripMenuItem1.Size = new Size(180, 26);
+            salirToolStripMenuItem1.Size = new Size(175, 26);
             salirToolStripMenuItem1.Text = "SALIR";
             salirToolStripMenuItem1.Click += salirToolStripMenuItem1_Click;
             // 
@@ -115,6 +117,21 @@
             sALIRToolStripMenuItem2.Size = new Size(65, 25);
             sALIRToolStripMenuItem2.Text = "SALIR";
             sALIRToolStripMenuItem2.Click += sALIRToolStripMenuItem2_Click;
+            // 
+            // cONSULTASToolStripMenuItem
+            // 
+            cONSULTASToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aLUMNOPORNRCToolStripMenuItem });
+            cONSULTASToolStripMenuItem.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cONSULTASToolStripMenuItem.Name = "cONSULTASToolStripMenuItem";
+            cONSULTASToolStripMenuItem.Size = new Size(116, 25);
+            cONSULTASToolStripMenuItem.Text = "CONSULTAS";
+            // 
+            // aLUMNOPORNRCToolStripMenuItem
+            // 
+            aLUMNOPORNRCToolStripMenuItem.Name = "aLUMNOPORNRCToolStripMenuItem";
+            aLUMNOPORNRCToolStripMenuItem.Size = new Size(228, 26);
+            aLUMNOPORNRCToolStripMenuItem.Text = "ALUMNO POR NRC";
+            aLUMNOPORNRCToolStripMenuItem.Click += aLUMNOPORNRCToolStripMenuItem_Click;
             // 
             // statusStrip1
             // 
@@ -189,5 +206,7 @@
         private ToolStripStatusLabel lbl1;
         private ToolStripStatusLabel lblUsuario;
         private ToolStripMenuItem sALIRToolStripMenuItem2;
+        private ToolStripMenuItem cONSULTASToolStripMenuItem;
+        private ToolStripMenuItem aLUMNOPORNRCToolStripMenuItem;
     }
 }

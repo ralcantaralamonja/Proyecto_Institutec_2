@@ -10,6 +10,7 @@ using System.Windows.Forms;
 //agregando
 using ProxyUsuario;
 using Test_Institutec;
+using Test_Institutec2;
 
 namespace ProyInstitutec_GUI
 {
@@ -110,6 +111,13 @@ namespace ProyInstitutec_GUI
             FrmVerAlumno objFrmVerAlumno = new FrmVerAlumno();
             objFrmVerAlumno.MdiParent = this;
             objFrmVerAlumno.Show();
+        }
+
+        private void aLUMNOPORNRCToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsulta1 objFrmConsulta1 = new FrmConsulta1();
+            objFrmConsulta1.MdiParent = this;
+            objFrmConsulta1.Show();
         }
     }
 }

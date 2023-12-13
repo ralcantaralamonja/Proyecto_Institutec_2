@@ -10,3 +10,15 @@ C:\desarrolloDeAplicaciones2\S5\WCG_Institutec\obj\Debug\WCG_Institutec.csproj.C
 C:\desarrolloDeAplicaciones2\S5\WCG_Institutec\obj\Debug\WCG_Institutec.csproj.CopyComplete
 C:\desarrolloDeAplicaciones2\S5\WCG_Institutec\obj\Debug\WCG_Institutec.dll
 C:\desarrolloDeAplicaciones2\S5\WCG_Institutec\obj\Debug\WCG_Institutec.pdb
+E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\WCG_Institutec\bin\Debug\WCG_Institutec.dll.config
+E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\WCG_Institutec\bin\Debug\WCG_Institutec.dll
+E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\WCG_Institutec\bin\Debug\WCG_Institutec.pdb
+E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\WCG_Institutec\bin\Debug\EntityFramework.dll
+E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\WCG_Institutec\bin\Debug\EntityFramework.SqlServer.dll
+E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\WCG_Institutec\bin\Debug\EntityFramework.xml
+E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\WCG_Institutec\bin\Debug\EntityFramework.SqlServer.xml
+E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\WCG_Institutec\obj\Debug\WCG_Institutec.csproj.AssemblyReference.cache
+E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\WCG_Institutec\obj\Debug\WCG_Institutec.csproj.CoreCompileInputs.cache
+E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\WCG_Institutec\obj\Debug\WCG_Institutec.csproj.CopyComplete
+E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\WCG_Institutec\obj\Debug\WCG_Institutec.dll
+E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\WCG_Institutec\obj\Debug\WCG_Institutec.pdb

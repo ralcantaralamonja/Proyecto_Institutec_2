@@ -41,7 +41,7 @@ namespace WCG_Institutec
         [OperationContract]
         List<AlumnoDC> ListarFacultad();
 
-
+         
         //Adicionales...
 
 
@@ -131,5 +131,7 @@ namespace WCG_Institutec
 
         [DataMember]
         public String IdFacu { get; set; }
+        [DataMember]
+        public String Curso { get; set; }
     }
 }
