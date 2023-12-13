@@ -23,7 +23,7 @@ namespace Test_Institutec2
 
         private void FrmConsulta2_Load(object sender, EventArgs e)
         {
-           // objServiceProfesor.Listar
+            // objServiceProfesor.Listar
 
             // objServiceProfesor.Listar
             // objServiceProfesor.ListarProfesor
@@ -37,9 +37,10 @@ namespace Test_Institutec2
 
             //objServiceProfesor.ListarProfesorEspecialidad(especialidad);
             try
-            { 
+            {
+                dtgEspecialistas.AutoGenerateColumns = false;
                 CargarDatos();
-              //  lblRegistros.Text = dtgAlumnoNrc.Rows.Count.ToString();
+                label4.Text = dtgEspecialistas.Rows.Count.ToString();
 
             }
             catch (Exception ex)
@@ -47,8 +48,8 @@ namespace Test_Institutec2
 
                 MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
-      
+
+
 
         }
 
@@ -60,6 +61,11 @@ namespace Test_Institutec2
             // contador de registros 
             //dtgAlumnoNrc.DataSource = objServiceAlumno.ListarAlumnoNRC(texLblNrc.Text);
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
