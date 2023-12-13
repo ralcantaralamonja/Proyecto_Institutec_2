@@ -214,6 +214,7 @@
             lblRegistros.Size = new Size(107, 33);
             lblRegistros.TabIndex = 4;
             lblRegistros.TextAlign = ContentAlignment.MiddleRight;
+            lblRegistros.Click += lblRegistros_Click;
             // 
             // FrmSeccion
             // 

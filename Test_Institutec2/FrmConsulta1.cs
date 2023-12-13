@@ -27,8 +27,8 @@ namespace Test_Institutec2
                 {
                     throw new Exception("NRC vacio o no contiene 6 caracteres");
                 }
-                //  dtgAlumnoNrc.AutoGenerateColumns = false;
                 CargarDatos();
+                lblRegistros.Text = dtgAlumnoNrc.Rows.Count.ToString();
 
             }
             catch (Exception ex)
@@ -49,6 +49,16 @@ namespace Test_Institutec2
         private void dtgAlumnoNrc_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void FrmConsulta1_Load(object sender, EventArgs e)
+        {
+            dtgAlumnoNrc.AutoGenerateColumns = false;
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

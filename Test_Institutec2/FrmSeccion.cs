@@ -136,5 +136,9 @@ namespace Test_Institutec
             lblRegistros.Text = dgtSeccion.Rows.Count.ToString();
         }
 
+        private void lblRegistros_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

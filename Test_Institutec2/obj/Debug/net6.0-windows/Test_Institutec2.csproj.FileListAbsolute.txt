@@ -145,3 +145,4 @@ E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\
 E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec2.genruntimeconfig.cache
 E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\obj\Debug\net6.0-windows\ref\Test_Institutec2.dll
 E:\ISIL DESARROLLO DE SOTFWARE\DESARROLLO DE APLICACIONES\Proyecto_Institutec_2\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec2.FrmConsulta1.resources
+C:\desarrolloDeAplicaciones2\S5\Test_Institutec2\obj\Debug\net6.0-windows\Test_Institutec2.FrmConsulta1.resources
