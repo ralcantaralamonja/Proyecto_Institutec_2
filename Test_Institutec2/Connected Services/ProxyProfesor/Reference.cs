@@ -9,6 +9,8 @@
 
 namespace ProxyProfesor
 {
+    using System;
+    using System.Collections.Generic;
     using System.Runtime.Serialization;
     
     
@@ -523,7 +525,9 @@ namespace ProxyProfesor
         {
             return ServicioProfesorClient.GetEndpointAddress(EndpointConfiguration.BasicHttpBinding_IServicioProfesor);
         }
-        
+
+       
+
         public enum EndpointConfiguration
         {
             

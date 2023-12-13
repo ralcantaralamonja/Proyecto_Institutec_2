@@ -238,5 +238,37 @@ namespace WCG_Institutec
                 throw new Exception(ex.Message);
             }
         }
+
+       public List<ProfesorDC> ListarEspecialidad() {
+            try
+            {
+                cmd.Connection = cnx;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "usp_ListarEspecialidad";
+                cmd.Parameters.Clear();
+                
+
+                ada = new SqlDataAdapter(cmd);
+                ada.Fill(dts, "ProfesorEspecialidad");
+
+                //convertir el dataTable en una coleccion
+                List<ProfesorDC> objLista = new List<ProfesorDC>();
+                foreach (DataRow drFila in dts.Tables[0].Rows)
+                {
+                    ProfesorDC profesor = new ProfesorDC();
+                    profesor.Especialidad = drFila["Especialidad"].ToString();
+                    profesor.IdEspecialidad = Convert.ToByte(drFila["ID"]);
+                    objLista.Add(profesor);
+                }
+                return objLista;
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+        }
     }
+
+
 }
