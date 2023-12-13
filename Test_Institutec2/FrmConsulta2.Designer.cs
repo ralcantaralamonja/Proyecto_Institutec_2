@@ -28,26 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnBuscar = new Button();
             label1 = new Label();
             dtgEspecialistas = new DataGridView();
-            txtNumero = new TextBox();
+            Profesor = new DataGridViewTextBoxColumn();
             label2 = new Label();
             label4 = new Label();
             button1 = new Button();
-            Profesor = new DataGridViewTextBoxColumn();
+            cboEspecialidad = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dtgEspecialistas).BeginInit();
             SuspendLayout();
-            // 
-            // btnBuscar
-            // 
-            btnBuscar.Location = new Point(326, 17);
-            btnBuscar.Name = "btnBuscar";
-            btnBuscar.Size = new Size(115, 31);
-            btnBuscar.TabIndex = 1;
-            btnBuscar.Text = "CONSULTAR";
-            btnBuscar.UseVisualStyleBackColor = true;
-            btnBuscar.Click += btnBuscar_Click;
             // 
             // label1
             // 
@@ -80,12 +69,12 @@
             dtgEspecialistas.TabIndex = 3;
             dtgEspecialistas.TabStop = false;
             // 
-            // txtNumero
+            // Profesor
             // 
-            txtNumero.Location = new Point(193, 22);
-            txtNumero.Name = "txtNumero";
-            txtNumero.Size = new Size(127, 23);
-            txtNumero.TabIndex = 4;
+            Profesor.DataPropertyName = "Fullname";
+            Profesor.HeaderText = "PROFESOR";
+            Profesor.Name = "Profesor";
+            Profesor.ReadOnly = true;
             // 
             // label2
             // 
@@ -119,42 +108,41 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // Profesor
+            // cboEspecialidad
             // 
-            Profesor.DataPropertyName = "Fullname";
-            Profesor.HeaderText = "PROFESOR";
-            Profesor.Name = "Profesor";
-            Profesor.ReadOnly = true;
+            cboEspecialidad.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboEspecialidad.FormattingEnabled = true;
+            cboEspecialidad.Location = new Point(207, 17);
+            cboEspecialidad.Name = "cboEspecialidad";
+            cboEspecialidad.Size = new Size(192, 23);
+            cboEspecialidad.TabIndex = 12;
             // 
             // FrmConsulta2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(673, 526);
+            Controls.Add(cboEspecialidad);
             Controls.Add(button1);
             Controls.Add(label4);
             Controls.Add(label2);
-            Controls.Add(txtNumero);
             Controls.Add(dtgEspecialistas);
             Controls.Add(label1);
-            Controls.Add(btnBuscar);
             Name = "FrmConsulta2";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Lista de profesores especialistas";
-            Load += FrmConsulta2_Load;
             ((System.ComponentModel.ISupportInitialize)dtgEspecialistas).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private Button btnBuscar;
         private Label label1;
         private DataGridView dtgEspecialistas;
-        private TextBox txtNumero;
         private Label label2;
         private Label label4;
         private Button button1;
         private DataGridViewTextBoxColumn Profesor;
+        private ComboBox cboEspecialidad;
     }
 }
